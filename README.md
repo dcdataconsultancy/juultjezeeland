@@ -17,6 +17,6 @@ Nieuwe of gewijzigde Nederlandse teksten voeg je eerst toe aan de woordenlijsten
 
 ## Nog te doen
 - Foto voor de hero (buitenkant van het huis met hek en vlaggenmast) en voor Over ons (Marc en Angelia)
-- Mailadres invullen en contactformulier koppelen (bijvoorbeeld Formspree)
+- Mailadres invullen
 - Pagina's voor huisregels, algemene voorwaarden, annuleringsvoorwaarden en privacyverklaring
 - Eigen domein juultjezeeland.nl koppelen (CNAME); daarna de `hreflang` links in `index.html` aanpassen
