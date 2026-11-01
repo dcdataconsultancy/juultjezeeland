@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Juultje Zeeland | Holiday cottage and apartment in Wissenkerke</title>
+<meta name="description" content="Two charming stays for two people in Wissenkerke on Noord-Beveland. Dogs welcome. Book directly with Marc and Angelia.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%237D6F5D'/><path d='M12 30V20l8-6 8 6v10z' fill='white'/></svg>">
+<link rel="alternate" hreflang="nl" href="https://dcdataconsultancy.github.io/juultjezeeland/">
+<link rel="alternate" hreflang="de" href="https://dcdataconsultancy.github.io/juultjezeeland/de/">
+<link rel="alternate" hreflang="en" href="https://dcdataconsultancy.github.io/juultjezeeland/en/">
+<link rel="alternate" hreflang="x-default" href="https://dcdataconsultancy.github.io/juultjezeeland/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wit:#FFFFFF; --gebroken:#F7F4EF; --zand:#F2EEE7; --beige:#E7DFD3; --lijn:#ECE6DD; --veld:#D6CCBE;
+  --taupe:#3F3830; --tekst2:#5A5148; --tekst3:#6B6157; --olijf:#6B7350; --knop:#7D6F5D; --knop-hover:#675B4B;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'DM Sans',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--sans);color:var(--taupe);background:var(--wit);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:var(--taupe)}
+a:hover{color:#1F1B16}
+:focus-visible{outline:3px solid var(--olijf);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.band{padding:96px 0}
+.band.alt{background:var(--gebroken)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05}
+h1{font-size:clamp(46px,7vw,76px)}
+h2{font-size:clamp(36px,5vw,52px)}
+h3{font-size:34px;line-height:1.1}
+p{margin:0}
+.label{font-size:15px;color:var(--olijf);font-weight:700}
+.intro{display:flex;flex-direction:column;gap:12px;max-width:660px;margin-bottom:40px}
+.intro p{font-size:18px;color:var(--tekst2)}
+.knop{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:999px;background:var(--knop);color:#fff;font-weight:700;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+.knop:hover{background:var(--knop-hover);color:#fff}
+.knop.rand{background:transparent;color:var(--taupe);border:1.5px solid var(--taupe)}
+.knop.rand:hover{background:var(--taupe);color:#fff}
+.foto{background:var(--beige);color:#5E5547;font-size:15px;display:flex;align-items:flex-end;padding:18px;border-radius:20px}
+.beeld{display:block;overflow:hidden;background:var(--beige)}
+.beeld img{width:100%;height:100%;object-fit:cover}
+
+/* header */
+header{background:var(--wit);border-bottom:1px solid var(--lijn);position:sticky;top:0;z-index:10}
+.kop{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo span{font-family:var(--serif);font-size:28px;line-height:1;white-space:nowrap}
+nav ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:26px;font-weight:500}
+nav a{text-decoration:none;white-space:nowrap}
+.talen{display:flex;gap:10px;font-size:14px;color:var(--tekst3)}
+.talen a{color:var(--tekst3);text-decoration:none}
+.menuknop{display:none;background:none;border:1.5px solid var(--taupe);border-radius:999px;min-height:44px;padding:0 18px;font:inherit;font-weight:700;color:var(--taupe);cursor:pointer}
+@media (max-width:1080px){
+  .menuknop{display:inline-flex;align-items:center}
+  nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--wit);border-bottom:1px solid var(--lijn)}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:flex-start;gap:4px;padding:16px 24px 24px}
+  nav ul a{display:block;padding:10px 0}
+}
+
+/* hero */
+.hero{background:var(--gebroken);padding:64px 0 80px}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.hero-tekst{flex:1 1 420px;display:flex;flex-direction:column;gap:22px}
+.hero-tekst p{font-size:19px;color:var(--tekst2);max-width:520px}
+.knoppen{display:flex;flex-wrap:wrap;gap:12px}
+.hero .foto{flex:1 1 420px;min-height:480px;border-radius:24px}
+
+/* voordelen */
+.voordelen{display:flex;flex-wrap:wrap;gap:32px;padding:48px 0}
+.voordeel{flex:1 1 230px;display:flex;gap:14px;align-items:flex-start}
+.voordeel svg{flex:none}
+.voordeel strong{display:block}
+.voordeel span{color:var(--tekst3);font-size:15px}
+
+/* verblijven */
+.verblijven{display:flex;flex-wrap:wrap;gap:32px}
+.verblijf{flex:1 1 440px;background:var(--wit);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.verblijf .foto{min-height:320px;border-radius:0}
+.galerij-knop{position:relative;display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.galerij-knop .beeld{height:320px}
+.aantal{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.92);color:var(--taupe);font-size:14px;font-weight:700;padding:6px 14px;border-radius:999px}
+.duimen{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;list-style:none;margin:0;padding:6px 6px 0}
+.duimen button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:8px;overflow:hidden}
+.duimen .beeld{height:72px}
+.duimen button:hover img{opacity:.85}
+.duimen button{position:relative}
+.meer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(31,27,22,.55);color:#fff;font-weight:700;font-size:17px}
+.verblijf-inhoud{padding:30px;display:flex;flex-direction:column;gap:16px;flex-grow:1}
+.verblijf-kop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
+.kenmerken{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;list-style:none;margin:0;padding:0}
+.kenmerken li{background:var(--zand);padding:6px 12px;border-radius:999px}
+.verblijf p{color:var(--tekst2)}
+.verblijf .knop{margin-top:auto;align-self:flex-start}
+.melding{display:flex;gap:16px;background:var(--wit);border-radius:16px;padding:22px 26px;margin-top:32px}
+.melding svg{flex:none}
+.melding p{color:var(--tekst2)}
+
+/* omgeving */
+.tegels{display:flex;flex-wrap:wrap;gap:24px}
+.tegel{flex:1 1 250px;display:flex;flex-direction:column;gap:12px}
+.tegel .foto{min-height:210px;border-radius:16px;font-size:14px}
+.tegel .beeld{height:210px;border-radius:16px}
+.tegel-knop{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:16px}
+.tegel-knop:hover img{opacity:.9}
+.tegel strong{font-size:19px}
+.tegel span{color:var(--tekst3);font-size:15px}
+
+/* reviews */
+.scores{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:24px}
+.score{flex:1 1 260px;background:var(--wit);border-radius:16px;padding:20px 24px;display:flex;align-items:baseline;gap:12px}
+.score strong{font-family:var(--serif);font-weight:400;font-size:48px;line-height:1}
+.score span{color:var(--tekst3);font-size:15px}
+.reviews{display:flex;flex-wrap:wrap;gap:24px}
+.reviews figure{flex:1 1 300px;margin:0;background:var(--wit);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.reviews blockquote{margin:0}
+.reviews figcaption{color:var(--tekst3);font-size:14px}
+
+/* praktisch */
+.blokken{display:flex;flex-wrap:wrap;gap:24px}
+.blok{flex:1 1 300px;border:1px solid var(--lijn);border-radius:18px;padding:28px}
+.blok h3{font-family:var(--sans);font-weight:700;font-size:20px;margin-bottom:12px}
+.blok ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;color:var(--tekst2)}
+
+/* boeken */
+.boeking{background:var(--wit);border-radius:20px;padding:16px;min-height:420px}
+.betalen{margin-top:16px;color:var(--tekst3);font-size:15px}
+
+/* over ons */
+.over .wrap{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.over .foto{flex:1 1 380px;min-height:440px;border-radius:24px}
+.over-tekst{flex:1 1 440px;display:flex;flex-direction:column;gap:18px}
+.over-tekst p{font-size:18px;color:var(--tekst2)}
+
+/* contact */
+.contact .wrap{display:flex;flex-wrap:wrap;gap:48px}
+.contact-info{flex:1 1 360px;display:flex;flex-direction:column;gap:16px}
+.contact-info ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+form{flex:1 1 440px;background:var(--wit);border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:16px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500}
+input,textarea{font:inherit;color:var(--taupe);border:1px solid var(--veld);border-radius:10px;padding:12px;min-height:48px;background:var(--wit)}
+textarea{resize:vertical}
+form .knop{align-self:flex-start}
+
+/* footer */
+footer{background:var(--taupe);color:#EDE7DE;padding:56px 0 28px}
+footer a{color:#EDE7DE}
+footer a:hover{color:#fff}
+.voet{display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between}
+.voet div{flex:1 1 200px;display:flex;flex-direction:column;gap:8px}
+.voet strong{color:#fff}
+.voet .naam{font-family:var(--serif);font-size:30px;color:#fff}
+.copy{border-top:1px solid #5E5547;margin-top:36px;padding-top:18px;font-size:14px;color:#CFC5B8}
+
+/* fotogalerij */
+.lightbox{border:0;padding:0;margin:0;width:100vw;height:100dvh;max-width:none;max-height:none;background:rgba(31,27,22,.96);color:#EDE7DE}
+.lightbox::backdrop{background:rgba(31,27,22,.96)}
+.lightbox[open]{display:flex;flex-direction:column}
+.lb-balk{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;font-size:15px}
+.lb-beeld{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 72px;touch-action:pan-y}
+.lb-beeld picture{display:contents}
+.lb-beeld img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+.lb-onderschrift{text-align:center;padding:14px 20px 22px;font-size:15px;min-height:56px}
+.lb-knop{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:999px;min-width:48px;min-height:48px;font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0 16px}
+.lb-knop:hover{background:rgba(255,255,255,.24)}
+.lb-vorige,.lb-volgende{position:absolute;top:50%;transform:translateY(-50%);padding:0}
+.lb-vorige{left:14px}
+.lb-volgende{right:14px}
+
+@media (max-width:600px){
+  .band{padding:64px 0}
+  .hero .foto{min-height:300px}
+  .verblijf{flex-basis:100%}
+  .galerij-knop .beeld{height:260px}
+  .duimen .beeld{height:56px}
+  .lb-beeld{padding:0 8px}
+  .lb-vorige,.lb-volgende{top:auto;bottom:16px;transform:none}
+  .lb-onderschrift{padding:16px 76px 20px;min-height:80px;display:flex;align-items:center;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap kop">
+    <a href="#top" class="logo" aria-label="Juultje Zeeland, back to top">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#3F3830" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v32"/><path d="M8 5h9l-2 3 2 3H8"/><path d="M14 22l10-8 10 8"/><path d="M16 21v11h16V21"/><path d="M22 32v-6h4v6"/><path d="M3 36h35"/><path d="M3 29h10M3 33h10M5 27v9M10 27v9"/></svg>
+      <span>Juultje Zeeland</span>
+    </a>
+    <button class="menuknop" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Main menu">
+      <ul>
+        <li><a href="#verblijven">Stays</a></li>
+        <li><a href="#omgeving">Area</a></li>
+        <li><a href="#praktisch">Practical</a></li>
+        <li><a href="#over-ons">About us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="talen"><a href="../" lang="nl" hreflang="nl">NL</a><a href="../de/" lang="de" hreflang="de">DE</a><strong>EN</strong></li>
+        <li><a href="#boeken" class="knop">Book now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tekst">
+      <span class="label">Wissenkerke, Noord-Beveland</span>
+      <h1>Peace and space in the heart of Zeeland</h1>
+      <p>Two charming stays for two people, on either side of our home in the village of Wissenkerke. Polders, dykes and water are just around the corner. Your dog is very welcome.</p>
+      <div class="knoppen">
+        <a href="#boeken" class="knop">Check availability</a>
+        <a href="#verblijven" class="knop rand">View the stays</a>
+      </div>
+    </div>
+    <div class="foto" role="img" aria-label="Outside of the house">Photo: outside of the house with gate and flagpole</div>
+  </div>
+</section>
+
+<section aria-label="Why Juultje Zeeland">
+  <div class="wrap voordelen">
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><path d="M20 12a8 8 0 1 1-8-8"/><path d="M20 4l-8 8-3-3"/></svg>
+      <div><strong>Book directly with us</strong><span>Direct contact, no middleman</span></div>
+    </div>
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="9" r="2"/><circle cx="10" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="19" cy="9" r="2"/><path d="M12.5 11c-3 0-5.5 4-5.5 6.5 0 2 2 2.5 5.5 2.5s5.5-.5 5.5-2.5c0-2.5-2.5-6.5-5.5-6.5z"/></svg>
+      <div><strong>Dogs welcome</strong><span>€15 per night</span></div>
+    </div>
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
+      <div><strong>We live next door</strong><span>For tips and a personal welcome</span></div>
+    </div>
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8"/><path d="M9 6h3"/></svg>
+      <div><strong>Rent an electric bike</strong><span>Availability and rates on request</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="verblijven" class="band alt">
+  <div class="wrap">
+    <div class="intro">
+      <span class="label">Stays</span>
+      <h2>Two stays, one address</h2>
+      <p>Both sleep two people in one bedroom, on different sides of our home. Bed linen, towels, wifi and air conditioning are included everywhere.</p>
+    </div>
+    <div class="verblijven">
+      <article class="verblijf">
+        <button type="button" class="galerij-knop" data-galerij="huisje" data-index="0" aria-label="View all 13 photos of the holiday cottage"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-woonkamer-800.webp 800w, ../assets/fotos/vakantiehuisje-woonkamer-1600.webp 1600w" sizes="(max-width: 1000px) calc(100vw - 48px), 560px"><img src="../assets/fotos/vakantiehuisje-woonkamer-1600.jpg" alt="Living room of the holiday cottage with leather sofa, dining table and open kitchen" width="1600" height="1200" sizes="(max-width: 1000px) calc(100vw - 48px), 560px" loading="lazy" decoding="async"></picture><span class="aantal" aria-hidden="true">13 photos</span></button>
+        <ul class="duimen">
+          <li><button type="button" data-galerij="huisje" data-index="1" aria-label="Enlarge photo 2 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-keuken-800.webp 800w, ../assets/fotos/vakantiehuisje-keuken-1600.webp 1126w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-keuken-1600.jpg" alt="Kitchen of the holiday cottage with sink, coffee machine and shelves with glasses" width="1126" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="2" aria-label="Enlarge photo 3 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-zithoek-800.webp 800w, ../assets/fotos/vakantiehuisje-zithoek-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-zithoek-1600.jpg" alt="Seating area with leather sofa, coffee table and a large plant by the window" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="3" aria-label="Enlarge photo 4 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-slaapkamer-800.webp 800w, ../assets/fotos/vakantiehuisje-slaapkamer-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-slaapkamer-1600.jpg" alt="Bedroom with double bed and bedside table" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="4" aria-label="Enlarge photo 5 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-overkapping-800.webp 800w, ../assets/fotos/vakantiehuisje-overkapping-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-overkapping-1600.jpg" alt="Covered wooden patio in the garden with two lounge chairs and a table" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="5" aria-label="Enlarge photo 6 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-bank-800.webp 800w, ../assets/fotos/vakantiehuisje-bank-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-bank-1600.jpg" alt="Leather sofa with cushions and a coffee table with fresh flowers" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture><span class="meer" aria-hidden="true">+7</span></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="6" aria-label="Enlarge photo 7 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-slaapkamer-tv-800.webp 800w, ../assets/fotos/vakantiehuisje-slaapkamer-tv-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-slaapkamer-tv-1600.jpg" alt="Bedroom with double bed and a television on the wall" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="7" aria-label="Enlarge photo 8 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-badkamer-800.webp 800w, ../assets/fotos/vakantiehuisje-badkamer-1600.webp 934w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-badkamer-1600.jpg" alt="Bathroom with walk in shower and vanity unit" width="934" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="8" aria-label="Enlarge photo 9 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-douche-800.webp 800w, ../assets/fotos/vakantiehuisje-douche-1600.webp 934w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-douche-1600.jpg" alt="Walk in shower with rain shower head" width="934" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="9" aria-label="Enlarge photo 10 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-wc-800.webp 800w, ../assets/fotos/vakantiehuisje-wc-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-wc-1600.jpg" alt="Toilet with washbasin and a cheerful poster" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="10" aria-label="Enlarge photo 11 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-hal-800.webp 800w, ../assets/fotos/vakantiehuisje-hal-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-hal-1600.jpg" alt="View from the living room into the bathroom and bedroom" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="11" aria-label="Enlarge photo 12 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-poort-800.webp 800w, ../assets/fotos/vakantiehuisje-poort-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-poort-1600.jpg" alt="Side path with gate to the holiday cottage" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="12" aria-label="Enlarge photo 13 of 13"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/vakantiehuisje-oprit-800.webp 800w, ../assets/fotos/vakantiehuisje-oprit-1600.webp 1600w" sizes="120px"><img src="../assets/fotos/vakantiehuisje-oprit-1600.jpg" alt="Driveway with private parking for the holiday cottage" width="1600" height="1557" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+        </ul>
+        <div class="verblijf-inhoud">
+          <div class="verblijf-kop"><h3>Holiday cottage Juultje</h3><span class="label">The more spacious stay</span></div>
+          <ul class="kenmerken"><li>2 guests</li><li>1 bedroom</li><li>about 35 m²</li><li>Private parking on the driveway</li></ul>
+          <p>For anyone who wants to enjoy Zeeland in peace and quiet, with the coast, nature and charming villages close by. The cottage is on the other side of our home and offers a little more space.</p>
+          <a href="#boeken" class="knop">Price and availability</a>
+        </div>
+      </article>
+      <article class="verblijf">
+        <button type="button" class="galerij-knop" data-galerij="appartement" data-index="0" aria-label="View all 9 photos of the apartment"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-slaapkamer-800.webp 800w, ../assets/fotos/appartement-slaapkamer-1600.webp 1500w" sizes="(max-width: 1000px) calc(100vw - 48px), 560px"><img src="../assets/fotos/appartement-slaapkamer-1600.jpg" alt="Bedroom of the apartment with double bed under a sloping ceiling" width="1500" height="2000" sizes="(max-width: 1000px) calc(100vw - 48px), 560px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture><span class="aantal" aria-hidden="true">9 photos</span></button>
+        <ul class="duimen">
+          <li><button type="button" data-galerij="appartement" data-index="1" aria-label="Enlarge photo 2 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-zithoek-800.webp 800w, ../assets/fotos/appartement-zithoek-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/appartement-zithoek-1600.jpg" alt="Seating area with grey sofa, bed and skylight" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 75%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="2" aria-label="Enlarge photo 3 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-eettafel-800.webp 800w, ../assets/fotos/appartement-eettafel-1600.webp 1337w" sizes="120px"><img src="../assets/fotos/appartement-eettafel-1600.jpg" alt="Dining table for two with a bunch of flowers and a floor lamp" width="1337" height="1782" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="3" aria-label="Enlarge photo 4 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-keuken-800.webp 800w, ../assets/fotos/appartement-keuken-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/appartement-keuken-1600.jpg" alt="Kitchen with fridge, oven and hob" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="4" aria-label="Enlarge photo 5 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-badkamer-800.webp 800w, ../assets/fotos/appartement-badkamer-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/appartement-badkamer-1600.jpg" alt="Bathroom with washbasin and a towel rack" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 55%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="5" aria-label="Enlarge photo 6 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-terras-800.webp 800w, ../assets/fotos/appartement-terras-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/appartement-terras-1600.jpg" alt="Private patio with table and two chairs in the sun" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture><span class="meer" aria-hidden="true">+3</span></button></li>
+          <li hidden><button type="button" data-galerij="appartement" data-index="6" aria-label="Enlarge photo 7 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-slaapkamer-2-800.webp 800w, ../assets/fotos/appartement-slaapkamer-2-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/appartement-slaapkamer-2-1600.jpg" alt="Double bed with bedspread and a side table with a plant" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="appartement" data-index="7" aria-label="Enlarge photo 8 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-douche-800.webp 800w, ../assets/fotos/appartement-douche-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/appartement-douche-1600.jpg" alt="Shower with shower curtain and grab rail" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="appartement" data-index="8" aria-label="Enlarge photo 9 of 9"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/appartement-hal-800.webp 800w, ../assets/fotos/appartement-hal-1600.webp 1500w" sizes="120px"><img src="../assets/fotos/appartement-hal-1600.jpg" alt="Hallway with coat rack and a mirror on the door" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+        </ul>
+        <div class="verblijf-inhoud">
+          <div class="verblijf-kop"><h3>Apartment Juultje</h3><span class="label">Compact and comfortable</span></div>
+          <ul class="kenmerken"><li>2 guests</li><li>1 bedroom</li><li>about 26 m²</li><li>Air conditioning</li></ul>
+          <p>A lovely base for a relaxing stay. From Wissenkerke you can easily explore the area on foot or by bike and make the most of Zeeland's nature.</p>
+          <a href="#boeken" class="knop">Price and availability</a>
+        </div>
+      </article>
+    </div>
+    <div class="melding">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+      <p><strong>Accessibility.</strong> Both stays have a low entrance step but are not fully wheelchair accessible: some doorways and the space around the shower are limited. Do you have specific needs? Please get in touch with us beforehand.</p>
+    </div>
+  </div>
+</section>
+
+<section id="omgeving" class="band">
+  <div class="wrap">
+    <div class="intro">
+      <span class="label">Area</span>
+      <h2>Discover Noord-Beveland</h2>
+      <p>Ideal for anyone who loves peace and quiet, nature, walking and cycling. We are happy to share our personal tips.</p>
+    </div>
+    <div class="tegels">
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="0" aria-label="Enlarge photo 1 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-polder-800.webp 800w, ../assets/fotos/omgeving-polder-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-polder-1600.jpg" alt="White dog in the grass of the polder at sunset" width="1600" height="747" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button><strong>Walking</strong><span>Through the polders, along dykes, nature reserves and the water. Lovely with your dog too.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="1" aria-label="Enlarge photo 2 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-fietsen-800.webp 800w, ../assets/fotos/omgeving-fietsen-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-fietsen-1600.jpg" alt="Two electric bikes on the grass in the garden" width="1600" height="1200" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Cycling</strong><span>Past polders, Zeeland villages and the North Sea coast. Ask about our electric bikes.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="2" aria-label="Enlarge photo 3 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-steiger-800.webp 800w, ../assets/fotos/omgeving-steiger-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-steiger-1600.jpg" alt="Wooden jetty on still water at sunrise with a sailing boat in the distance" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Oosterschelde and Veerse Meer</strong><span>Oosterschelde National Park and the Veerse Meer lake are close by.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="3" aria-label="Enlarge photo 4 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-strand-800.webp 800w, ../assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-strand-1600.jpg" alt="Empty sandy beach with sea and wind turbines on the horizon" width="1600" height="2133" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 52%"></picture></button><strong>Beaches</strong><span>A short drive away. Please check the local rules for dogs.</span></div>
+      <button type="button" hidden data-galerij="omgeving" data-index="4"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-dijk-800.webp 800w, ../assets/fotos/omgeving-dijk-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-dijk-1600.jpg" alt="Dyke with cycle path along the water and wind turbines in the distance" width="1600" height="2819" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
+      <button type="button" hidden data-galerij="omgeving" data-index="5"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-steiger-zonsopkomst-800.webp 800w, ../assets/fotos/omgeving-steiger-zonsopkomst-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-steiger-zonsopkomst-1600.jpg" alt="Jetty and rocks by the water at sunrise" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
+      <button type="button" hidden data-galerij="omgeving" data-index="6"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-oever-800.webp 800w, ../assets/fotos/omgeving-oever-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-oever-1600.jpg" alt="Shore with stones and a row of buoys in the still water" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" aria-labelledby="reviews-titel">
+  <div class="wrap">
+    <div class="intro"><h2 id="reviews-titel">What guests say</h2></div>
+    <div class="scores">
+      <div class="score"><strong>9.1</strong><span>out of 10 on Booking.com, 54 reviews</span></div>
+      <div class="score"><strong>4.92</strong><span>out of 5 on Airbnb, 24 reviews</span></div>
+    </div>
+    <div class="reviews">
+      <figure><blockquote>“We had a wonderful stay! The hosts were exceptionally friendly and always helpful, so we felt welcome from the very first minute.”</blockquote><figcaption>Simon from Switzerland, holiday cottage via Booking.com (translated from German)</figcaption></figure>
+      <figure><blockquote>“It is in a very quiet neighbourhood. It was very clean and tidy. Communication was very smooth.”</blockquote><figcaption>Liliane, apartment via Airbnb (translated from Dutch)</figcaption></figure>
+      <figure><blockquote>“This is one of the best holiday homes I have ever stayed in. I will definitely go back.”</blockquote><figcaption>Saida from the Netherlands, holiday cottage via Booking.com (translated from Dutch)</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="praktisch" class="band">
+  <div class="wrap">
+    <div class="intro"><span class="label">Practical</span><h2>Good to know</h2></div>
+    <div class="blokken">
+      <div class="blok"><h3>Arrival and departure</h3><ul><li>Arrival from 3 pm</li><li>Departure by 10 am</li><li>Check in yourself using a key safe</li><li>Early arrival or late departure only by arrangement</li></ul></div>
+      <div class="blok"><h3>House rules</h3><ul><li>No smoking indoors, no parties</li><li>Quiet hours from 9 pm to 7 am</li><li>Extra guests only by arrangement</li><li>On departure: swept clean, dishes done and fridge empty</li></ul></div>
+      <div class="blok"><h3>Cancellation</h3><ul><li>Free up to 30 days before arrival</li><li>30 to 14 days before arrival: 50% of the booking price</li><li>Less than 14 days or no show: 100%</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="boeken" class="band alt">
+  <div class="wrap">
+    <div class="intro">
+      <span class="label">Booking</span>
+      <h2>Book directly with us</h2>
+      <p>Always the latest prices and availability. You receive a confirmation straight after booking, and before your arrival we send you all the practical information.</p>
+    </div>
+    <div class="boeking">
+      <div id="apartmentIframeAll">
+        <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+        <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/en/booking-tool/iframe/1927951", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
+      </div>
+    </div>
+    <p class="betalen">You can pay by iDEAL, credit card, Bancontact or bank transfer on invoice.</p>
+  </div>
+</section>
+
+<section id="over-ons" class="band over">
+  <div class="wrap">
+    <div class="foto" role="img" aria-label="Marc and Angelia">Photo: Marc and Angelia</div>
+    <div class="over-tekst">
+      <span class="label">About us</span>
+      <h2>Welcome from Marc and Angelia</h2>
+      <p>We love welcoming our guests to the quiet village of Wissenkerke. We live at the same address ourselves, so a friendly face is never far away.</p>
+      <p>Hospitality and personal contact matter to us. We are happy to help with tips about the area, fun activities and beautiful places to visit.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="band alt contact">
+  <div class="wrap">
+    <div class="contact-info">
+      <span class="label">Contact</span>
+      <h2>Questions? Feel free to get in touch</h2>
+      <ul>
+        <li>Call or WhatsApp Marc: <a href="tel:+31613664239">+31 6 1366 4239</a></li>
+        <li>Call or WhatsApp Angelia: <a href="tel:+31681199425">+31 6 8119 9425</a></li>
+        <li>Email: [to follow]</li>
+        <li>Instagram: Juultje Zeeland</li>
+        <li>Julianastraat 38, 4491 GB Wissenkerke</li>
+      </ul>
+    </div>
+    <form action="#" method="post">
+      <label>Name<input type="text" name="naam" autocomplete="name" required></label>
+      <label>Email address<input type="email" name="email" autocomplete="email" required></label>
+      <label>Message<textarea name="bericht" rows="5" required></textarea></label>
+      <button type="submit" class="knop">Send message</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="voet">
+      <div><span class="naam">Juultje Zeeland</span><span>Holiday cottage and apartment in Wissenkerke</span></div>
+      <div><strong>Information</strong><a href="#">House rules</a><a href="#">Terms and conditions</a><a href="#">Cancellation policy</a><a href="#">Privacy policy</a></div>
+      <div><strong>Language</strong><a href="../" lang="nl" hreflang="nl">Nederlands</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="./" lang="en" hreflang="en">English</a></div>
+    </div>
+    <div class="copy">© <span id="jaar">2026</span> Juultje Zeeland</div>
+  </div>
+</footer>
+
+<dialog class="lightbox" aria-label="Photo gallery" data-teller="Photo {n} of {t}">
+  <div class="lb-balk">
+    <span class="lb-teller" aria-live="polite"></span>
+    <button type="button" class="lb-knop lb-sluiten">Close</button>
+  </div>
+  <div class="lb-beeld">
+    <picture><source type="image/webp" sizes="100vw"><img alt=""></picture>
+  </div>
+  <p class="lb-onderschrift"></p>
+  <button type="button" class="lb-knop lb-vorige" aria-label="Previous photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="lb-knop lb-volgende" aria-label="Next photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</dialog>
+
+<script>
+  const knop = document.querySelector('.menuknop');
+  const menu = document.getElementById('menu');
+  knop.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    knop.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    knop.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('jaar').textContent = new Date().getFullYear();
+
+  // fotogalerij
+  const lb = document.querySelector('.lightbox');
+  const lbBron = lb.querySelector('source');
+  const lbImg = lb.querySelector('img');
+  const lbTeller = lb.querySelector('.lb-teller');
+  const lbTekst = lb.querySelector('.lb-onderschrift');
+  let reeks = [], pos = 0;
+  function toon(i) {
+    pos = (i + reeks.length) % reeks.length;
+    const knop = reeks[pos];
+    const img = knop.querySelector('img');
+    lbBron.srcset = knop.querySelector('source').srcset;
+    lbImg.src = img.getAttribute('src');
+    lbImg.alt = img.alt;
+    lbTekst.textContent = img.alt;
+    lbTeller.textContent = lb.dataset.teller.replace('{n}', pos + 1).replace('{t}', reeks.length);
+  }
+  document.querySelectorAll('[data-galerij]').forEach(knop => knop.addEventListener('click', () => {
+    reeks = [...document.querySelectorAll('[data-galerij="' + knop.dataset.galerij + '"]')];
+    toon(Number(knop.dataset.index));
+    lb.showModal();
+  }));
+  lb.querySelector('.lb-vorige').addEventListener('click', () => toon(pos - 1));
+  lb.querySelector('.lb-volgende').addEventListener('click', () => toon(pos + 1));
+  lb.querySelector('.lb-sluiten').addEventListener('click', () => lb.close());
+  let geveegd = false;
+  lb.addEventListener('click', e => {
+    if (geveegd) { geveegd = false; return; }
+    if (e.target === lb || e.target.classList.contains('lb-beeld')) lb.close();
+  });
+  lb.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') toon(pos - 1);
+    if (e.key === 'ArrowRight') toon(pos + 1);
+  });
+  let startX = null;
+  lb.addEventListener('pointerdown', e => { startX = e.clientX; });
+  lb.addEventListener('pointerup', e => {
+    geveegd = startX !== null && Math.abs(e.clientX - startX) > 50;
+    if (geveegd) toon(pos + (e.clientX < startX ? 1 : -1));
+    startX = null;
+  });
+</script>
+</body>
+</html>
