@@ -40,6 +40,8 @@ p{margin:0}
 .knop.rand{background:transparent;color:var(--taupe);border:1.5px solid var(--taupe)}
 .knop.rand:hover{background:var(--taupe);color:#fff}
 .foto{background:var(--beige);color:#5E5547;font-size:15px;display:flex;align-items:flex-end;padding:18px;border-radius:20px}
+.beeld{display:block;overflow:hidden;background:var(--beige)}
+.beeld img{width:100%;height:100%;object-fit:cover}
 
 /* header */
 header{background:var(--wit);border-bottom:1px solid var(--lijn);position:sticky;top:0;z-index:10}
@@ -78,6 +80,15 @@ nav a{text-decoration:none}
 .verblijven{display:flex;flex-wrap:wrap;gap:32px}
 .verblijf{flex:1 1 440px;background:var(--wit);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
 .verblijf .foto{min-height:320px;border-radius:0}
+.galerij-knop{position:relative;display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.galerij-knop .beeld{height:320px}
+.aantal{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.92);color:var(--taupe);font-size:14px;font-weight:700;padding:6px 14px;border-radius:999px}
+.duimen{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;list-style:none;margin:0;padding:6px 6px 0}
+.duimen button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:8px;overflow:hidden}
+.duimen .beeld{height:72px}
+.duimen button:hover img{opacity:.85}
+.duimen button{position:relative}
+.meer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(31,27,22,.55);color:#fff;font-weight:700;font-size:17px}
 .verblijf-inhoud{padding:30px;display:flex;flex-direction:column;gap:16px;flex-grow:1}
 .verblijf-kop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
 .kenmerken{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;list-style:none;margin:0;padding:0}
@@ -92,6 +103,9 @@ nav a{text-decoration:none}
 .tegels{display:flex;flex-wrap:wrap;gap:24px}
 .tegel{flex:1 1 250px;display:flex;flex-direction:column;gap:12px}
 .tegel .foto{min-height:210px;border-radius:16px;font-size:14px}
+.tegel .beeld{height:210px;border-radius:16px}
+.tegel-knop{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:16px}
+.tegel-knop:hover img{opacity:.9}
 .tegel strong{font-size:19px}
 .tegel span{color:var(--tekst3);font-size:15px}
 
@@ -141,10 +155,30 @@ footer a:hover{color:#fff}
 .voet .naam{font-family:var(--serif);font-size:30px;color:#fff}
 .copy{border-top:1px solid #5E5547;margin-top:36px;padding-top:18px;font-size:14px;color:#CFC5B8}
 
+/* fotogalerij */
+.lightbox{border:0;padding:0;margin:0;width:100vw;height:100dvh;max-width:none;max-height:none;background:rgba(31,27,22,.96);color:#EDE7DE}
+.lightbox::backdrop{background:rgba(31,27,22,.96)}
+.lightbox[open]{display:flex;flex-direction:column}
+.lb-balk{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;font-size:15px}
+.lb-beeld{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 72px;touch-action:pan-y}
+.lb-beeld picture{display:contents}
+.lb-beeld img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+.lb-onderschrift{text-align:center;padding:14px 20px 22px;font-size:15px;min-height:56px}
+.lb-knop{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:999px;min-width:48px;min-height:48px;font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0 16px}
+.lb-knop:hover{background:rgba(255,255,255,.24)}
+.lb-vorige,.lb-volgende{position:absolute;top:50%;transform:translateY(-50%);padding:0}
+.lb-vorige{left:14px}
+.lb-volgende{right:14px}
+
 @media (max-width:600px){
   .band{padding:64px 0}
   .hero .foto{min-height:300px}
   .verblijf{flex-basis:100%}
+  .galerij-knop .beeld{height:260px}
+  .duimen .beeld{height:56px}
+  .lb-beeld{padding:0 8px}
+  .lb-vorige,.lb-volgende{top:auto;bottom:16px;transform:none}
+  .lb-onderschrift{padding:16px 76px 20px;min-height:80px;display:flex;align-items:center;justify-content:center}
 }
 </style>
 </head>
@@ -218,7 +252,21 @@ footer a:hover{color:#fff}
     </div>
     <div class="verblijven">
       <article class="verblijf">
-        <div class="foto" role="img" aria-label="Woonkamer vakantiehuisje">Foto: woonkamer vakantiehuisje</div>
+        <button type="button" class="galerij-knop" data-galerij="huisje" data-index="0" aria-label="Bekijk alle 13 foto's van het vakantiehuisje"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-woonkamer-800.webp 800w, assets/fotos/vakantiehuisje-woonkamer-1600.webp 1600w" sizes="(max-width: 1000px) calc(100vw - 48px), 560px"><img src="assets/fotos/vakantiehuisje-woonkamer-1600.jpg" alt="Woonkamer van het vakantiehuisje met leren bank, eettafel en open keuken" width="1600" height="1200" sizes="(max-width: 1000px) calc(100vw - 48px), 560px" loading="lazy" decoding="async"></picture><span class="aantal" aria-hidden="true">13 foto's</span></button>
+        <ul class="duimen">
+          <li><button type="button" data-galerij="huisje" data-index="1" aria-label="Vergroot foto 2 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-keuken-800.webp 800w, assets/fotos/vakantiehuisje-keuken-1600.webp 1126w" sizes="120px"><img src="assets/fotos/vakantiehuisje-keuken-1600.jpg" alt="Keuken van het vakantiehuisje met spoelbak, koffiezetapparaat en planken met glazen" width="1126" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="2" aria-label="Vergroot foto 3 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-zithoek-800.webp 800w, assets/fotos/vakantiehuisje-zithoek-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-zithoek-1600.jpg" alt="Zithoek met leren bank, salontafel en een grote plant bij het raam" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="3" aria-label="Vergroot foto 4 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-slaapkamer-800.webp 800w, assets/fotos/vakantiehuisje-slaapkamer-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-slaapkamer-1600.jpg" alt="Slaapkamer met tweepersoonsbed en nachtkastje" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="4" aria-label="Vergroot foto 5 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-overkapping-800.webp 800w, assets/fotos/vakantiehuisje-overkapping-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-overkapping-1600.jpg" alt="Houten overkapping in de tuin met twee loungestoelen en een tafel" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="huisje" data-index="5" aria-label="Vergroot foto 6 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-bank-800.webp 800w, assets/fotos/vakantiehuisje-bank-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-bank-1600.jpg" alt="Leren bank met kussens en een salontafel met verse bloemen" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture><span class="meer" aria-hidden="true">+7</span></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="6" aria-label="Vergroot foto 7 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-slaapkamer-tv-800.webp 800w, assets/fotos/vakantiehuisje-slaapkamer-tv-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-slaapkamer-tv-1600.jpg" alt="Slaapkamer met tweepersoonsbed en een televisie aan de muur" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="7" aria-label="Vergroot foto 8 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-badkamer-800.webp 800w, assets/fotos/vakantiehuisje-badkamer-1600.webp 934w" sizes="120px"><img src="assets/fotos/vakantiehuisje-badkamer-1600.jpg" alt="Badkamer met inloopdouche en wastafelmeubel" width="934" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="8" aria-label="Vergroot foto 9 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-douche-800.webp 800w, assets/fotos/vakantiehuisje-douche-1600.webp 934w" sizes="120px"><img src="assets/fotos/vakantiehuisje-douche-1600.jpg" alt="Inloopdouche met regendouche" width="934" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="9" aria-label="Vergroot foto 10 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-wc-800.webp 800w, assets/fotos/vakantiehuisje-wc-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-wc-1600.jpg" alt="Toilet met wastafel en een vrolijke poster" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="10" aria-label="Vergroot foto 11 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-hal-800.webp 800w, assets/fotos/vakantiehuisje-hal-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-hal-1600.jpg" alt="Doorkijk vanuit de woonkamer naar de badkamer en de slaapkamer" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="11" aria-label="Vergroot foto 12 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-poort-800.webp 800w, assets/fotos/vakantiehuisje-poort-1600.webp 1500w" sizes="120px"><img src="assets/fotos/vakantiehuisje-poort-1600.jpg" alt="Zijpad met poort naar het vakantiehuisje" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="huisje" data-index="12" aria-label="Vergroot foto 13 van 13"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/vakantiehuisje-oprit-800.webp 800w, assets/fotos/vakantiehuisje-oprit-1600.webp 1600w" sizes="120px"><img src="assets/fotos/vakantiehuisje-oprit-1600.jpg" alt="Oprit met eigen parkeerplaats voor het vakantiehuisje" width="1600" height="1557" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+        </ul>
         <div class="verblijf-inhoud">
           <div class="verblijf-kop"><h3>Vakantiehuisje Juultje</h3><span class="label">Het ruimste verblijf</span></div>
           <ul class="kenmerken"><li>2 personen</li><li>1 slaapkamer</li><li>circa 35 m²</li><li>Eigen parkeerplaats op de oprit</li></ul>
@@ -227,7 +275,17 @@ footer a:hover{color:#fff}
         </div>
       </article>
       <article class="verblijf">
-        <div class="foto" role="img" aria-label="Slaapkamer appartement">Foto: slaapkamer appartement</div>
+        <button type="button" class="galerij-knop" data-galerij="appartement" data-index="0" aria-label="Bekijk alle 9 foto's van het appartement"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-slaapkamer-800.webp 800w, assets/fotos/appartement-slaapkamer-1600.webp 1500w" sizes="(max-width: 1000px) calc(100vw - 48px), 560px"><img src="assets/fotos/appartement-slaapkamer-1600.jpg" alt="Slaapkamer van het appartement met tweepersoonsbed onder een schuin dak" width="1500" height="2000" sizes="(max-width: 1000px) calc(100vw - 48px), 560px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture><span class="aantal" aria-hidden="true">9 foto's</span></button>
+        <ul class="duimen">
+          <li><button type="button" data-galerij="appartement" data-index="1" aria-label="Vergroot foto 2 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-zithoek-800.webp 800w, assets/fotos/appartement-zithoek-1600.webp 1500w" sizes="120px"><img src="assets/fotos/appartement-zithoek-1600.jpg" alt="Zithoek met grijze bank, bed en dakraam" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 75%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="2" aria-label="Vergroot foto 3 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-eettafel-800.webp 800w, assets/fotos/appartement-eettafel-1600.webp 1337w" sizes="120px"><img src="assets/fotos/appartement-eettafel-1600.jpg" alt="Eettafel voor twee met een bos bloemen en een staande lamp" width="1337" height="1782" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 70%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="3" aria-label="Vergroot foto 4 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-keuken-800.webp 800w, assets/fotos/appartement-keuken-1600.webp 1500w" sizes="120px"><img src="assets/fotos/appartement-keuken-1600.jpg" alt="Keuken met koelkast, oven en kookplaat" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="4" aria-label="Vergroot foto 5 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-badkamer-800.webp 800w, assets/fotos/appartement-badkamer-1600.webp 1500w" sizes="120px"><img src="assets/fotos/appartement-badkamer-1600.jpg" alt="Badkamer met wastafel en een rek met handdoeken" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 55%"></picture></button></li>
+          <li><button type="button" data-galerij="appartement" data-index="5" aria-label="Vergroot foto 6 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-terras-800.webp 800w, assets/fotos/appartement-terras-1600.webp 1500w" sizes="120px"><img src="assets/fotos/appartement-terras-1600.jpg" alt="Eigen terras met tafel en twee stoelen in de zon" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture><span class="meer" aria-hidden="true">+3</span></button></li>
+          <li hidden><button type="button" data-galerij="appartement" data-index="6" aria-label="Vergroot foto 7 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-slaapkamer-2-800.webp 800w, assets/fotos/appartement-slaapkamer-2-1600.webp 1500w" sizes="120px"><img src="assets/fotos/appartement-slaapkamer-2-1600.jpg" alt="Tweepersoonsbed met sprei en een bijzettafel met plantje" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="appartement" data-index="7" aria-label="Vergroot foto 8 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-douche-800.webp 800w, assets/fotos/appartement-douche-1600.webp 1500w" sizes="120px"><img src="assets/fotos/appartement-douche-1600.jpg" alt="Douche met douchegordijn en handgreep" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+          <li hidden><button type="button" data-galerij="appartement" data-index="8" aria-label="Vergroot foto 9 van 9"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/appartement-hal-800.webp 800w, assets/fotos/appartement-hal-1600.webp 1500w" sizes="120px"><img src="assets/fotos/appartement-hal-1600.jpg" alt="Hal met kapstok en een spiegel aan de deur" width="1500" height="2000" sizes="120px" loading="lazy" decoding="async"></picture></button></li>
+        </ul>
         <div class="verblijf-inhoud">
           <div class="verblijf-kop"><h3>Appartement Juultje</h3><span class="label">Compact en comfortabel</span></div>
           <ul class="kenmerken"><li>2 personen</li><li>1 slaapkamer</li><li>circa 26 m²</li><li>Airconditioning</li></ul>
@@ -251,10 +309,13 @@ footer a:hover{color:#fff}
       <p>Ideaal voor wie houdt van rust, natuur, wandelen en fietsen. Wij geven je graag onze persoonlijke tips.</p>
     </div>
     <div class="tegels">
-      <div class="tegel"><div class="foto">Foto: dijk of polder</div><strong>Wandelen</strong><span>Door de polders, langs dijken, natuurgebieden en het water. Ook heerlijk met de hond.</span></div>
-      <div class="tegel"><div class="foto">Foto: fietspad</div><strong>Fietsen</strong><span>Langs polders, Zeeuwse dorpen en de Noordzeekust. Vraag naar onze elektrische fietsen.</span></div>
-      <div class="tegel"><div class="foto">Foto: Oosterschelde</div><strong>Oosterschelde en Veerse Meer</strong><span>Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij.</span></div>
-      <div class="tegel"><div class="foto">Foto: strand</div><strong>Stranden</strong><span>Op korte rijafstand. Let op de plaatselijke regels voor honden.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="0" aria-label="Vergroot foto 1 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-polder-800.webp 800w, assets/fotos/omgeving-polder-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-polder-1600.jpg" alt="Witte hond in het gras van de polder bij zonsondergang" width="1600" height="747" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button><strong>Wandelen</strong><span>Door de polders, langs dijken, natuurgebieden en het water. Ook heerlijk met de hond.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="1" aria-label="Vergroot foto 2 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-fietsen-800.webp 800w, assets/fotos/omgeving-fietsen-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-fietsen-1600.jpg" alt="Twee elektrische fietsen op het gras in de tuin" width="1600" height="1200" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Fietsen</strong><span>Langs polders, Zeeuwse dorpen en de Noordzeekust. Vraag naar onze elektrische fietsen.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="2" aria-label="Vergroot foto 3 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-steiger-800.webp 800w, assets/fotos/omgeving-steiger-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-steiger-1600.jpg" alt="Houten steiger in stil water bij zonsopkomst met een zeilboot in de verte" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Oosterschelde en Veerse Meer</strong><span>Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="3" aria-label="Vergroot foto 4 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-strand-800.webp 800w, assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-strand-1600.jpg" alt="Leeg zandstrand met zee en windmolens aan de horizon" width="1600" height="2133" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 52%"></picture></button><strong>Stranden</strong><span>Op korte rijafstand. Let op de plaatselijke regels voor honden.</span></div>
+      <button type="button" hidden data-galerij="omgeving" data-index="4"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-dijk-800.webp 800w, assets/fotos/omgeving-dijk-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-dijk-1600.jpg" alt="Dijk met fietspad langs het water en windmolens in de verte" width="1600" height="2819" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
+      <button type="button" hidden data-galerij="omgeving" data-index="5"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-steiger-zonsopkomst-800.webp 800w, assets/fotos/omgeving-steiger-zonsopkomst-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-steiger-zonsopkomst-1600.jpg" alt="Steiger en rotsen aan het water bij zonsopkomst" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
+      <button type="button" hidden data-galerij="omgeving" data-index="6"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-oever-800.webp 800w, assets/fotos/omgeving-oever-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-oever-1600.jpg" alt="Oever met stenen en een rij boeien in het stille water" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
     </div>
   </div>
 </section>
@@ -349,6 +410,19 @@ footer a:hover{color:#fff}
   </div>
 </footer>
 
+<dialog class="lightbox" aria-label="Fotogalerij">
+  <div class="lb-balk">
+    <span class="lb-teller" aria-live="polite"></span>
+    <button type="button" class="lb-knop lb-sluiten">Sluiten</button>
+  </div>
+  <div class="lb-beeld">
+    <picture><source type="image/webp" sizes="100vw"><img alt=""></picture>
+  </div>
+  <p class="lb-onderschrift"></p>
+  <button type="button" class="lb-knop lb-vorige" aria-label="Vorige foto"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="lb-knop lb-volgende" aria-label="Volgende foto"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</dialog>
+
 <script>
   const knop = document.querySelector('.menuknop');
   const menu = document.getElementById('menu');
@@ -361,6 +435,48 @@ footer a:hover{color:#fff}
     knop.setAttribute('aria-expanded', 'false');
   }));
   document.getElementById('jaar').textContent = new Date().getFullYear();
+
+  // fotogalerij
+  const lb = document.querySelector('.lightbox');
+  const lbBron = lb.querySelector('source');
+  const lbImg = lb.querySelector('img');
+  const lbTeller = lb.querySelector('.lb-teller');
+  const lbTekst = lb.querySelector('.lb-onderschrift');
+  let reeks = [], pos = 0;
+  function toon(i) {
+    pos = (i + reeks.length) % reeks.length;
+    const knop = reeks[pos];
+    const img = knop.querySelector('img');
+    lbBron.srcset = knop.querySelector('source').srcset;
+    lbImg.src = img.getAttribute('src');
+    lbImg.alt = img.alt;
+    lbTekst.textContent = img.alt;
+    lbTeller.textContent = 'Foto ' + (pos + 1) + ' van ' + reeks.length;
+  }
+  document.querySelectorAll('[data-galerij]').forEach(knop => knop.addEventListener('click', () => {
+    reeks = [...document.querySelectorAll('[data-galerij="' + knop.dataset.galerij + '"]')];
+    toon(Number(knop.dataset.index));
+    lb.showModal();
+  }));
+  lb.querySelector('.lb-vorige').addEventListener('click', () => toon(pos - 1));
+  lb.querySelector('.lb-volgende').addEventListener('click', () => toon(pos + 1));
+  lb.querySelector('.lb-sluiten').addEventListener('click', () => lb.close());
+  let geveegd = false;
+  lb.addEventListener('click', e => {
+    if (geveegd) { geveegd = false; return; }
+    if (e.target === lb || e.target.classList.contains('lb-beeld')) lb.close();
+  });
+  lb.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') toon(pos - 1);
+    if (e.key === 'ArrowRight') toon(pos + 1);
+  });
+  let startX = null;
+  lb.addEventListener('pointerdown', e => { startX = e.clientX; });
+  lb.addEventListener('pointerup', e => {
+    geveegd = startX !== null && Math.abs(e.clientX - startX) > 50;
+    if (geveegd) toon(pos + (e.clientX < startX ? 1 : -1));
+    startX = null;
+  });
 </script>
 </body>
 </html>
