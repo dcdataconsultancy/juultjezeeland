@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Juultje Zeeland | Vakantiehuisje en appartement in Wissenkerke</title>
+<meta name="description" content="Twee sfeervolle verblijven voor twee personen in Wissenkerke op Noord-Beveland. Honden welkom. Boek rechtstreeks bij Marc en Angelia.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%237D6F5D'/><path d='M12 30V20l8-6 8 6v10z' fill='white'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wit:#FFFFFF; --gebroken:#F7F4EF; --zand:#F2EEE7; --beige:#E7DFD3; --lijn:#ECE6DD; --veld:#D6CCBE;
+  --taupe:#3F3830; --tekst2:#5A5148; --tekst3:#6B6157; --olijf:#6B7350; --knop:#7D6F5D; --knop-hover:#675B4B;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'DM Sans',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--sans);color:var(--taupe);background:var(--wit);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:var(--taupe)}
+a:hover{color:#1F1B16}
+:focus-visible{outline:3px solid var(--olijf);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.band{padding:96px 0}
+.band.alt{background:var(--gebroken)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05}
+h1{font-size:clamp(46px,7vw,76px)}
+h2{font-size:clamp(36px,5vw,52px)}
+h3{font-size:34px;line-height:1.1}
+p{margin:0}
+.label{font-size:15px;color:var(--olijf);font-weight:700}
+.intro{display:flex;flex-direction:column;gap:12px;max-width:660px;margin-bottom:40px}
+.intro p{font-size:18px;color:var(--tekst2)}
+.knop{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:999px;background:var(--knop);color:#fff;font-weight:700;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+.knop:hover{background:var(--knop-hover);color:#fff}
+.knop.rand{background:transparent;color:var(--taupe);border:1.5px solid var(--taupe)}
+.knop.rand:hover{background:var(--taupe);color:#fff}
+.foto{background:var(--beige);color:#5E5547;font-size:15px;display:flex;align-items:flex-end;padding:18px;border-radius:20px}
+
+/* header */
+header{background:var(--wit);border-bottom:1px solid var(--lijn);position:sticky;top:0;z-index:10}
+.kop{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo span{font-family:var(--serif);font-size:28px;line-height:1}
+nav ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:26px;font-weight:500}
+nav a{text-decoration:none}
+.talen{display:flex;gap:10px;font-size:14px;color:var(--tekst3)}
+.talen a{color:var(--tekst3);text-decoration:none}
+.menuknop{display:none;background:none;border:1.5px solid var(--taupe);border-radius:999px;min-height:44px;padding:0 18px;font:inherit;font-weight:700;color:var(--taupe);cursor:pointer}
+@media (max-width:900px){
+  .menuknop{display:inline-flex;align-items:center}
+  nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--wit);border-bottom:1px solid var(--lijn)}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:flex-start;gap:4px;padding:16px 24px 24px}
+  nav ul a{display:block;padding:10px 0}
+}
+
+/* hero */
+.hero{background:var(--gebroken);padding:64px 0 80px}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.hero-tekst{flex:1 1 420px;display:flex;flex-direction:column;gap:22px}
+.hero-tekst p{font-size:19px;color:var(--tekst2);max-width:520px}
+.knoppen{display:flex;flex-wrap:wrap;gap:12px}
+.hero .foto{flex:1 1 420px;min-height:480px;border-radius:24px}
+
+/* voordelen */
+.voordelen{display:flex;flex-wrap:wrap;gap:32px;padding:48px 0}
+.voordeel{flex:1 1 230px;display:flex;gap:14px;align-items:flex-start}
+.voordeel svg{flex:none}
+.voordeel strong{display:block}
+.voordeel span{color:var(--tekst3);font-size:15px}
+
+/* verblijven */
+.verblijven{display:flex;flex-wrap:wrap;gap:32px}
+.verblijf{flex:1 1 440px;background:var(--wit);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.verblijf .foto{min-height:320px;border-radius:0}
+.verblijf-inhoud{padding:30px;display:flex;flex-direction:column;gap:16px;flex-grow:1}
+.verblijf-kop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
+.kenmerken{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;list-style:none;margin:0;padding:0}
+.kenmerken li{background:var(--zand);padding:6px 12px;border-radius:999px}
+.verblijf p{color:var(--tekst2)}
+.verblijf .knop{margin-top:auto;align-self:flex-start}
+.melding{display:flex;gap:16px;background:var(--wit);border-radius:16px;padding:22px 26px;margin-top:32px}
+.melding svg{flex:none}
+.melding p{color:var(--tekst2)}
+
+/* omgeving */
+.tegels{display:flex;flex-wrap:wrap;gap:24px}
+.tegel{flex:1 1 250px;display:flex;flex-direction:column;gap:12px}
+.tegel .foto{min-height:210px;border-radius:16px;font-size:14px}
+.tegel strong{font-size:19px}
+.tegel span{color:var(--tekst3);font-size:15px}
+
+/* reviews */
+.scores{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:24px}
+.score{flex:1 1 260px;background:var(--wit);border-radius:16px;padding:20px 24px;display:flex;align-items:baseline;gap:12px}
+.score strong{font-family:var(--serif);font-weight:400;font-size:48px;line-height:1}
+.score span{color:var(--tekst3);font-size:15px}
+.reviews{display:flex;flex-wrap:wrap;gap:24px}
+.reviews figure{flex:1 1 300px;margin:0;background:var(--wit);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.reviews blockquote{margin:0}
+.reviews figcaption{color:var(--tekst3);font-size:14px}
+
+/* praktisch */
+.blokken{display:flex;flex-wrap:wrap;gap:24px}
+.blok{flex:1 1 300px;border:1px solid var(--lijn);border-radius:18px;padding:28px}
+.blok h3{font-family:var(--sans);font-weight:700;font-size:20px;margin-bottom:12px}
+.blok ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;color:var(--tekst2)}
+
+/* boeken */
+.boeking{background:var(--wit);border-radius:20px;padding:16px;min-height:420px}
+.betalen{margin-top:16px;color:var(--tekst3);font-size:15px}
+
+/* over ons */
+.over .wrap{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.over .foto{flex:1 1 380px;min-height:440px;border-radius:24px}
+.over-tekst{flex:1 1 440px;display:flex;flex-direction:column;gap:18px}
+.over-tekst p{font-size:18px;color:var(--tekst2)}
+
+/* contact */
+.contact .wrap{display:flex;flex-wrap:wrap;gap:48px}
+.contact-info{flex:1 1 360px;display:flex;flex-direction:column;gap:16px}
+.contact-info ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+form{flex:1 1 440px;background:var(--wit);border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:16px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500}
+input,textarea{font:inherit;color:var(--taupe);border:1px solid var(--veld);border-radius:10px;padding:12px;min-height:48px;background:var(--wit)}
+textarea{resize:vertical}
+form .knop{align-self:flex-start}
+
+/* footer */
+footer{background:var(--taupe);color:#EDE7DE;padding:56px 0 28px}
+footer a{color:#EDE7DE}
+footer a:hover{color:#fff}
+.voet{display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between}
+.voet div{flex:1 1 200px;display:flex;flex-direction:column;gap:8px}
+.voet strong{color:#fff}
+.voet .naam{font-family:var(--serif);font-size:30px;color:#fff}
+.copy{border-top:1px solid #5E5547;margin-top:36px;padding-top:18px;font-size:14px;color:#CFC5B8}
+
+@media (max-width:600px){
+  .band{padding:64px 0}
+  .hero .foto{min-height:300px}
+  .verblijf{flex-basis:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap kop">
+    <a href="#top" class="logo" aria-label="Juultje Zeeland, naar boven">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#3F3830" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v32"/><path d="M8 5h9l-2 3 2 3H8"/><path d="M14 22l10-8 10 8"/><path d="M16 21v11h16V21"/><path d="M22 32v-6h4v6"/><path d="M3 36h35"/><path d="M3 29h10M3 33h10M5 27v9M10 27v9"/></svg>
+      <span>Juultje Zeeland</span>
+    </a>
+    <button class="menuknop" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="#verblijven">Verblijven</a></li>
+        <li><a href="#omgeving">Omgeving</a></li>
+        <li><a href="#praktisch">Praktisch</a></li>
+        <li><a href="#over-ons">Over ons</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="talen"><strong>NL</strong><a href="#" lang="de">DE</a><a href="#" lang="en">EN</a></li>
+        <li><a href="#boeken" class="knop">Boek direct</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tekst">
+      <span class="label">Wissenkerke, Noord-Beveland</span>
+      <h1>Rust en ruimte in het hart van Zeeland</h1>
+      <p>Twee sfeervolle verblijven voor twee personen, aan weerszijden van ons huis in het dorp Wissenkerke. Polders, dijken en water liggen om de hoek. Je hond is van harte welkom.</p>
+      <div class="knoppen">
+        <a href="#boeken" class="knop">Bekijk beschikbaarheid</a>
+        <a href="#verblijven" class="knop rand">Bekijk de verblijven</a>
+      </div>
+    </div>
+    <div class="foto" role="img" aria-label="Buitenkant van het huis">Foto: buitenkant van het huis met hek en vlaggenmast</div>
+  </div>
+</section>
+
+<section aria-label="Waarom Juultje Zeeland">
+  <div class="wrap voordelen">
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><path d="M20 12a8 8 0 1 1-8-8"/><path d="M20 4l-8 8-3-3"/></svg>
+      <div><strong>Direct bij ons boeken</strong><span>Rechtstreeks contact, zonder tussenpartij</span></div>
+    </div>
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="9" r="2"/><circle cx="10" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="19" cy="9" r="2"/><path d="M12.5 11c-3 0-5.5 4-5.5 6.5 0 2 2 2.5 5.5 2.5s5.5-.5 5.5-2.5c0-2.5-2.5-6.5-5.5-6.5z"/></svg>
+      <div><strong>Honden welkom</strong><span>€ 15 per nacht</span></div>
+    </div>
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
+      <div><strong>Wij wonen naast de deur</strong><span>Voor tips en een persoonlijk welkom</span></div>
+    </div>
+    <div class="voordeel">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8"/><path d="M9 6h3"/></svg>
+      <div><strong>Elektrische fiets huren</strong><span>Beschikbaarheid en tarief op aanvraag</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="verblijven" class="band alt">
+  <div class="wrap">
+    <div class="intro">
+      <span class="label">Verblijven</span>
+      <h2>Twee verblijven, één adres</h2>
+      <p>Allebei voor twee personen met één slaapkamer, aan verschillende kanten van ons huis. Beddengoed, handdoeken, wifi en airconditioning zijn overal inbegrepen.</p>
+    </div>
+    <div class="verblijven">
+      <article class="verblijf">
+        <div class="foto" role="img" aria-label="Woonkamer vakantiehuisje">Foto: woonkamer vakantiehuisje</div>
+        <div class="verblijf-inhoud">
+          <div class="verblijf-kop"><h3>Vakantiehuisje Juultje</h3><span class="label">Het ruimste verblijf</span></div>
+          <ul class="kenmerken"><li>2 personen</li><li>1 slaapkamer</li><li>circa 35 m²</li><li>Eigen parkeerplaats op de oprit</li></ul>
+          <p>Voor wie in alle rust wil genieten van Zeeland, met de kust, de natuur en gezellige dorpjes op korte afstand. Het huisje ligt aan de andere kant van onze woning en biedt net wat meer ruimte.</p>
+          <a href="#boeken" class="knop">Prijs en beschikbaarheid</a>
+        </div>
+      </article>
+      <article class="verblijf">
+        <div class="foto" role="img" aria-label="Slaapkamer appartement">Foto: slaapkamer appartement</div>
+        <div class="verblijf-inhoud">
+          <div class="verblijf-kop"><h3>Appartement Juultje</h3><span class="label">Compact en comfortabel</span></div>
+          <ul class="kenmerken"><li>2 personen</li><li>1 slaapkamer</li><li>circa 26 m²</li><li>Airconditioning</li></ul>
+          <p>Een fijne uitvalsbasis voor een ontspannen verblijf. Vanuit Wissenkerke ontdek je de omgeving makkelijk te voet of op de fiets, en geniet je volop van de Zeeuwse natuur.</p>
+          <a href="#boeken" class="knop">Prijs en beschikbaarheid</a>
+        </div>
+      </article>
+    </div>
+    <div class="melding">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+      <p><strong>Toegankelijkheid.</strong> Beide verblijven hebben een lage instap, maar zijn niet volledig rolstoeltoegankelijk: sommige doorgangen en de ruimte bij de douche zijn beperkt. Heb je specifieke wensen? Neem dan vooraf even contact met ons op.</p>
+    </div>
+  </div>
+</section>
+
+<section id="omgeving" class="band">
+  <div class="wrap">
+    <div class="intro">
+      <span class="label">Omgeving</span>
+      <h2>Ontdek Noord-Beveland</h2>
+      <p>Ideaal voor wie houdt van rust, natuur, wandelen en fietsen. Wij geven je graag onze persoonlijke tips.</p>
+    </div>
+    <div class="tegels">
+      <div class="tegel"><div class="foto">Foto: dijk of polder</div><strong>Wandelen</strong><span>Door de polders, langs dijken, natuurgebieden en het water. Ook heerlijk met de hond.</span></div>
+      <div class="tegel"><div class="foto">Foto: fietspad</div><strong>Fietsen</strong><span>Langs polders, Zeeuwse dorpen en de Noordzeekust. Vraag naar onze elektrische fietsen.</span></div>
+      <div class="tegel"><div class="foto">Foto: Oosterschelde</div><strong>Oosterschelde en Veerse Meer</strong><span>Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij.</span></div>
+      <div class="tegel"><div class="foto">Foto: strand</div><strong>Stranden</strong><span>Op korte rijafstand. Let op de plaatselijke regels voor honden.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" aria-labelledby="reviews-titel">
+  <div class="wrap">
+    <div class="intro"><h2 id="reviews-titel">Wat gasten zeggen</h2></div>
+    <div class="scores">
+      <div class="score"><strong>[9,1]</strong><span>Booking.com, [aantal] reviews</span></div>
+      <div class="score"><strong>[4,91]</strong><span>Airbnb, [aantal] recensies</span></div>
+    </div>
+    <div class="reviews">
+      <figure><blockquote>[Review van een gast]</blockquote><figcaption>[Naam], [platform]</figcaption></figure>
+      <figure><blockquote>[Review van een gast]</blockquote><figcaption>[Naam], [platform]</figcaption></figure>
+      <figure><blockquote>[Review van een gast]</blockquote><figcaption>[Naam], [platform]</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="praktisch" class="band">
+  <div class="wrap">
+    <div class="intro"><span class="label">Praktisch</span><h2>Goed om te weten</h2></div>
+    <div class="blokken">
+      <div class="blok"><h3>Aankomst en vertrek</h3><ul><li>Aankomst vanaf 15.00 uur</li><li>Vertrek uiterlijk 10.00 uur</li><li>Zelf inchecken via een sleutelkluisje</li><li>Eerder aankomen of later vertrekken alleen in overleg</li></ul></div>
+      <div class="blok"><h3>Huisregels</h3><ul><li>Niet roken binnen, geen feesten</li><li>Rust tussen 21.00 en 07.00 uur</li><li>Extra gasten alleen na overleg</li><li>Bij vertrek bezemschoon, afwas gedaan en koelkast leeg</li></ul></div>
+      <div class="blok"><h3>Annuleren</h3><ul><li>Tot 30 dagen voor aankomst gratis</li><li>30 tot 14 dagen voor aankomst: 50% van de boekingsprijs</li><li>Minder dan 14 dagen of niet verschenen: 100%</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="boeken" class="band alt">
+  <div class="wrap">
+    <div class="intro">
+      <span class="label">Boeken</span>
+      <h2>Boek rechtstreeks bij ons</h2>
+      <p>Altijd de actuele prijs en beschikbaarheid. Na je reservering ontvang je direct een bevestiging, en voor aankomst sturen we je alle praktische informatie.</p>
+    </div>
+    <div class="boeking">
+      <div id="apartmentIframeAll">
+        <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+        <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/nl/booking-tool/iframe/1927951", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
+      </div>
+    </div>
+    <p class="betalen">[Betaalmethoden nog bevestigen]</p>
+  </div>
+</section>
+
+<section id="over-ons" class="band over">
+  <div class="wrap">
+    <div class="foto" role="img" aria-label="Marc en Angelia">Foto: Marc en Angelia</div>
+    <div class="over-tekst">
+      <span class="label">Over ons</span>
+      <h2>Welkom bij Marc en Angelia</h2>
+      <p>Wij verwelkomen onze gasten graag in het rustige dorp Wissenkerke. We wonen zelf op hetzelfde adres, dus je bent nooit ver van een vriendelijk gezicht.</p>
+      <p>Gastvrijheid en persoonlijk contact vinden we belangrijk. We helpen je graag met tips over de omgeving, leuke activiteiten en mooie plekken om te bezoeken.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="band alt contact">
+  <div class="wrap">
+    <div class="contact-info">
+      <span class="label">Contact</span>
+      <h2>Vragen? Neem gerust contact op</h2>
+      <ul>
+        <li>Bel of app Marc: <a href="tel:+31613664239">06 1366 4239</a></li>
+        <li>Bel of app Angelia: <a href="tel:+31681199425">06 8119 9425</a></li>
+        <li>Mail: [nog aan te leveren]</li>
+        <li>Instagram: Juultje Zeeland</li>
+        <li>Julianastraat 38, 4491 GB Wissenkerke</li>
+      </ul>
+    </div>
+    <form action="#" method="post">
+      <label>Naam<input type="text" name="naam" autocomplete="name" required></label>
+      <label>Mailadres<input type="email" name="email" autocomplete="email" required></label>
+      <label>Bericht<textarea name="bericht" rows="5" required></textarea></label>
+      <button type="submit" class="knop">Verstuur bericht</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="voet">
+      <div><span class="naam">Juultje Zeeland</span><span>Vakantiehuisje en appartement in Wissenkerke</span></div>
+      <div><strong>Informatie</strong><a href="#">Huisregels</a><a href="#">Algemene voorwaarden</a><a href="#">Annuleringsvoorwaarden</a><a href="#">Privacyverklaring</a></div>
+      <div><strong>Taal</strong><a href="#">Nederlands</a><a href="#" lang="de">Deutsch</a><a href="#" lang="en">English</a></div>
+    </div>
+    <div class="copy">© <span id="jaar">2026</span> Juultje Zeeland</div>
+  </div>
+</footer>
+
+<script>
+  const knop = document.querySelector('.menuknop');
+  const menu = document.getElementById('menu');
+  knop.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    knop.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    knop.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('jaar').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
