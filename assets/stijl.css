@@ -119,9 +119,6 @@ nav a{text-decoration:none;white-space:nowrap}
 .boeking{background:var(--wit);border-radius:20px;padding:16px;min-height:420px}
 .betalen{margin-top:16px;color:var(--tekst3);font-size:15px}
 
-/* over ons */
-.over-tekst{max-width:720px;display:flex;flex-direction:column;gap:18px}
-.over-tekst p{font-size:18px;color:var(--tekst2)}
 
 /* contact */
 .contact .wrap{display:flex;flex-wrap:wrap;gap:48px}
