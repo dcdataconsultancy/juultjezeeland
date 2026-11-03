@@ -130,6 +130,7 @@ DE = {
  '06 1366 4239': '+31 6 1366 4239',
  '06 8119 9425': '+31 6 8119 9425',
  'Mail:': 'Email:',
+ 'Het exacte adres ontvang je na het boeken.': 'Die genaue Adresse erhalten Sie nach der Buchung.',
  'Vakantiehuisje en appartement in Wissenkerke': 'Ferienhaus und Ferienwohnung in Wissenkerke',
  'Informatie': 'Informationen',
  'Algemene voorwaarden': 'Allgemeine Geschäftsbedingungen',
@@ -289,6 +290,7 @@ EN = {
  '06 1366 4239': '+31 6 1366 4239',
  '06 8119 9425': '+31 6 8119 9425',
  'Mail:': 'Email:',
+ 'Het exacte adres ontvang je na het boeken.': 'You will receive the exact address after booking.',
  'Vakantiehuisje en appartement in Wissenkerke': 'Holiday cottage and apartment in Wissenkerke',
  'Informatie': 'Information',
  'Algemene voorwaarden': 'Terms and conditions',
@@ -335,7 +337,7 @@ EN_RE = [
 
 # strings die in alle talen gelijk blijven
 GELIJK = {'juultjeverhuur@gmail.com', 'Juultje Zeeland', 'NL', 'DE', 'EN', 'Wissenkerke, Noord-Beveland', '+7', '+3', '9,1', '4,92',
-          'Instagram: Juultje Zeeland', 'Julianastraat 38, 4491 GB Wissenkerke', 'Nederlands', 'Deutsch', 'English', '©', '2026', '">'}
+          'Instagram: Juultje Zeeland', 'Nederlands', 'Deutsch', 'English', '©', '2026', '">'}
 
 def vertaal(tekst, tabel, regels, missers):
     kern = tekst.strip()
