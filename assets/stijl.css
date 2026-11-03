@@ -126,10 +126,10 @@ nav a{text-decoration:none;white-space:nowrap}
 .tekst .afsluiting{margin-top:40px;padding-top:24px;border-top:1px solid var(--lijn)}
 
 /* boeken */
-.verblijfkeuze{display:inline-flex;flex-wrap:wrap;gap:6px;background:var(--wit);border-radius:999px;padding:6px;margin-bottom:16px}
-.verblijfkeuze button{font:inherit;font-weight:700;border:0;border-radius:999px;min-height:44px;padding:0 20px;background:transparent;color:var(--taupe);cursor:pointer}
-.verblijfkeuze button:hover{background:var(--zand)}
-.verblijfkeuze button[aria-pressed="true"]{background:var(--knop);color:#fff}
+.verblijfkeuze{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:16px}
+.verblijfkeuze label{font-weight:700}
+.verblijfkeuze select{font:inherit;font-weight:700;color:var(--taupe);min-height:48px;min-width:260px;padding:0 52px 0 22px;border:1.5px solid var(--beige);border-radius:999px;cursor:pointer;appearance:none;-webkit-appearance:none;background:var(--wit) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%233F3830' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 22px center}
+.verblijfkeuze select:hover{border-color:var(--knop)}
 .boeking{background:var(--wit);border-radius:20px;padding:16px;min-height:420px}
 .betalen{margin-top:16px;color:var(--tekst3);font-size:15px}
 
@@ -171,9 +171,7 @@ footer a:hover{color:#fff}
   .galerij-knop .beeld{height:260px}
   .duimen .beeld{height:56px}
   .lb-beeld{padding:0 8px}
-  .verblijfkeuze{display:grid;grid-template-columns:1fr 1fr;border-radius:22px}
-  .verblijfkeuze button{padding:0 8px}
-  .verblijfkeuze button:first-child{grid-column:1 / -1}
+  .verblijfkeuze select{width:100%;min-width:0}
   .lb-vorige,.lb-volgende{top:auto;bottom:16px;transform:none}
   .lb-onderschrift{padding:16px 76px 20px;min-height:80px;display:flex;align-items:center;justify-content:center}
 }
