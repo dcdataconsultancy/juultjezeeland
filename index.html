@@ -71,7 +71,7 @@ nav a{text-decoration:none;white-space:nowrap}
 .hero-tekst{flex:1 1 420px;display:flex;flex-direction:column;gap:22px}
 .hero-tekst p{font-size:19px;color:var(--tekst2);max-width:520px}
 .knoppen{display:flex;flex-wrap:wrap;gap:12px}
-.hero .foto{flex:1 1 420px;min-height:480px;border-radius:24px}
+.hero-foto{flex:1 1 420px;height:480px;border-radius:24px}
 
 /* voordelen */
 .voordelen{display:flex;flex-wrap:wrap;gap:32px;padding:48px 0}
@@ -171,7 +171,7 @@ footer a:hover{color:#fff}
 
 @media (max-width:600px){
   .band{padding:64px 0}
-  .hero .foto{min-height:300px}
+  .hero-foto{height:300px}
   .verblijf{flex-basis:100%}
   .galerij-knop .beeld{height:260px}
   .duimen .beeld{height:56px}
@@ -210,14 +210,14 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="hero-tekst">
       <span class="label">Wissenkerke, Noord-Beveland</span>
-      <h1>Rust en ruimte in het hart van Zeeland</h1>
-      <p>Twee sfeervolle verblijven voor twee personen, aan weerszijden van ons huis in het dorp Wissenkerke. Polders, dijken en water liggen om de hoek. Je hond is van harte welkom.</p>
+      <h1>Welkom in Zeeland</h1>
+      <p>Twee sfeervolle verblijven voor twee personen in het dorp Wissenkerke. Het strand ligt op een paar minuten afstand: uitwaaien aan zee, wandelen langs het water en daarna heerlijk tot rust komen. Je hond is van harte welkom.</p>
       <div class="knoppen">
         <a href="#boeken" class="knop">Bekijk beschikbaarheid</a>
         <a href="#verblijven" class="knop rand">Bekijk de verblijven</a>
       </div>
     </div>
-    <div class="foto" role="img" aria-label="Buitenkant van het huis">Foto: buitenkant van het huis met hek en vlaggenmast</div>
+    <picture class="beeld hero-foto"><source type="image/webp" srcset="assets/fotos/omgeving-strand-800.webp 800w, assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 1000px) calc(100vw - 48px), 560px"><img src="assets/fotos/omgeving-strand-1600.jpg" alt="Leeg zandstrand met zee en windmolens aan de horizon" width="1600" height="2133" sizes="(max-width: 1000px) calc(100vw - 48px), 560px" loading="eager" fetchpriority="high" decoding="async" style="object-position:50% 50%"></picture>
   </div>
 </section>
 
@@ -233,7 +233,7 @@ footer a:hover{color:#fff}
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
-      <div><strong>Wij wonen naast de deur</strong><span>Voor tips en een persoonlijk welkom</span></div>
+      <div><strong>Wij wonen naast de deur</strong></div>
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8"/><path d="M9 6h3"/></svg>
@@ -305,7 +305,7 @@ footer a:hover{color:#fff}
     <div class="intro">
       <span class="label">Omgeving</span>
       <h2>Ontdek Noord-Beveland</h2>
-      <p>Ideaal voor wie houdt van rust, natuur, wandelen en fietsen. Wij geven je graag onze persoonlijke tips.</p>
+      <p>Ideaal voor wie houdt van rust, natuur, wandelen en fietsen.</p>
     </div>
     <div class="tegels">
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="0" aria-label="Vergroot foto 1 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-polder-800.webp 800w, assets/fotos/omgeving-polder-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-polder-1600.jpg" alt="Witte hond in het gras van de polder bij zonsondergang" width="1600" height="747" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button><strong>Wandelen</strong><span>Door de polders, langs dijken, natuurgebieden en het water. Ook heerlijk met de hond.</span></div>
@@ -369,7 +369,7 @@ footer a:hover{color:#fff}
       <span class="label">Over ons</span>
       <h2>Welkom bij Marc en Angelia</h2>
       <p>Wij verwelkomen onze gasten graag in het rustige dorp Wissenkerke. We wonen zelf op hetzelfde adres, dus je bent nooit ver van een vriendelijk gezicht.</p>
-      <p>Gastvrijheid en persoonlijk contact vinden we belangrijk. We helpen je graag met tips over de omgeving, leuke activiteiten en mooie plekken om te bezoeken.</p>
+      <p>Gastvrijheid vinden we belangrijk.</p>
     </div>
   </div>
 </section>

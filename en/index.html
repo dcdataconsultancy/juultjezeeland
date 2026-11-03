@@ -71,7 +71,7 @@ nav a{text-decoration:none;white-space:nowrap}
 .hero-tekst{flex:1 1 420px;display:flex;flex-direction:column;gap:22px}
 .hero-tekst p{font-size:19px;color:var(--tekst2);max-width:520px}
 .knoppen{display:flex;flex-wrap:wrap;gap:12px}
-.hero .foto{flex:1 1 420px;min-height:480px;border-radius:24px}
+.hero-foto{flex:1 1 420px;height:480px;border-radius:24px}
 
 /* voordelen */
 .voordelen{display:flex;flex-wrap:wrap;gap:32px;padding:48px 0}
@@ -171,7 +171,7 @@ footer a:hover{color:#fff}
 
 @media (max-width:600px){
   .band{padding:64px 0}
-  .hero .foto{min-height:300px}
+  .hero-foto{height:300px}
   .verblijf{flex-basis:100%}
   .galerij-knop .beeld{height:260px}
   .duimen .beeld{height:56px}
@@ -210,14 +210,14 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="hero-tekst">
       <span class="label">Wissenkerke, Noord-Beveland</span>
-      <h1>Peace and space in the heart of Zeeland</h1>
-      <p>Two charming stays for two people, on either side of our home in the village of Wissenkerke. Polders, dykes and water are just around the corner. Your dog is very welcome.</p>
+      <h1>Welcome to Zeeland</h1>
+      <p>Two charming stays for two people in the village of Wissenkerke. The beach is just a few minutes away: fresh sea air, walks along the water and then time to unwind. Your dog is very welcome.</p>
       <div class="knoppen">
         <a href="#boeken" class="knop">Check availability</a>
         <a href="#verblijven" class="knop rand">View the stays</a>
       </div>
     </div>
-    <div class="foto" role="img" aria-label="Outside of the house">Photo: outside of the house with gate and flagpole</div>
+    <picture class="beeld hero-foto"><source type="image/webp" srcset="../assets/fotos/omgeving-strand-800.webp 800w, ../assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 1000px) calc(100vw - 48px), 560px"><img src="../assets/fotos/omgeving-strand-1600.jpg" alt="Empty sandy beach with sea and wind turbines on the horizon" width="1600" height="2133" sizes="(max-width: 1000px) calc(100vw - 48px), 560px" loading="eager" fetchpriority="high" decoding="async" style="object-position:50% 50%"></picture>
   </div>
 </section>
 
@@ -233,7 +233,7 @@ footer a:hover{color:#fff}
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
-      <div><strong>We live next door</strong><span>For tips and a personal welcome</span></div>
+      <div><strong>We live next door</strong></div>
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8"/><path d="M9 6h3"/></svg>
@@ -305,7 +305,7 @@ footer a:hover{color:#fff}
     <div class="intro">
       <span class="label">Area</span>
       <h2>Discover Noord-Beveland</h2>
-      <p>Ideal for anyone who loves peace and quiet, nature, walking and cycling. We are happy to share our personal tips.</p>
+      <p>Ideal for anyone who loves peace and quiet, nature, walking and cycling.</p>
     </div>
     <div class="tegels">
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="0" aria-label="Enlarge photo 1 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-polder-800.webp 800w, ../assets/fotos/omgeving-polder-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-polder-1600.jpg" alt="White dog in the grass of the polder at sunset" width="1600" height="747" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button><strong>Walking</strong><span>Through the polders, along dykes, nature reserves and the water. Lovely with your dog too.</span></div>
@@ -369,7 +369,7 @@ footer a:hover{color:#fff}
       <span class="label">About us</span>
       <h2>Welcome from Marc and Angelia</h2>
       <p>We love welcoming our guests to the quiet village of Wissenkerke. We live at the same address ourselves, so a friendly face is never far away.</p>
-      <p>Hospitality and personal contact matter to us. We are happy to help with tips about the area, fun activities and beautiful places to visit.</p>
+      <p>Hospitality matters to us.</p>
     </div>
   </div>
 </section>

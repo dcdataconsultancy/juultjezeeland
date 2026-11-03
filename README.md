@@ -16,7 +16,7 @@ python3 tools/vertaal.py
 Nieuwe of gewijzigde Nederlandse teksten voeg je eerst toe aan de woordenlijsten `DE` en `EN` in `tools/vertaal.py`. Het script stopt met "ONVERTAALD" als er nog een tekst zonder vertaling is.
 
 ## Nog te doen
-- Foto voor de hero (buitenkant van het huis met hek en vlaggenmast) en voor Over ons (Marc en Angelia)
+- Foto voor Over ons (Marc en Angelia)
 - Mailadres invullen
 - Pagina's voor huisregels, algemene voorwaarden, annuleringsvoorwaarden en privacyverklaring
 - Eigen domein juultjezeeland.nl koppelen (CNAME); daarna de `hreflang` links in `index.html` aanpassen
