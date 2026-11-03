@@ -258,6 +258,27 @@ DE = {
  'Eventuele geschillen worden voorgelegd aan de bevoegde rechter volgens de wettelijke regels.': 'Etwaige Streitigkeiten werden nach den gesetzlichen Vorschriften dem zuständigen Gericht vorgelegt.',
  'Zeeland, Nederland': 'Zeeland, Niederlande',
  'Wij wensen al onze gasten een prettig en ontspannen verblijf bij Juultje Zeeland!': 'Wir wünschen allen unseren Gästen einen angenehmen und entspannten Aufenthalt bei Juultje Zeeland!',
+ 'Annuleringsvoorwaarden | Juultje Zeeland': 'Stornierungsbedingungen | Juultje Zeeland',
+ 'Annuleringsvoorwaarden van Juultje Zeeland in Wissenkerke: kosten bij annuleren, hoe je annuleert en boekingen via externe platforms.': 'Stornierungsbedingungen von Juultje Zeeland in Wissenkerke: Stornokosten, so stornieren Sie und Buchungen über externe Plattformen.',
+ 'Bij Juultje Zeeland begrijpen we dat plannen soms veranderen. Daarom hanteren wij de volgende annuleringsvoorwaarden voor reserveringen van ons appartement en vakantiehuis in Wissenkerke.': 'Bei Juultje Zeeland wissen wir, dass sich Pläne manchmal ändern. Deshalb gelten für Reservierungen unserer Ferienwohnung und unseres Ferienhauses in Wissenkerke die folgenden Stornierungsbedingungen.',
+ '1. Annuleren door de gast': '1. Stornierung durch den Gast',
+ '15 tot en met 29 dagen voor aankomst:': '15 bis einschließlich 29 Tage vor Anreise:',
+ '50% van de totale reserveringsprijs wordt in rekening gebracht.': '50 % des gesamten Reservierungspreises werden berechnet.',
+ '100% van de totale reserveringsprijs wordt in rekening gebracht.': '100 % des gesamten Reservierungspreises werden berechnet.',
+ 'Niet aankomen (no show):': 'Nichterscheinen:',
+ '2. Hoe annuleer ik mijn reservering?': '2. Wie storniere ich meine Reservierung?',
+ 'Een reservering kan worden geannuleerd via:': 'Eine Reservierung können Sie stornieren per:',
+ 'Mail aan Juultje Zeeland:': 'Mail an Juultje Zeeland:',
+ 'Het boekingsplatform waarop de reservering is gemaakt, zoals Booking.com of Airbnb.': 'Buchungsplattform, auf der die Reservierung erfolgt ist, zum Beispiel Booking.com oder Airbnb.',
+ 'De datum waarop wij de annulering ontvangen, geldt als officiële annuleringsdatum.': 'Als offizielles Stornierungsdatum gilt das Datum, an dem die Stornierung bei uns eingeht.',
+ '3. Annulering door Juultje Zeeland': '3. Stornierung durch Juultje Zeeland',
+ 'In uitzonderlijke omstandigheden kan het voorkomen dat Juultje Zeeland een reservering moet annuleren, bijvoorbeeld door overmacht of onvoorziene omstandigheden.': 'In Ausnahmefällen kann es vorkommen, dass Juultje Zeeland eine Reservierung stornieren muss, zum Beispiel wegen höherer Gewalt oder unvorhergesehener Umstände.',
+ 'In dat geval nemen wij zo snel mogelijk contact op met de gast en zoeken we samen naar een passende oplossing. Indien de accommodatie niet beschikbaar kan worden gesteld, worden eventuele vooruitbetalingen voor het niet genoten verblijf terugbetaald, met inachtneming van de wettelijke rechten van de gast.': 'In diesem Fall nehmen wir so schnell wie möglich Kontakt mit dem Gast auf und suchen gemeinsam nach einer passenden Lösung. Kann die Unterkunft nicht zur Verfügung gestellt werden, werden etwaige Vorauszahlungen für den nicht in Anspruch genommenen Aufenthalt erstattet, unter Wahrung der gesetzlichen Rechte des Gastes.',
+ '4. Advies': '4. Empfehlung',
+ 'Wij adviseren onze gasten om een passende reisverzekering en annuleringsverzekering af te sluiten.': 'Wir empfehlen unseren Gästen, eine passende Reiseversicherung und Reiserücktrittsversicherung abzuschließen.',
+ '5. Boekingen via externe platforms': '5. Buchungen über externe Plattformen',
+ 'Voor reserveringen via Booking.com, Airbnb of andere boekingsplatforms kunnen afwijkende annuleringsvoorwaarden gelden. In dat geval zijn de annuleringsvoorwaarden die tijdens het boeken op het betreffende platform zijn overeengekomen van toepassing.': 'Für Reservierungen über Booking.com, Airbnb oder andere Buchungsplattformen können abweichende Stornierungsbedingungen gelten. In diesem Fall gelten die Stornierungsbedingungen, die bei der Buchung auf der jeweiligen Plattform vereinbart wurden.',
+ 'Wissenkerke, Zeeland': 'Wissenkerke, Zeeland',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -509,6 +530,27 @@ EN = {
  'Eventuele geschillen worden voorgelegd aan de bevoegde rechter volgens de wettelijke regels.': 'Any disputes will be submitted to the competent court in accordance with the statutory rules.',
  'Zeeland, Nederland': 'Zeeland, the Netherlands',
  'Wij wensen al onze gasten een prettig en ontspannen verblijf bij Juultje Zeeland!': 'We wish all our guests a pleasant and relaxing stay at Juultje Zeeland!',
+ 'Annuleringsvoorwaarden | Juultje Zeeland': 'Cancellation policy | Juultje Zeeland',
+ 'Annuleringsvoorwaarden van Juultje Zeeland in Wissenkerke: kosten bij annuleren, hoe je annuleert en boekingen via externe platforms.': 'Cancellation policy of Juultje Zeeland in Wissenkerke: cancellation charges, how to cancel and bookings through external platforms.',
+ 'Bij Juultje Zeeland begrijpen we dat plannen soms veranderen. Daarom hanteren wij de volgende annuleringsvoorwaarden voor reserveringen van ons appartement en vakantiehuis in Wissenkerke.': 'At Juultje Zeeland we understand that plans sometimes change. That is why the following cancellation policy applies to bookings of our apartment and holiday cottage in Wissenkerke.',
+ '1. Annuleren door de gast': '1. Cancellation by the guest',
+ '15 tot en met 29 dagen voor aankomst:': '15 to 29 days before arrival (inclusive):',
+ '50% van de totale reserveringsprijs wordt in rekening gebracht.': '50% of the total booking price is charged.',
+ '100% van de totale reserveringsprijs wordt in rekening gebracht.': '100% of the total booking price is charged.',
+ 'Niet aankomen (no show):': 'Not arriving (no show):',
+ '2. Hoe annuleer ik mijn reservering?': '2. How do I cancel my booking?',
+ 'Een reservering kan worden geannuleerd via:': 'You can cancel a booking via:',
+ 'Mail aan Juultje Zeeland:': 'Email to Juultje Zeeland:',
+ 'Het boekingsplatform waarop de reservering is gemaakt, zoals Booking.com of Airbnb.': 'The booking platform where the booking was made, such as Booking.com or Airbnb.',
+ 'De datum waarop wij de annulering ontvangen, geldt als officiële annuleringsdatum.': 'The date on which we receive the cancellation counts as the official cancellation date.',
+ '3. Annulering door Juultje Zeeland': '3. Cancellation by Juultje Zeeland',
+ 'In uitzonderlijke omstandigheden kan het voorkomen dat Juultje Zeeland een reservering moet annuleren, bijvoorbeeld door overmacht of onvoorziene omstandigheden.': 'In exceptional circumstances, Juultje Zeeland may have to cancel a booking, for example due to force majeure or unforeseen circumstances.',
+ 'In dat geval nemen wij zo snel mogelijk contact op met de gast en zoeken we samen naar een passende oplossing. Indien de accommodatie niet beschikbaar kan worden gesteld, worden eventuele vooruitbetalingen voor het niet genoten verblijf terugbetaald, met inachtneming van de wettelijke rechten van de gast.': "In that case we will contact the guest as soon as possible and look for a suitable solution together. If the accommodation cannot be made available, any advance payments for the stay that did not take place will be refunded, with due regard for the guest's statutory rights.",
+ '4. Advies': '4. Advice',
+ 'Wij adviseren onze gasten om een passende reisverzekering en annuleringsverzekering af te sluiten.': 'We advise our guests to take out suitable travel insurance and cancellation insurance.',
+ '5. Boekingen via externe platforms': '5. Bookings through external platforms',
+ 'Voor reserveringen via Booking.com, Airbnb of andere boekingsplatforms kunnen afwijkende annuleringsvoorwaarden gelden. In dat geval zijn de annuleringsvoorwaarden die tijdens het boeken op het betreffende platform zijn overeengekomen van toepassing.': 'Different cancellation terms may apply to bookings made through Booking.com, Airbnb or other booking platforms. In that case, the cancellation terms agreed on that platform at the time of booking apply.',
+ 'Wissenkerke, Zeeland': 'Wissenkerke, Zeeland',
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),
@@ -586,7 +628,7 @@ def maak(bron, taal, tabel, regels, bestand):
     h = re.sub(r'<(?:a|link|img|source|script)\b[^>]*>', tag, h)
     return h, missers
 
-PAGINAS = ['index.html', 'huisregels.html', 'algemene-voorwaarden.html']
+PAGINAS = ['index.html', 'huisregels.html', 'algemene-voorwaarden.html', 'annuleringsvoorwaarden.html']
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 fout = False
 for bestand in PAGINAS:
