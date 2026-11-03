@@ -1,0 +1,18 @@
+name: Alleen dev naar main
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  alleen-dev:
+    name: alleen-dev
+    runs-on: ubuntu-latest
+    steps:
+      - name: Controleer bronbranch
+        run: |
+          if [ "${{ github.head_ref }}" != "dev" ]; then
+            echo "::error::Naar main mag alleen vanuit dev gemerged worden (deze pull request komt van '${{ github.head_ref }}')."
+            exit 1
+          fi
+          echo "Bronbranch is dev."

@@ -7,6 +7,14 @@ Website voor Juultje Zeeland: vakantiehuisje en appartement in Wissenkerke, Noor
 - Boekingen via de Smoobu Booking Engine (iframe in de sectie `#boeken`). Smoobu kiest de taal zelf op basis van de browser van de gast.
 - Foto's staan in `assets/fotos/` (WebP 800 en 1600 px plus JPG als terugval, zonder EXIF). Originelen horen in `fotos-origineel/`, die map staat in `.gitignore`.
 
+## Werkwijze met branches
+- `main` is de live website. Hier wordt nooit direct op gewerkt.
+- `dev` is de ontwikkelbranch.
+- Elke wijziging begint in een eigen branch vanaf `dev`, bijvoorbeeld `git checkout -b nieuwe-tekst dev`.
+- Die branch gaat via een pull request naar `dev`.
+- Pas daarna gaat `dev` via een pull request naar `main`.
+- GitHub dwingt dit af: op `main` en `dev` kan niet direct gepusht worden, en een pull request naar `main` wordt alleen geaccepteerd als die van `dev` komt (controle in `.github/workflows/alleen-dev-naar-main.yml`).
+
 ## Teksten wijzigen
 Pas alleen de Nederlandse pagina's aan en maak daarna de Duitse en Engelse versie opnieuw:
 
