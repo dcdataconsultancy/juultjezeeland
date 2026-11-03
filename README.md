@@ -2,7 +2,7 @@
 
 Website voor Juultje Zeeland: vakantiehuisje en appartement in Wissenkerke, Noord-Beveland.
 
-- Statische site, gehost op GitHub Pages: Nederlandse pagina's in de hoofdmap (`index.html`, `huisregels.html`), Duits in `de/`, Engels in `en/`
+- Statische site, gehost op GitHub Pages: Nederlandse pagina's in de hoofdmap (`index.html`, `huisregels.html`, `algemene-voorwaarden.html`, `annuleringsvoorwaarden.html`, `privacyverklaring.html`), Duits in `de/`, Engels in `en/`
 - Gedeelde opmaak in `assets/stijl.css`
 - Boekingen via de Smoobu Booking Engine (iframe in de sectie `#boeken`). Smoobu kiest de taal zelf op basis van de browser van de gast.
 - Foto's staan in `assets/fotos/` (WebP 800 en 1600 px plus JPG als terugval, zonder EXIF). Originelen horen in `fotos-origineel/`, die map staat in `.gitignore`.
@@ -29,5 +29,4 @@ Nieuwe of gewijzigde Nederlandse teksten voeg je eerst toe aan de woordenlijsten
 - De opmaak binnen de boekingsmodule (zoals rood gearceerde data die niet meer kunnen) kan niet vanaf deze website. Plak daarvoor `tools/smoobu-kalender.css` in Smoobu bij Custom CSS (Instellingen boekingssysteem, tabblad Custom style).
 
 ## Nog te doen
-- Pagina's voor algemene voorwaarden, annuleringsvoorwaarden en privacyverklaring
 - Eigen domein juultjezeeland.nl koppelen (CNAME); daarna de `hreflang` links in `index.html` aanpassen
