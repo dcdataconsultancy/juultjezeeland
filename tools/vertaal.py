@@ -1,4 +1,6 @@
-"""Maakt de/index.html en en/index.html uit de Nederlandse index.html.
+"""Maakt de Duitse (de/) en Engelse (en/) versie van de Nederlandse pagina's.
+
+Doet hetzelfde voor elke pagina in PAGINAS (onderaan dit bestand).
 
 Gebruik, vanuit de hoofdmap van de repository:
 
@@ -145,6 +147,31 @@ DE = {
  'Sluiten': 'Schließen',
  'Vorige foto': 'Vorheriges Foto',
  'Volgende foto': 'Nächstes Foto',
+ 'Lees alle huisregels': 'Alle Hausregeln lesen',
+ 'Huisregels | Juultje Zeeland': 'Hausregeln | Juultje Zeeland',
+ 'Huisregels van Vakantiehuisje en Appartement Juultje in Wissenkerke: aankomst en vertrek, rust, huisdieren en schoonmaak.': 'Hausregeln für das Ferienhaus und die Ferienwohnung Juultje in Wissenkerke: Anreise und Abreise, Ruhezeiten, Haustiere und Reinigung.',
+ 'Juultje Zeeland, naar de startpagina': 'Juultje Zeeland, zur Startseite',
+ 'Wij wensen jullie een heerlijk verblijf in Wissenkerke. Om het voor iedereen prettig en gezellig te houden, vragen wij jullie rekening te houden met de volgende huisregels.': 'Wir wünschen Ihnen einen herrlichen Aufenthalt in Wissenkerke. Damit es für alle angenehm und gemütlich bleibt, bitten wir Sie, die folgenden Hausregeln zu beachten.',
+ 'Inchecken: vanaf 15.00 uur': 'Anreise: ab 15:00 Uhr',
+ 'Uitchecken: uiterlijk 10.00 uur': 'Abreise: bis spätestens 10:00 Uhr',
+ 'De sleutel is beschikbaar via een sleutelkluisje. Jullie ontvangen hiervoor vooraf de instructies.': 'Den Schlüssel finden Sie in einem Schlüsseltresor. Die Anleitung dazu erhalten Sie vorab.',
+ 'Eerder inchecken of later uitchecken is uitsluitend mogelijk in overleg.': 'Eine frühere Anreise oder spätere Abreise ist nur nach Absprache möglich.',
+ 'Tijdens het verblijf': 'Während des Aufenthalts',
+ 'Roken is niet toegestaan in de accommodatie.': 'Rauchen ist in der Unterkunft nicht erlaubt.',
+ 'Feesten en evenementen zijn niet toegestaan.': 'Partys und Veranstaltungen sind nicht erlaubt.',
+ 'Van 21.00 tot 07.00 uur moet het stil zijn. Wij vragen jullie om gedurende deze uren geen geluidsoverlast te veroorzaken, uit respect voor onze buren en andere gasten.': 'Von 21:00 bis 07:00 Uhr gilt Nachtruhe. Bitte vermeiden Sie in dieser Zeit Lärm, aus Rücksicht auf unsere Nachbarn und andere Gäste.',
+ 'Ga zorgvuldig om met de meubels, apparatuur en overige voorzieningen. Meld eventuele schade of defecten zo snel mogelijk.': 'Bitte gehen Sie sorgsam mit Möbeln, Geräten und der übrigen Ausstattung um. Melden Sie Schäden oder Defekte bitte so schnell wie möglich.',
+ 'Extra overnachtende gasten zijn alleen toegestaan na voorafgaand overleg.': 'Zusätzliche Übernachtungsgäste sind nur nach vorheriger Absprache erlaubt.',
+ 'Huisdieren': 'Haustiere',
+ 'Huisdieren zijn toegestaan. Hiervoor rekenen wij € 15 per nacht.': 'Haustiere sind erlaubt. Dafür berechnen wir 15 € pro Nacht.',
+ 'Schoonmaak en vertrek': 'Reinigung und Abreise',
+ 'Wij vragen jullie vriendelijk om bij vertrek:': 'Wir bitten Sie freundlich, bei der Abreise:',
+ 'De accommodatie netjes en bezemschoon achter te laten': 'die Unterkunft ordentlich und besenrein zu hinterlassen',
+ 'De afwas te doen en de vaatwasser leeg te ruimen': 'den Abwasch zu erledigen und die Spülmaschine auszuräumen',
+ 'De koelkast leeg te maken en etensresten mee te nemen': 'den Kühlschrank zu leeren und Essensreste mitzunehmen',
+ 'De sleutel terug te leggen in het sleutelkluisje': 'den Schlüssel wieder in den Schlüsseltresor zu legen',
+ 'Bedlinnen en handdoeken': 'Bettwäsche und Handtücher',
+ 'Bedlinnen, handdoeken en keukenlinnen zijn inbegrepen bij het verblijf.': 'Bettwäsche, Handtücher und Küchentücher sind im Aufenthalt inbegriffen.',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -285,6 +312,31 @@ EN = {
  'Sluiten': 'Close',
  'Vorige foto': 'Previous photo',
  'Volgende foto': 'Next photo',
+ 'Lees alle huisregels': 'Read all house rules',
+ 'Huisregels | Juultje Zeeland': 'House rules | Juultje Zeeland',
+ 'Huisregels van Vakantiehuisje en Appartement Juultje in Wissenkerke: aankomst en vertrek, rust, huisdieren en schoonmaak.': 'House rules for holiday cottage and apartment Juultje in Wissenkerke: arrival and departure, quiet hours, pets and cleaning.',
+ 'Juultje Zeeland, naar de startpagina': 'Juultje Zeeland, to the home page',
+ 'Wij wensen jullie een heerlijk verblijf in Wissenkerke. Om het voor iedereen prettig en gezellig te houden, vragen wij jullie rekening te houden met de volgende huisregels.': 'We wish you a wonderful stay in Wissenkerke. To keep it pleasant and enjoyable for everyone, we kindly ask you to observe the following house rules.',
+ 'Inchecken: vanaf 15.00 uur': 'Check in: from 3 pm',
+ 'Uitchecken: uiterlijk 10.00 uur': 'Check out: by 10 am',
+ 'De sleutel is beschikbaar via een sleutelkluisje. Jullie ontvangen hiervoor vooraf de instructies.': 'The key is available from a key safe. You will receive the instructions in advance.',
+ 'Eerder inchecken of later uitchecken is uitsluitend mogelijk in overleg.': 'Early check in or late check out is only possible by arrangement.',
+ 'Tijdens het verblijf': 'During your stay',
+ 'Roken is niet toegestaan in de accommodatie.': 'Smoking is not allowed in the accommodation.',
+ 'Feesten en evenementen zijn niet toegestaan.': 'Parties and events are not allowed.',
+ 'Van 21.00 tot 07.00 uur moet het stil zijn. Wij vragen jullie om gedurende deze uren geen geluidsoverlast te veroorzaken, uit respect voor onze buren en andere gasten.': 'Quiet hours are from 9 pm to 7 am. Please avoid making noise during these hours, out of respect for our neighbours and other guests.',
+ 'Ga zorgvuldig om met de meubels, apparatuur en overige voorzieningen. Meld eventuele schade of defecten zo snel mogelijk.': 'Please treat the furniture, appliances and other facilities with care. Report any damage or defects as soon as possible.',
+ 'Extra overnachtende gasten zijn alleen toegestaan na voorafgaand overleg.': 'Extra overnight guests are only allowed by prior arrangement.',
+ 'Huisdieren': 'Pets',
+ 'Huisdieren zijn toegestaan. Hiervoor rekenen wij € 15 per nacht.': 'Pets are allowed. We charge €15 per night.',
+ 'Schoonmaak en vertrek': 'Cleaning and departure',
+ 'Wij vragen jullie vriendelijk om bij vertrek:': 'When you leave, we kindly ask you to:',
+ 'De accommodatie netjes en bezemschoon achter te laten': 'leave the accommodation tidy and swept clean',
+ 'De afwas te doen en de vaatwasser leeg te ruimen': 'do the washing up and empty the dishwasher',
+ 'De koelkast leeg te maken en etensresten mee te nemen': 'empty the fridge and take any leftover food with you',
+ 'De sleutel terug te leggen in het sleutelkluisje': 'put the key back in the key safe',
+ 'Bedlinnen en handdoeken': 'Bed linen and towels',
+ 'Bedlinnen, handdoeken en keukenlinnen zijn inbegrepen bij het verblijf.': 'Bed linen, towels and tea towels are included in your stay.',
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),
@@ -314,7 +366,7 @@ def vertaal(tekst, tabel, regels, missers):
     i = tekst.index(kern)
     return tekst[:i] + nieuw + tekst[i + len(kern):]
 
-def maak(bron, taal, tabel, regels):
+def maak(bron, taal, tabel, regels, bestand):
     missers = []
     delen = re.split(r'(<[^>]+>)', bron)
     uit, in_code = [], False
@@ -332,34 +384,47 @@ def maak(bron, taal, tabel, regels):
         else:
             uit.append(d if in_code else vertaal(d, tabel, regels, missers))
     h = ''.join(uit)
-    andere = 'en' if taal == 'de' else 'de'
-    struct = [
-        ('<html lang="nl">', f'<html lang="{taal}">'),
-        ('"assets/fotos/', '"../assets/fotos/'),
-        (', assets/fotos/', ', ../assets/fotos/'),
-        ('login.smoobu.com/nl/booking-tool', f'login.smoobu.com/{taal}/booking-tool'),
-        ('<li class="talen"><strong>NL</strong><a href="de/" lang="de" hreflang="de">DE</a><a href="en/" lang="en" hreflang="en">EN</a></li>',
-         '<li class="talen"><a href="../" lang="nl" hreflang="nl">NL</a>' +
-         ('<strong>DE</strong><a href="../en/" lang="en" hreflang="en">EN</a>' if taal == 'de' else '<a href="../de/" lang="de" hreflang="de">DE</a><strong>EN</strong>') + '</li>'),
-        ('<a href="./" lang="nl" hreflang="nl">Nederlands</a><a href="de/" lang="de" hreflang="de">Deutsch</a><a href="en/" lang="en" hreflang="en">English</a>',
-         '<a href="../" lang="nl" hreflang="nl">Nederlands</a>' +
-         ('<a href="./" lang="de" hreflang="de">Deutsch</a><a href="../en/" lang="en" hreflang="en">English</a>' if taal == 'de' else '<a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="./" lang="en" hreflang="en">English</a>')),
-    ]
-    for o, n in struct:
-        assert o in h, (taal, o)
-        h = h.replace(o, n)
+    h = h.replace('<html lang="nl">', f'<html lang="{taal}">')
+    h = h.replace('login.smoobu.com/nl/booking-tool', f'login.smoobu.com/{taal}/booking-tool')
+    # taalkeuze in het menu: NL wordt een link, de eigen taal wordt vet
+    nl_pagina = './' if bestand == 'index.html' else bestand
+    def talen(m):
+        li = m.group(0).replace('<strong>NL</strong>', f'<a href="{nl_pagina}" lang="nl" hreflang="nl">NL</a>')
+        return re.sub(rf'<a href="[^"]*" lang="{taal}" hreflang="{taal}">{taal.upper()}</a>', f'<strong>{taal.upper()}</strong>', li)
+    h, n = re.subn(r'<li class="talen">.*?</li>', talen, h)
+    assert n == 1, (bestand, taal, 'taalkeuze niet gevonden')
+    # links en bestanden: de taalversies staan een map dieper
+    def url(u, nl_link):
+        if u.startswith(('http', '//', 'data:', 'tel:', 'mailto:', '#')):
+            return u
+        if u.startswith(taal + '/'):
+            return u[len(taal) + 1:] or './'
+        if u.startswith(('de/', 'en/', 'assets/')):
+            return '../' + u
+        if nl_link:
+            return '../' + ('' if u == './' else u)
+        return u
+    def tag(m):
+        t = m.group(0)
+        nl_link = 'hreflang="nl"' in t and not t.startswith('<link')
+        t = re.sub(r'\b(href|src)="([^"]*)"', lambda a: f'{a.group(1)}="{url(a.group(2), nl_link)}"', t)
+        t = re.sub(r'\bsrcset="([^"]*)"', lambda a: 'srcset="' + ', '.join(
+            ' '.join([url(d.strip().split(' ')[0], False)] + d.strip().split(' ')[1:]) for d in a.group(1).split(',')) + '"', t)
+        return t
+    h = re.sub(r'<(?:a|link|img|source|script)\b[^>]*>', tag, h)
     return h, missers
 
-pad = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'index.html')
-bron = open(pad).read()
-root = os.path.dirname(os.path.abspath(pad))
+PAGINAS = ['index.html', 'huisregels.html']
+root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 fout = False
-for taal, tabel, regels in (('de', DE, DE_RE), ('en', EN, EN_RE)):
-    h, missers = maak(bron, taal, tabel, regels)
-    if missers:
-        fout = True
-        print(taal, 'ONVERTAALD:', missers)
-    os.makedirs(os.path.join(root, taal), exist_ok=True)
-    open(os.path.join(root, taal, 'index.html'), 'w').write(h)
-    print(taal, 'ok', len(h))
+for bestand in PAGINAS:
+    bron = open(os.path.join(root, bestand)).read()
+    for taal, tabel, regels in (('de', DE, DE_RE), ('en', EN, EN_RE)):
+        h, missers = maak(bron, taal, tabel, regels, bestand)
+        if missers:
+            fout = True
+            print(bestand, taal, 'ONVERTAALD:', missers)
+        os.makedirs(os.path.join(root, taal), exist_ok=True)
+        open(os.path.join(root, taal, bestand), 'w').write(h)
+        print(taal + '/' + bestand, 'ok', len(h))
 sys.exit(1 if fout else 0)

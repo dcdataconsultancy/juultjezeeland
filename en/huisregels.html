@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>House rules | Juultje Zeeland</title>
+<meta name="description" content="House rules for holiday cottage and apartment Juultje in Wissenkerke: arrival and departure, quiet hours, pets and cleaning.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%237D6F5D'/><path d='M12 30V20l8-6 8 6v10z' fill='white'/></svg>">
+<link rel="alternate" hreflang="nl" href="https://dcdataconsultancy.github.io/juultjezeeland/huisregels.html">
+<link rel="alternate" hreflang="de" href="https://dcdataconsultancy.github.io/juultjezeeland/de/huisregels.html">
+<link rel="alternate" hreflang="en" href="https://dcdataconsultancy.github.io/juultjezeeland/en/huisregels.html">
+<link rel="alternate" hreflang="x-default" href="https://dcdataconsultancy.github.io/juultjezeeland/huisregels.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/stijl.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap kop">
+    <a href="./" class="logo" aria-label="Juultje Zeeland, to the home page">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#3F3830" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v32"/><path d="M8 5h9l-2 3 2 3H8"/><path d="M14 22l10-8 10 8"/><path d="M16 21v11h16V21"/><path d="M22 32v-6h4v6"/><path d="M3 36h35"/><path d="M3 29h10M3 33h10M5 27v9M10 27v9"/></svg>
+      <span>Juultje Zeeland</span>
+    </a>
+    <button class="menuknop" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Main menu">
+      <ul>
+        <li><a href="./#verblijven">Stays</a></li>
+        <li><a href="./#omgeving">Area</a></li>
+        <li><a href="./#praktisch">Practical</a></li>
+        <li><a href="./#over-ons">About us</a></li>
+        <li><a href="./#contact">Contact</a></li>
+        <li class="talen"><a href="../huisregels.html" lang="nl" hreflang="nl">NL</a><a href="../de/huisregels.html" lang="de" hreflang="de">DE</a><strong>EN</strong></li>
+        <li><a href="./#boeken" class="knop">Book now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="band">
+  <div class="wrap">
+    <div class="intro">
+      <span class="label">Juultje Zeeland</span>
+      <h1>House rules</h1>
+      <p>We wish you a wonderful stay in Wissenkerke. To keep it pleasant and enjoyable for everyone, we kindly ask you to observe the following house rules.</p>
+    </div>
+    <div class="blokken">
+      <div class="blok"><h3>Arrival and departure</h3><ul><li>Check in: from 3 pm</li><li>Check out: by 10 am</li><li>The key is available from a key safe. You will receive the instructions in advance.</li><li>Early check in or late check out is only possible by arrangement.</li></ul></div>
+      <div class="blok"><h3>During your stay</h3><ul><li>Smoking is not allowed in the accommodation.</li><li>Parties and events are not allowed.</li><li>Quiet hours are from 9 pm to 7 am. Please avoid making noise during these hours, out of respect for our neighbours and other guests.</li><li>Please treat the furniture, appliances and other facilities with care. Report any damage or defects as soon as possible.</li><li>Extra overnight guests are only allowed by prior arrangement.</li></ul></div>
+      <div class="blok"><h3>Pets</h3><ul><li>Pets are allowed. We charge €15 per night.</li></ul></div>
+      <div class="blok"><h3>Cleaning and departure</h3><p>When you leave, we kindly ask you to:</p><ul><li>leave the accommodation tidy and swept clean</li><li>do the washing up and empty the dishwasher</li><li>empty the fridge and take any leftover food with you</li><li>put the key back in the key safe</li></ul></div>
+      <div class="blok"><h3>Bed linen and towels</h3><ul><li>Bed linen, towels and tea towels are included in your stay.</li></ul></div>
+    </div>
+    <p class="meer-link"><a href="./#boeken" class="knop">Check availability</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="voet">
+      <div><span class="naam">Juultje Zeeland</span><span>Holiday cottage and apartment in Wissenkerke</span></div>
+      <div><strong>Information</strong><a href="huisregels.html">House rules</a><a href="#">Terms and conditions</a><a href="#">Cancellation policy</a><a href="#">Privacy policy</a></div>
+      <div><strong>Language</strong><a href="../huisregels.html" lang="nl" hreflang="nl">Nederlands</a><a href="../de/huisregels.html" lang="de" hreflang="de">Deutsch</a><a href="huisregels.html" lang="en" hreflang="en">English</a></div>
+    </div>
+    <div class="copy">© <span id="jaar">2026</span> Juultje Zeeland</div>
+  </div>
+</footer>
+
+<script>
+  const knop = document.querySelector('.menuknop');
+  const menu = document.getElementById('menu');
+  knop.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    knop.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    knop.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('jaar').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
