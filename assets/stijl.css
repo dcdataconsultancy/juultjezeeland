@@ -65,6 +65,7 @@ nav a{text-decoration:none;white-space:nowrap}
 
 /* verblijven */
 .verblijven{display:flex;flex-wrap:wrap;gap:32px}
+.verblijven:has(.verblijf-meer[open]){align-items:flex-start}
 .verblijf{flex:1 1 440px;background:var(--wit);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
 .verblijf .foto{min-height:320px;border-radius:0}
 .galerij-knop{position:relative;display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
@@ -82,6 +83,18 @@ nav a{text-decoration:none;white-space:nowrap}
 .kenmerken li{background:var(--zand);padding:6px 12px;border-radius:999px}
 .verblijf p{color:var(--tekst2)}
 .verblijf .knop{margin-top:auto;align-self:flex-start}
+.verblijf-meer{border-top:1px solid var(--lijn);padding-top:14px}
+.verblijf-meer summary{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:700;cursor:pointer;list-style:none}
+.verblijf-meer summary::-webkit-details-marker{display:none}
+.verblijf-meer summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform .2s}
+.verblijf-meer[open] summary::after{transform:translateY(2px) rotate(225deg)}
+.verblijf-meer .tekst-open,.verblijf-meer[open] .tekst-dicht{display:none}
+.verblijf-meer[open] .tekst-open{display:inline}
+.verblijf-details{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px 28px;margin:12px 0 4px}
+.verblijf-details h4{margin:0 0 8px;font-size:15px;color:var(--olijf)}
+.verblijf-details ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;color:var(--tekst2);font-size:15px}
+.verblijf-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:14px 0 0;font-size:15px}
+.verblijf-links a{font-weight:700}
 .melding{display:flex;gap:16px;background:var(--wit);border-radius:16px;padding:22px 26px;margin-top:32px}
 .melding svg{flex:none}
 .melding p{color:var(--tekst2)}
