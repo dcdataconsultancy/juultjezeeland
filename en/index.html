@@ -104,7 +104,7 @@
           <div class="verblijf-kop"><h3>Holiday cottage Juultje</h3><span class="label">The more spacious stay</span></div>
           <ul class="kenmerken"><li>2 guests</li><li>1 bedroom</li><li>about 35 m²</li><li>Private parking on the driveway</li></ul>
           <p>For anyone who wants to enjoy Zeeland in peace and quiet, with the coast, nature and charming villages close by. The cottage is on the other side of our home and offers a little more space.</p>
-          <a href="#boeken" class="knop">Price and availability</a>
+          <a href="#boeken" class="knop" data-verblijf="3563861">Price and availability</a>
         </div>
       </article>
       <article class="verblijf">
@@ -123,7 +123,7 @@
           <div class="verblijf-kop"><h3>Apartment Juultje</h3><span class="label">Compact and comfortable</span></div>
           <ul class="kenmerken"><li>2 guests</li><li>1 bedroom</li><li>about 26 m²</li><li>Air conditioning</li></ul>
           <p>A lovely base for a relaxing stay. From Wissenkerke you can easily explore the area on foot or by bike and make the most of Zeeland's nature.</p>
-          <a href="#boeken" class="knop">Price and availability</a>
+          <a href="#boeken" class="knop" data-verblijf="3563866">Price and availability</a>
         </div>
       </article>
     </div>
@@ -186,6 +186,11 @@
       <span class="label">Booking</span>
       <h2>Book directly with us</h2>
       <p>Always the latest prices and availability. You receive a confirmation straight after booking, and before your arrival we send you all the practical information.</p>
+    </div>
+    <div class="verblijfkeuze" role="group" aria-label="Choose a stay">
+      <button type="button" aria-pressed="true" data-apartment="">Both stays</button>
+      <button type="button" aria-pressed="false" data-apartment="3563861">Holiday cottage</button>
+      <button type="button" aria-pressed="false" data-apartment="3563866">Apartment</button>
     </div>
     <div class="boeking">
       <div id="apartmentIframeAll">
@@ -252,6 +257,25 @@
     knop.setAttribute('aria-expanded', 'false');
   }));
   document.getElementById('jaar').textContent = new Date().getFullYear();
+
+  // keuze van verblijf in de boekingsmodule van Smoobu
+  const smoobuPagina = 'https://booking.smoobu.com/juultjezeeland';
+  const keuzeknoppen = document.querySelectorAll('.verblijfkeuze button');
+  const boekingsmodule = document.getElementById('apartmentIframeAll');
+  let gekozenVerblijf = '';
+  function toonVerblijf() {
+    const iframe = boekingsmodule.querySelector('iframe');
+    const adres = smoobuPagina + (gekozenVerblijf ? '?apartmentId=' + gekozenVerblijf : '');
+    if (iframe && iframe.src !== adres) iframe.src = adres;
+  }
+  function kiesVerblijf(id) {
+    gekozenVerblijf = id;
+    keuzeknoppen.forEach(k => k.setAttribute('aria-pressed', String(k.dataset.apartment === id)));
+    toonVerblijf();
+  }
+  keuzeknoppen.forEach(k => k.addEventListener('click', () => kiesVerblijf(k.dataset.apartment)));
+  document.querySelectorAll('[data-verblijf]').forEach(a => a.addEventListener('click', () => kiesVerblijf(a.dataset.verblijf)));
+  new MutationObserver(toonVerblijf).observe(boekingsmodule, { childList: true, subtree: true });
 
   // fotogalerij
   const lb = document.querySelector('.lightbox');

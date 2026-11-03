@@ -116,6 +116,10 @@ nav a{text-decoration:none;white-space:nowrap}
 .meer-link a{font-weight:700}
 
 /* boeken */
+.verblijfkeuze{display:inline-flex;flex-wrap:wrap;gap:6px;background:var(--wit);border-radius:999px;padding:6px;margin-bottom:16px}
+.verblijfkeuze button{font:inherit;font-weight:700;border:0;border-radius:999px;min-height:44px;padding:0 20px;background:transparent;color:var(--taupe);cursor:pointer}
+.verblijfkeuze button:hover{background:var(--zand)}
+.verblijfkeuze button[aria-pressed="true"]{background:var(--knop);color:#fff}
 .boeking{background:var(--wit);border-radius:20px;padding:16px;min-height:420px}
 .betalen{margin-top:16px;color:var(--tekst3);font-size:15px}
 
@@ -157,6 +161,9 @@ footer a:hover{color:#fff}
   .galerij-knop .beeld{height:260px}
   .duimen .beeld{height:56px}
   .lb-beeld{padding:0 8px}
+  .verblijfkeuze{display:grid;grid-template-columns:1fr 1fr;border-radius:22px}
+  .verblijfkeuze button{padding:0 8px}
+  .verblijfkeuze button:first-child{grid-column:1 / -1}
   .lb-vorige,.lb-volgende{top:auto;bottom:16px;transform:none}
   .lb-onderschrift{padding:16px 76px 20px;min-height:80px;display:flex;align-items:center;justify-content:center}
 }

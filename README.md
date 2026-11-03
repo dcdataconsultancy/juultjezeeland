@@ -24,6 +24,10 @@ python3 tools/vertaal.py
 
 Nieuwe of gewijzigde Nederlandse teksten voeg je eerst toe aan de woordenlijsten `DE` en `EN` in `tools/vertaal.py`. Het script stopt met "ONVERTAALD" als er nog een tekst zonder vertaling is. Een nieuwe pagina voeg je toe aan `PAGINAS` onderaan het script.
 
+## Boekingsmodule (Smoobu)
+- Boven de boekingsmodule kiest de bezoeker "Beide verblijven", "Vakantiehuisje" (Smoobu ID 3563861) of "Appartement" (Smoobu ID 3563866). De knoppen "Prijs en beschikbaarheid" bij de verblijven kiezen het juiste verblijf vooraf.
+- De opmaak binnen de boekingsmodule (zoals rood gearceerde data die niet meer kunnen) kan niet vanaf deze website. Plak daarvoor `tools/smoobu-kalender.css` in Smoobu bij Custom CSS (Instellingen boekingssysteem, tabblad Custom style).
+
 ## Nog te doen
 - Pagina's voor algemene voorwaarden, annuleringsvoorwaarden en privacyverklaring
 - Eigen domein juultjezeeland.nl koppelen (CNAME); daarna de `hreflang` links in `index.html` aanpassen
