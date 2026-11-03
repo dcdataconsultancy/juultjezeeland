@@ -120,9 +120,7 @@ nav a{text-decoration:none;white-space:nowrap}
 .betalen{margin-top:16px;color:var(--tekst3);font-size:15px}
 
 /* over ons */
-.over .wrap{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
-.over .foto{flex:1 1 380px;min-height:440px;border-radius:24px}
-.over-tekst{flex:1 1 440px;display:flex;flex-direction:column;gap:18px}
+.over-tekst{max-width:720px;display:flex;flex-direction:column;gap:18px}
 .over-tekst p{font-size:18px;color:var(--tekst2)}
 
 /* contact */
