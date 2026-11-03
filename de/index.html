@@ -187,10 +187,13 @@
       <h2>Buchen Sie direkt bei uns</h2>
       <p>Immer aktuelle Preise und Verfügbarkeit. Nach Ihrer Reservierung erhalten Sie sofort eine Bestätigung, und vor der Anreise senden wir Ihnen alle praktischen Informationen.</p>
     </div>
-    <div class="verblijfkeuze" role="group" aria-label="Unterkunft wählen">
-      <button type="button" aria-pressed="true" data-apartment="">Beide Unterkünfte</button>
-      <button type="button" aria-pressed="false" data-apartment="3563861">Ferienhaus</button>
-      <button type="button" aria-pressed="false" data-apartment="3563866">Ferienwohnung</button>
+    <div class="verblijfkeuze">
+      <label for="verblijf">Unterkunft wählen</label>
+      <select id="verblijf" autocomplete="off">
+        <option value="">Beide Unterkünfte</option>
+        <option value="3563861">Ferienhaus</option>
+        <option value="3563866">Ferienwohnung</option>
+      </select>
     </div>
     <div class="boeking">
       <div id="apartmentIframeAll">
@@ -260,7 +263,7 @@
 
   // keuze van verblijf in de boekingsmodule van Smoobu
   const smoobuPagina = 'https://booking.smoobu.com/juultjezeeland';
-  const keuzeknoppen = document.querySelectorAll('.verblijfkeuze button');
+  const keuze = document.getElementById('verblijf');
   const boekingsmodule = document.getElementById('apartmentIframeAll');
   let gekozenVerblijf = '';
   function toonVerblijf() {
@@ -270,10 +273,10 @@
   }
   function kiesVerblijf(id) {
     gekozenVerblijf = id;
-    keuzeknoppen.forEach(k => k.setAttribute('aria-pressed', String(k.dataset.apartment === id)));
+    keuze.value = id;
     toonVerblijf();
   }
-  keuzeknoppen.forEach(k => k.addEventListener('click', () => kiesVerblijf(k.dataset.apartment)));
+  keuze.addEventListener('change', () => kiesVerblijf(keuze.value));
   document.querySelectorAll('[data-verblijf]').forEach(a => a.addEventListener('click', () => kiesVerblijf(a.dataset.verblijf)));
   new MutationObserver(toonVerblijf).observe(boekingsmodule, { childList: true, subtree: true });
 
