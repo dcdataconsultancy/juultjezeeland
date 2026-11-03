@@ -1,0 +1,22 @@
+/*
+  Extra opmaak voor de kalender van de Smoobu boekingsmodule.
+  Niet bedoeld voor de website zelf: plak dit onderaan het veld Custom CSS
+  in Smoobu (Instellingen boekingssysteem, tabblad Custom style).
+  Laat de kleuren die daar al staan gewoon staan.
+*/
+
+/* data die niet meer kunnen: rood gearceerd en doorgestreept */
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background: repeating-linear-gradient(135deg, rgba(180, 35, 24, 0.22) 0 3px, rgba(180, 35, 24, 0.06) 3px 7px) !important;
+  color: #9B2C2C !important;
+  text-decoration: line-through;
+  cursor: not-allowed;
+  border-radius: 0;
+}
+
+/* dagen van de vorige en volgende maand niet tonen */
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  visibility: hidden;
+}

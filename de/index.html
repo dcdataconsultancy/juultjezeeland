@@ -104,7 +104,7 @@
           <div class="verblijf-kop"><h3>Ferienhaus Juultje</h3><span class="label">Die geräumigere Unterkunft</span></div>
           <ul class="kenmerken"><li>2 Personen</li><li>1 Schlafzimmer</li><li>ca. 35 m²</li><li>Eigener Parkplatz in der Einfahrt</li></ul>
           <p>Für alle, die Zeeland in aller Ruhe genießen möchten, mit Küste, Natur und gemütlichen Dörfern ganz in der Nähe. Das Häuschen liegt auf der anderen Seite unseres Hauses und bietet etwas mehr Platz.</p>
-          <a href="#boeken" class="knop">Preis und Verfügbarkeit</a>
+          <a href="#boeken" class="knop" data-verblijf="3563861">Preis und Verfügbarkeit</a>
         </div>
       </article>
       <article class="verblijf">
@@ -123,7 +123,7 @@
           <div class="verblijf-kop"><h3>Ferienwohnung Juultje</h3><span class="label">Kompakt und komfortabel</span></div>
           <ul class="kenmerken"><li>2 Personen</li><li>1 Schlafzimmer</li><li>ca. 26 m²</li><li>Klimaanlage</li></ul>
           <p>Ein schöner Ausgangspunkt für einen entspannten Aufenthalt. Von Wissenkerke aus erkunden Sie die Umgebung ganz einfach zu Fuß oder mit dem Fahrrad und genießen die Natur von Zeeland in vollen Zügen.</p>
-          <a href="#boeken" class="knop">Preis und Verfügbarkeit</a>
+          <a href="#boeken" class="knop" data-verblijf="3563866">Preis und Verfügbarkeit</a>
         </div>
       </article>
     </div>
@@ -187,6 +187,11 @@
       <h2>Buchen Sie direkt bei uns</h2>
       <p>Immer aktuelle Preise und Verfügbarkeit. Nach Ihrer Reservierung erhalten Sie sofort eine Bestätigung, und vor der Anreise senden wir Ihnen alle praktischen Informationen.</p>
     </div>
+    <div class="verblijfkeuze" role="group" aria-label="Unterkunft wählen">
+      <button type="button" aria-pressed="true" data-apartment="">Beide Unterkünfte</button>
+      <button type="button" aria-pressed="false" data-apartment="3563861">Ferienhaus</button>
+      <button type="button" aria-pressed="false" data-apartment="3563866">Ferienwohnung</button>
+    </div>
     <div class="boeking">
       <div id="apartmentIframeAll">
         <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
@@ -205,9 +210,10 @@
       <ul>
         <li>Marc per Anruf oder WhatsApp: <a href="tel:+31613664239">+31 6 1366 4239</a></li>
         <li>Angelia per Anruf oder WhatsApp: <a href="tel:+31681199425">+31 6 8119 9425</a></li>
-        <li>Email: [folgt noch]</li>
+        <li>Email: <a href="mailto:juultjeverhuur@gmail.com">juultjeverhuur@gmail.com</a></li>
         <li>Instagram: Juultje Zeeland</li>
-        <li>Julianastraat 38, 4491 GB Wissenkerke</li>
+        <li>Wissenkerke, Noord-Beveland</li>
+        <li>Die genaue Adresse erhalten Sie nach der Buchung.</li>
       </ul>
     </div>
   </div>
@@ -251,6 +257,25 @@
     knop.setAttribute('aria-expanded', 'false');
   }));
   document.getElementById('jaar').textContent = new Date().getFullYear();
+
+  // keuze van verblijf in de boekingsmodule van Smoobu
+  const smoobuPagina = 'https://booking.smoobu.com/juultjezeeland';
+  const keuzeknoppen = document.querySelectorAll('.verblijfkeuze button');
+  const boekingsmodule = document.getElementById('apartmentIframeAll');
+  let gekozenVerblijf = '';
+  function toonVerblijf() {
+    const iframe = boekingsmodule.querySelector('iframe');
+    const adres = smoobuPagina + (gekozenVerblijf ? '?apartmentId=' + gekozenVerblijf : '');
+    if (iframe && iframe.src !== adres) iframe.src = adres;
+  }
+  function kiesVerblijf(id) {
+    gekozenVerblijf = id;
+    keuzeknoppen.forEach(k => k.setAttribute('aria-pressed', String(k.dataset.apartment === id)));
+    toonVerblijf();
+  }
+  keuzeknoppen.forEach(k => k.addEventListener('click', () => kiesVerblijf(k.dataset.apartment)));
+  document.querySelectorAll('[data-verblijf]').forEach(a => a.addEventListener('click', () => kiesVerblijf(a.dataset.verblijf)));
+  new MutationObserver(toonVerblijf).observe(boekingsmodule, { childList: true, subtree: true });
 
   // fotogalerij
   const lb = document.querySelector('.lightbox');

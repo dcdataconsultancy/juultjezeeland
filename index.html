@@ -104,7 +104,7 @@
           <div class="verblijf-kop"><h3>Vakantiehuisje Juultje</h3><span class="label">Het ruimste verblijf</span></div>
           <ul class="kenmerken"><li>2 personen</li><li>1 slaapkamer</li><li>circa 35 m²</li><li>Eigen parkeerplaats op de oprit</li></ul>
           <p>Voor wie in alle rust wil genieten van Zeeland, met de kust, de natuur en gezellige dorpjes op korte afstand. Het huisje ligt aan de andere kant van onze woning en biedt net wat meer ruimte.</p>
-          <a href="#boeken" class="knop">Prijs en beschikbaarheid</a>
+          <a href="#boeken" class="knop" data-verblijf="3563861">Prijs en beschikbaarheid</a>
         </div>
       </article>
       <article class="verblijf">
@@ -123,7 +123,7 @@
           <div class="verblijf-kop"><h3>Appartement Juultje</h3><span class="label">Compact en comfortabel</span></div>
           <ul class="kenmerken"><li>2 personen</li><li>1 slaapkamer</li><li>circa 26 m²</li><li>Airconditioning</li></ul>
           <p>Een fijne uitvalsbasis voor een ontspannen verblijf. Vanuit Wissenkerke ontdek je de omgeving makkelijk te voet of op de fiets, en geniet je volop van de Zeeuwse natuur.</p>
-          <a href="#boeken" class="knop">Prijs en beschikbaarheid</a>
+          <a href="#boeken" class="knop" data-verblijf="3563866">Prijs en beschikbaarheid</a>
         </div>
       </article>
     </div>
@@ -187,6 +187,11 @@
       <h2>Boek rechtstreeks bij ons</h2>
       <p>Altijd de actuele prijs en beschikbaarheid. Na je reservering ontvang je direct een bevestiging, en voor aankomst sturen we je alle praktische informatie.</p>
     </div>
+    <div class="verblijfkeuze" role="group" aria-label="Kies een verblijf">
+      <button type="button" aria-pressed="true" data-apartment="">Beide verblijven</button>
+      <button type="button" aria-pressed="false" data-apartment="3563861">Vakantiehuisje</button>
+      <button type="button" aria-pressed="false" data-apartment="3563866">Appartement</button>
+    </div>
     <div class="boeking">
       <div id="apartmentIframeAll">
         <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
@@ -205,9 +210,10 @@
       <ul>
         <li>Bel of app Marc: <a href="tel:+31613664239">06 1366 4239</a></li>
         <li>Bel of app Angelia: <a href="tel:+31681199425">06 8119 9425</a></li>
-        <li>Mail: [nog aan te leveren]</li>
+        <li>Mail: <a href="mailto:juultjeverhuur@gmail.com">juultjeverhuur@gmail.com</a></li>
         <li>Instagram: Juultje Zeeland</li>
-        <li>Julianastraat 38, 4491 GB Wissenkerke</li>
+        <li>Wissenkerke, Noord-Beveland</li>
+        <li>Het exacte adres ontvang je na het boeken.</li>
       </ul>
     </div>
   </div>
@@ -251,6 +257,25 @@
     knop.setAttribute('aria-expanded', 'false');
   }));
   document.getElementById('jaar').textContent = new Date().getFullYear();
+
+  // keuze van verblijf in de boekingsmodule van Smoobu
+  const smoobuPagina = 'https://booking.smoobu.com/juultjezeeland';
+  const keuzeknoppen = document.querySelectorAll('.verblijfkeuze button');
+  const boekingsmodule = document.getElementById('apartmentIframeAll');
+  let gekozenVerblijf = '';
+  function toonVerblijf() {
+    const iframe = boekingsmodule.querySelector('iframe');
+    const adres = smoobuPagina + (gekozenVerblijf ? '?apartmentId=' + gekozenVerblijf : '');
+    if (iframe && iframe.src !== adres) iframe.src = adres;
+  }
+  function kiesVerblijf(id) {
+    gekozenVerblijf = id;
+    keuzeknoppen.forEach(k => k.setAttribute('aria-pressed', String(k.dataset.apartment === id)));
+    toonVerblijf();
+  }
+  keuzeknoppen.forEach(k => k.addEventListener('click', () => kiesVerblijf(k.dataset.apartment)));
+  document.querySelectorAll('[data-verblijf]').forEach(a => a.addEventListener('click', () => kiesVerblijf(a.dataset.verblijf)));
+  new MutationObserver(toonVerblijf).observe(boekingsmodule, { childList: true, subtree: true });
 
   // fotogalerij
   const lb = document.querySelector('.lightbox');
