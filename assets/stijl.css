@@ -115,6 +115,16 @@ nav a{text-decoration:none;white-space:nowrap}
 .meer-link{margin-top:24px}
 .meer-link a{font-weight:700}
 
+/* voorwaarden */
+.tekst{max-width:760px;color:var(--tekst2)}
+.tekst h2{font-family:var(--sans);font-weight:700;font-size:22px;color:var(--taupe);margin:40px 0 12px;scroll-margin-top:100px}
+.tekst h3{font-family:var(--sans);font-weight:700;font-size:17px;color:var(--taupe);margin:16px 0 6px}
+.tekst p{margin:0 0 12px}
+.tekst ol,.tekst ul{margin:0 0 12px;padding-left:24px;display:flex;flex-direction:column;gap:8px}
+.tekst li ul{margin:8px 0 0}
+.tekst strong{color:var(--taupe)}
+.tekst .afsluiting{margin-top:40px;padding-top:24px;border-top:1px solid var(--lijn)}
+
 /* boeken */
 .verblijfkeuze{display:inline-flex;flex-wrap:wrap;gap:6px;background:var(--wit);border-radius:999px;padding:6px;margin-bottom:16px}
 .verblijfkeuze button{font:inherit;font-weight:700;border:0;border-radius:999px;min-height:44px;padding:0 20px;background:transparent;color:var(--taupe);cursor:pointer}
