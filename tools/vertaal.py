@@ -359,7 +359,6 @@ DE = {
  'Inbegrepen': 'Inklusive',
  'Beddengoed, handdoeken en keukenlinnen': 'Bettwäsche, Handtücher und Küchentücher',
  'Wifi': 'WLAN',
- 'Toeristenbelasting': 'Kurtaxe',
  'Extra kosten': 'Zusätzliche Kosten',
  'Schoonmaakkosten: € 45 per verblijf': 'Endreinigung: 45 € pro Aufenthalt',
  'Schoonmaakkosten: € 40 per verblijf': 'Endreinigung: 40 € pro Aufenthalt',
@@ -369,6 +368,7 @@ DE = {
  'Uitchecken uiterlijk 10.00 uur': 'Abreise bis spätestens 10:00 Uhr',
  'Sleutel via een sleutelkluisje': 'Schlüssel im Schlüsseltresor',
  'Eerder of later alleen in overleg': 'Früher oder später nur nach Absprache',
+ 'Meer informatie over de verblijven': 'Mehr Informationen zu den Unterkünften',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -721,7 +721,6 @@ EN = {
  'Inbegrepen': 'Included',
  'Beddengoed, handdoeken en keukenlinnen': 'Bed linen, towels and tea towels',
  'Wifi': 'Wifi',
- 'Toeristenbelasting': 'Tourist tax',
  'Extra kosten': 'Extra costs',
  'Schoonmaakkosten: € 45 per verblijf': 'Cleaning fee: €45 per stay',
  'Schoonmaakkosten: € 40 per verblijf': 'Cleaning fee: €40 per stay',
@@ -731,6 +730,7 @@ EN = {
  'Uitchecken uiterlijk 10.00 uur': 'Check out by 10 am',
  'Sleutel via een sleutelkluisje': 'Key from a key safe',
  'Eerder of later alleen in overleg': 'Earlier or later only by arrangement',
+ 'Meer informatie over de verblijven': 'More information about the stays',
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),

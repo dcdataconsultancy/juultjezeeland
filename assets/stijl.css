@@ -22,6 +22,7 @@ p{margin:0}
 .label{font-size:15px;color:var(--olijf);font-weight:700}
 .intro{display:flex;flex-direction:column;gap:12px;max-width:660px;margin-bottom:40px}
 .intro p{font-size:18px;color:var(--tekst2)}
+.intro .intro-link a{color:var(--taupe);font-weight:700}
 .knop{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:999px;background:var(--knop);color:#fff;font-weight:700;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
 .knop:hover{background:var(--knop-hover);color:#fff}
 .knop.rand{background:transparent;color:var(--taupe);border:1.5px solid var(--taupe)}
