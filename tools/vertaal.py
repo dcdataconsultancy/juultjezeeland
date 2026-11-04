@@ -735,7 +735,7 @@ EN_RE = [
 
 # strings die in alle talen gelijk blijven
 GELIJK = {'juultjeverhuur@gmail.com', 'Juultje Zeeland', 'NL', 'DE', 'EN', 'Wissenkerke, Noord-Beveland', '+7', '+3', '9,1', '4,92',
-          'Instagram: Juultje Zeeland', 'Nederlands', 'Deutsch', 'English', '©', '2026', '">', '.', 'Wissenkerke, Zeeland',
+          'Instagram:', '@juultjezeeland', 'Nederlands', 'Deutsch', 'English', '©', '2026', '">', '.', 'Wissenkerke, Zeeland',
           'www.autoriteitpersoonsgegevens.nl'}
 
 def vertaal(tekst, tabel, regels, missers):
