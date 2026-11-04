@@ -3,7 +3,7 @@
 Website voor Juultje Zeeland: vakantiehuisje en appartement in Wissenkerke, Noord-Beveland.
 
 - Statische site, gehost op GitHub Pages: Nederlandse pagina's in de hoofdmap (`index.html`, `huisregels.html`, `algemene-voorwaarden.html`, `annuleringsvoorwaarden.html`, `privacyverklaring.html`), Duits in `de/`, Engels in `en/`
-- Gedeelde opmaak in `assets/stijl.css`
+- Gedeelde opmaak in `assets/stijl.css`. De lettertypen (DM Sans en Instrument Serif, licentie OFL) staan in `assets/fonts/`, zodat bezoekers niets bij Google ophalen.
 - Boekingen via de Smoobu Booking Engine (iframe in de sectie `#boeken`). Smoobu kiest de taal zelf op basis van de browser van de gast.
 - Foto's staan in `assets/fotos/` (WebP 800 en 1600 px plus JPG als terugval, zonder EXIF). Originelen horen in `fotos-origineel/`, die map staat in `.gitignore`.
 
