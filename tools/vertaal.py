@@ -366,6 +366,15 @@ DE = {
  'Sleutel via een sleutelkluisje': 'Schlüssel im Schlüsseltresor',
  'Eerder of later alleen in overleg': 'Früher oder später nur nach Absprache',
  'Meer informatie over de verblijven': 'Mehr Informationen zu den Unterkünften',
+ 'Laagseizoen': 'Nebensaison',
+ 'Hoogseizoen': 'Hauptsaison',
+ 'vanaf': 'ab',
+ 'per nacht': 'pro Nacht',
+ '€ 86': '86 €',
+ '€ 130': '130 €',
+ '€ 72': '72 €',
+ '€ 100': '100 €',
+ 'Hoogseizoen is van april tot en met september.': 'Die Hauptsaison dauert von April bis einschließlich September.',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -725,6 +734,15 @@ EN = {
  'Sleutel via een sleutelkluisje': 'Key from a key safe',
  'Eerder of later alleen in overleg': 'Earlier or later only by arrangement',
  'Meer informatie over de verblijven': 'More information about the stays',
+ 'Laagseizoen': 'Low season',
+ 'Hoogseizoen': 'High season',
+ 'vanaf': 'from',
+ 'per nacht': 'per night',
+ '€ 86': '€86',
+ '€ 130': '€130',
+ '€ 72': '€72',
+ '€ 100': '€100',
+ 'Hoogseizoen is van april tot en met september.': 'High season runs from April through September.',
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),
