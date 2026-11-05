@@ -28,5 +28,8 @@ Nieuwe of gewijzigde Nederlandse teksten voeg je eerst toe aan de woordenlijsten
 - Boven de boekingsmodule kiest de bezoeker in een keuzelijst "Beide verblijven", "Vakantiehuisje" (Smoobu ID 3563861) of "Appartement" (Smoobu ID 3563866). De knoppen "Prijs en beschikbaarheid" bij de verblijven kiezen het juiste verblijf vooraf.
 - De opmaak binnen de boekingsmodule (zoals rood gearceerde data die niet meer kunnen) kan niet vanaf deze website. Plak daarvoor `tools/smoobu-kalender.css` in Smoobu bij Custom CSS (Instellingen boekingssysteem, tabblad Custom style).
 
-## Nog te doen
-- Eigen domein juultjezeeland.nl koppelen (CNAME); daarna de `hreflang` links in `index.html` aanpassen
+## Domein
+De site draait op GitHub Pages met het eigen domein juultjezeeland.nl (bestand `CNAME`). Het domein staat bij Strato. DNS instellingen bij Strato:
+- A records voor juultjezeeland.nl: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+- AAAA records (optioneel): 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153
+- CNAME voor www: dcdataconsultancy.github.io
