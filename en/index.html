@@ -55,12 +55,18 @@
    "email": "juultjeverhuur@gmail.com",
    "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Julianastraat 38",
+    "postalCode": "4491 GB",
     "addressLocality": "Wissenkerke",
     "addressRegion": "Zeeland",
     "addressCountry": "NL"
    },
-   "areaServed": "Noord-Beveland",
-   "priceRange": "€€",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.58268,
+    "longitude": 3.7459
+   },
+   "priceRange": "€72 to €130 per night",
    "currenciesAccepted": "EUR",
    "paymentAccepted": "iDEAL, Creditcard, Bancontact, Overschrijving",
    "checkinTime": "15:00",
@@ -82,18 +88,51 @@
     }
    ],
    "sameAs": [
-    "https://www.instagram.com/juultjezeeland"
+    "https://www.instagram.com/juultjezeeland",
+    "https://www.booking.com/hotel/nl/vakantiehuisje-juultje-in-wissenkerke.html",
+    "https://www.booking.com/hotel/nl/appartement-in-wissenkerke.html"
    ],
    "containsPlace": [
     {
      "@type": "House",
+     "@id": "https://juultjezeeland.nl/#huisje",
      "name": "Holiday cottage Juultje",
+     "identifier": "3563861",
      "url": "https://juultjezeeland.nl/en/#verblijven",
+     "image": [
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-woonkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-keuken-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-zithoek-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-slaapkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-overkapping-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-bank-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-badkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-oprit-1600.jpg"
+     ],
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Julianastraat 38",
+      "postalCode": "4491 GB",
+      "addressLocality": "Wissenkerke",
+      "addressRegion": "Zeeland",
+      "addressCountry": "NL"
+     },
+     "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.58268,
+      "longitude": 3.7459
+     },
      "occupancy": {
       "@type": "QuantitativeValue",
-      "maxValue": 2
+      "value": 2
      },
      "numberOfBedrooms": 1,
+     "numberOfBathroomsTotal": 1,
+     "bed": {
+      "@type": "BedDetails",
+      "numberOfBeds": 1,
+      "typeOfBed": "Double bed"
+     },
      "floorSize": {
       "@type": "QuantitativeValue",
       "value": 35,
@@ -116,17 +155,51 @@
        "name": "Private parking on the driveway",
        "value": true
       }
+     ],
+     "sameAs": [
+      "https://www.booking.com/hotel/nl/vakantiehuisje-juultje-in-wissenkerke.html"
      ]
     },
     {
      "@type": "Apartment",
+     "@id": "https://juultjezeeland.nl/#appartement",
      "name": "Apartment Juultje",
+     "identifier": "3563866",
      "url": "https://juultjezeeland.nl/en/#verblijven",
+     "image": [
+      "https://juultjezeeland.nl/assets/fotos/appartement-slaapkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-zithoek-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-eettafel-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-keuken-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-badkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-terras-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-douche-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-hal-1600.jpg"
+     ],
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Julianastraat 38",
+      "postalCode": "4491 GB",
+      "addressLocality": "Wissenkerke",
+      "addressRegion": "Zeeland",
+      "addressCountry": "NL"
+     },
+     "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.58268,
+      "longitude": 3.7459
+     },
      "occupancy": {
       "@type": "QuantitativeValue",
-      "maxValue": 2
+      "value": 2
      },
      "numberOfBedrooms": 1,
+     "numberOfBathroomsTotal": 1,
+     "bed": {
+      "@type": "BedDetails",
+      "numberOfBeds": 1,
+      "typeOfBed": "Double bed"
+     },
      "floorSize": {
       "@type": "QuantitativeValue",
       "value": 26,
@@ -144,6 +217,9 @@
        "name": "Air conditioning",
        "value": true
       }
+     ],
+     "sameAs": [
+      "https://www.booking.com/hotel/nl/appartement-in-wissenkerke.html"
      ]
     }
    ]
@@ -182,8 +258,8 @@
   <div class="wrap">
     <div class="hero-tekst">
       <span class="label">Wissenkerke, Noord-Beveland</span>
-      <h1>Welcome to Zeeland</h1>
-      <p>Two charming stays for two people in the village of Wissenkerke. The beach is just a few minutes away: fresh sea air, walks along the water and then time to unwind. You are very welcome, and so is your dog.</p>
+      <h1>Holiday cottage and apartment in Wissenkerke</h1>
+      <p>Two charming stays for two people in the village of Wissenkerke. The beach is 2.5 kilometres away: fresh sea air, walks along the water and then time to unwind. You are very welcome, and so is your dog.</p>
       <div class="knoppen">
         <a href="#verblijven" class="knop">View the stays</a>
       </div>
@@ -200,11 +276,11 @@
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="9" r="2"/><circle cx="10" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="19" cy="9" r="2"/><path d="M12.5 11c-3 0-5.5 4-5.5 6.5 0 2 2 2.5 5.5 2.5s5.5-.5 5.5-2.5c0-2.5-2.5-6.5-5.5-6.5z"/></svg>
-      <div><strong>Dogs welcome</strong><span>€15 per night</span></div>
+      <div><strong>Dogs welcome</strong><span>€15 per dog per night</span></div>
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8"/><path d="M9 6h3"/></svg>
-      <div><strong>Rent an electric bike</strong><span>Availability and rates on request</span></div>
+      <div><strong>Rent an electric bike</strong><span>First day €25, then €15 per day</span></div>
     </div>
   </div>
 </section>
@@ -242,8 +318,8 @@
             <summary><span class="tekst-dicht">More information</span><span class="tekst-open">Less information</span></summary>
             <div class="verblijf-details">
               <div><h4>Layout</h4><ul><li>Living room with leather sofa, dining table and open kitchen</li><li>Kitchen with coffee machine</li><li>Bedroom with double bed and television</li><li>Bathroom with walk in rain shower</li><li>Toilet with washbasin</li><li>Small garden with covered wooden patio and lounge chairs</li><li>Private parking on the driveway</li></ul></div>
-              <div><h4>Included</h4><ul><li>Bed linen, towels and tea towels</li><li>Wifi</li><li>Air conditioning</li></ul></div>
-              <div><h4>Extra costs</h4><ul><li>Cleaning fee: €45 per stay</li><li>Dog: €15 per night</li><li>Electric bike: on request</li></ul></div>
+              <div><h4>Included</h4><ul><li>Bed linen, towels and tea towels</li><li>Wifi</li><li>Air conditioning</li><li>Tourist tax</li></ul></div>
+              <div><h4>Extra costs</h4><ul><li>Cleaning fee: €45 per stay</li><li>Dog: €15 per dog per night</li><li>Electric bike: first day €25, then €15 per day</li></ul></div>
               <div><h4>Arrival and departure</h4><ul><li>Check in from 3 pm</li><li>Check out by 10 am</li><li>Key from a key safe</li><li>Earlier or later only by arrangement</li></ul></div>
             </div>
             <p class="verblijf-links"><a href="huisregels.html">House rules</a><a href="annuleringsvoorwaarden.html">Cancellation policy</a></p>
@@ -272,8 +348,8 @@
             <summary><span class="tekst-dicht">More information</span><span class="tekst-open">Less information</span></summary>
             <div class="verblijf-details">
               <div><h4>Layout</h4><ul><li>Bedroom with double bed under a sloping ceiling</li><li>Seating area with sofa and skylight</li><li>Dining table for two</li><li>Kitchen with fridge, oven and hob</li><li>Bathroom with shower and grab rail</li><li>Private patio with table and two chairs</li></ul></div>
-              <div><h4>Included</h4><ul><li>Bed linen, towels and tea towels</li><li>Wifi</li><li>Air conditioning</li></ul></div>
-              <div><h4>Extra costs</h4><ul><li>Cleaning fee: €40 per stay</li><li>Dog: €15 per night</li><li>Electric bike: on request</li></ul></div>
+              <div><h4>Included</h4><ul><li>Bed linen, towels and tea towels</li><li>Wifi</li><li>Air conditioning</li><li>Tourist tax</li></ul></div>
+              <div><h4>Extra costs</h4><ul><li>Cleaning fee: €40 per stay</li><li>Dog: €15 per dog per night</li><li>Electric bike: first day €25, then €15 per day</li></ul></div>
               <div><h4>Arrival and departure</h4><ul><li>Check in from 3 pm</li><li>Check out by 10 am</li><li>Key from a key safe</li><li>Earlier or later only by arrangement</li></ul></div>
             </div>
             <p class="verblijf-links"><a href="huisregels.html">House rules</a><a href="annuleringsvoorwaarden.html">Cancellation policy</a></p>
@@ -300,7 +376,7 @@
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="0" aria-label="Enlarge photo 1 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-polder-800.webp 800w, ../assets/fotos/omgeving-polder-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-polder-1600.jpg" alt="White dog in the grass of the polder at sunset" width="1600" height="747" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button><strong>Walking</strong><span>Through the polders, along dykes, nature reserves and the water. Lovely with your dog too.</span></div>
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="1" aria-label="Enlarge photo 2 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-fietsen-800.webp 800w, ../assets/fotos/omgeving-fietsen-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-fietsen-1600.jpg" alt="Two electric bikes on the grass in the garden" width="1600" height="1200" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Cycling</strong><span>Past polders, Zeeland villages and the North Sea coast. Ask about our electric bikes.</span></div>
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="2" aria-label="Enlarge photo 3 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-steiger-800.webp 800w, ../assets/fotos/omgeving-steiger-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-steiger-1600.jpg" alt="Wooden jetty on still water at sunrise with a sailing boat in the distance" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Oosterschelde and Veerse Meer</strong><span>Oosterschelde National Park and the Veerse Meer lake are close by.</span></div>
-      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="3" aria-label="Enlarge photo 4 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-strand-800.webp 800w, ../assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-strand-1600.jpg" alt="Empty sandy beach with sea and wind turbines on the horizon" width="1600" height="2133" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 52%"></picture></button><strong>Beaches</strong><span>A short drive away. Please check the local rules for dogs.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="3" aria-label="Enlarge photo 4 of 7"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-strand-800.webp 800w, ../assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-strand-1600.jpg" alt="Empty sandy beach with sea and wind turbines on the horizon" width="1600" height="2133" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 52%"></picture></button><strong>Beaches</strong><span>2.5 kilometres away, an easy bike ride. Please check the local rules for dogs.</span></div>
       <button type="button" hidden data-galerij="omgeving" data-index="4"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-dijk-800.webp 800w, ../assets/fotos/omgeving-dijk-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-dijk-1600.jpg" alt="Dyke with cycle path along the water and wind turbines in the distance" width="1600" height="2819" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
       <button type="button" hidden data-galerij="omgeving" data-index="5"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-steiger-zonsopkomst-800.webp 800w, ../assets/fotos/omgeving-steiger-zonsopkomst-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-steiger-zonsopkomst-1600.jpg" alt="Jetty and rocks by the water at sunrise" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
       <button type="button" hidden data-galerij="omgeving" data-index="6"><picture class="beeld"><source type="image/webp" srcset="../assets/fotos/omgeving-oever-800.webp 800w, ../assets/fotos/omgeving-oever-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="../assets/fotos/omgeving-oever-1600.jpg" alt="Shore with stones and a row of buoys in the still water" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
@@ -352,11 +428,12 @@
       </select>
     </div>
     <div class="boeking">
-      <div id="apartmentIframeAll">
+      <div id="apartmentIframeAll" data-titel="Booking tool of Juultje Zeeland">
         <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
         <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/en/booking-tool/iframe/1927951", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
       </div>
     </div>
+    <p class="betalen">No booking tool showing above? <a href="https://booking.smoobu.com/juultjezeeland" target="_blank" rel="noopener">Open the booking page</a>.</p>
     <p class="betalen">You can pay by iDEAL, credit card, Bancontact or bank transfer on invoice.</p>
   </div>
 </section>
@@ -424,6 +501,7 @@
   let gekozenVerblijf = '';
   function toonVerblijf() {
     const iframe = boekingsmodule.querySelector('iframe');
+    if (iframe && !iframe.title) iframe.title = boekingsmodule.dataset.titel;
     const adres = smoobuPagina + (gekozenVerblijf ? '?apartmentId=' + gekozenVerblijf : '');
     if (iframe && iframe.src !== adres) iframe.src = adres;
   }

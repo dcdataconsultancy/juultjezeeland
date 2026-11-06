@@ -29,16 +29,16 @@ DE = {
  'Contact': 'Kontakt',
  'Boek direct': 'Direkt buchen',
  'Welkom in Zeeland': 'Willkommen in Zeeland',
- 'Twee sfeervolle verblijven voor twee personen in het dorp Wissenkerke. Het strand ligt op een paar minuten afstand: uitwaaien aan zee, wandelen langs het water en daarna heerlijk tot rust komen. Jullie zijn van harte welkom en je hond natuurlijk ook.': 'Zwei gemütliche Unterkünfte für zwei Personen im Dorf Wissenkerke. Der Strand ist nur wenige Minuten entfernt: frische Seeluft, Spaziergänge am Wasser und danach herrlich zur Ruhe kommen. Sie sind herzlich willkommen und Ihr Hund natürlich auch.',
+ 'Twee sfeervolle verblijven voor twee personen in het dorp Wissenkerke. Het strand ligt op 2,5 kilometer: uitwaaien aan zee, wandelen langs het water en daarna heerlijk tot rust komen. Jullie zijn van harte welkom en je hond natuurlijk ook.': 'Zwei gemütliche Unterkünfte für zwei Personen im Dorf Wissenkerke. Der Strand ist 2,5 Kilometer entfernt: frische Seeluft, Spaziergänge am Wasser und danach herrlich zur Ruhe kommen. Sie sind herzlich willkommen und Ihr Hund natürlich auch.',
  'Bekijk beschikbaarheid': 'Verfügbarkeit prüfen',
  'Bekijk de verblijven': 'Unterkünfte ansehen',
  'Waarom Juultje Zeeland': 'Warum Juultje Zeeland',
  'Direct bij ons boeken': 'Direkt bei uns buchen',
  'Rechtstreeks contact, zonder tussenpartij': 'Direkter Kontakt, ohne Vermittler',
  'Honden welkom': 'Hunde willkommen',
- '€ 15 per nacht': '15 € pro Nacht',
+ '€ 15 per hond per nacht': '15 € pro Hund und Nacht',
  'Elektrische fiets huren': 'Elektrofahrrad mieten',
- 'Beschikbaarheid en tarief op aanvraag': 'Verfügbarkeit und Preis auf Anfrage',
+ 'Eerste dag € 25, daarna € 15 per dag': 'Erster Tag 25 €, danach 15 € pro Tag',
  'Twee verblijven, één adres': 'Zwei Unterkünfte, eine Adresse',
  'Allebei voor twee personen met één slaapkamer, aan verschillende kanten van ons huis. Beddengoed, handdoeken, wifi en airconditioning zijn overal inbegrepen.': 'Beide für zwei Personen mit einem Schlafzimmer, auf verschiedenen Seiten unseres Hauses. Bettwäsche, Handtücher, WLAN und Klimaanlage sind überall inklusive.',
  'Woonkamer van het vakantiehuisje met leren bank, eettafel en open keuken': 'Wohnzimmer des Ferienhauses mit Ledersofa, Esstisch und offener Küche',
@@ -91,7 +91,6 @@ DE = {
  'Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij.': 'Der Nationalpark Oosterschelde und das Veerse Meer liegen ganz in der Nähe.',
  'Leeg zandstrand met zee en windmolens aan de horizon': 'Leerer Sandstrand mit Meer und Windrädern am Horizont',
  'Stranden': 'Strände',
- 'Op korte rijafstand. Let op de plaatselijke regels voor honden.': 'Nur eine kurze Autofahrt entfernt. Bitte beachten Sie die örtlichen Regeln für Hunde.',
  'Dijk met fietspad langs het water en windmolens in de verte': 'Deich mit Radweg am Wasser und Windrädern in der Ferne',
  'Steiger en rotsen aan het water bij zonsopkomst': 'Steg und Felsen am Wasser bei Sonnenaufgang',
  'Oever met stenen en een rij boeien in het stille water': 'Ufer mit Steinen und einer Reihe Bojen im stillen Wasser',
@@ -359,8 +358,13 @@ DE = {
  'Extra kosten': 'Zusätzliche Kosten',
  'Schoonmaakkosten: € 45 per verblijf': 'Endreinigung: 45 € pro Aufenthalt',
  'Schoonmaakkosten: € 40 per verblijf': 'Endreinigung: 40 € pro Aufenthalt',
- 'Hond: € 15 per nacht': 'Hund: 15 € pro Nacht',
- 'Elektrische fiets: op aanvraag': 'Elektrofahrrad: auf Anfrage',
+ 'Hond: € 15 per hond per nacht': 'Hund: 15 € pro Hund und Nacht',
+ 'Elektrische fiets: eerste dag € 25, daarna € 15 per dag': 'Elektrofahrrad: erster Tag 25 €, danach 15 € pro Tag',
+ 'Toeristenbelasting': 'Kurtaxe',
+ 'Op 2,5 kilometer, makkelijk te fietsen. Let op de plaatselijke regels voor honden.': '2,5 Kilometer entfernt, gut mit dem Fahrrad zu erreichen. Bitte beachten Sie die örtlichen Regeln für Hunde.',
+ 'Boekingsmodule van Juultje Zeeland': 'Buchungsmodul von Juultje Zeeland',
+ 'Zie je hierboven geen boekingsmodule?': 'Sie sehen oben kein Buchungsmodul?',
+ 'Open de boekingspagina': 'Buchungsseite öffnen',
  'Inchecken vanaf 15.00 uur': 'Anreise ab 15:00 Uhr',
  'Uitchecken uiterlijk 10.00 uur': 'Abreise bis spätestens 10:00 Uhr',
  'Sleutel via een sleutelkluisje': 'Schlüssel im Schlüsseltresor',
@@ -395,16 +399,16 @@ EN = {
  'Contact': 'Contact',
  'Boek direct': 'Book now',
  'Welkom in Zeeland': 'Welcome to Zeeland',
- 'Twee sfeervolle verblijven voor twee personen in het dorp Wissenkerke. Het strand ligt op een paar minuten afstand: uitwaaien aan zee, wandelen langs het water en daarna heerlijk tot rust komen. Jullie zijn van harte welkom en je hond natuurlijk ook.': 'Two charming stays for two people in the village of Wissenkerke. The beach is just a few minutes away: fresh sea air, walks along the water and then time to unwind. You are very welcome, and so is your dog.',
+ 'Twee sfeervolle verblijven voor twee personen in het dorp Wissenkerke. Het strand ligt op 2,5 kilometer: uitwaaien aan zee, wandelen langs het water en daarna heerlijk tot rust komen. Jullie zijn van harte welkom en je hond natuurlijk ook.': 'Two charming stays for two people in the village of Wissenkerke. The beach is 2.5 kilometres away: fresh sea air, walks along the water and then time to unwind. You are very welcome, and so is your dog.',
  'Bekijk beschikbaarheid': 'Check availability',
  'Bekijk de verblijven': 'View the stays',
  'Waarom Juultje Zeeland': 'Why Juultje Zeeland',
  'Direct bij ons boeken': 'Book directly with us',
  'Rechtstreeks contact, zonder tussenpartij': 'Direct contact, no middleman',
  'Honden welkom': 'Dogs welcome',
- '€ 15 per nacht': '€15 per night',
+ '€ 15 per hond per nacht': '€15 per dog per night',
  'Elektrische fiets huren': 'Rent an electric bike',
- 'Beschikbaarheid en tarief op aanvraag': 'Availability and rates on request',
+ 'Eerste dag € 25, daarna € 15 per dag': 'First day €25, then €15 per day',
  'Twee verblijven, één adres': 'Two stays, one address',
  'Allebei voor twee personen met één slaapkamer, aan verschillende kanten van ons huis. Beddengoed, handdoeken, wifi en airconditioning zijn overal inbegrepen.': 'Both sleep two people in one bedroom, on different sides of our home. Bed linen, towels, wifi and air conditioning are included everywhere.',
  'Woonkamer van het vakantiehuisje met leren bank, eettafel en open keuken': 'Living room of the holiday cottage with leather sofa, dining table and open kitchen',
@@ -457,7 +461,6 @@ EN = {
  'Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij.': 'Oosterschelde National Park and the Veerse Meer lake are close by.',
  'Leeg zandstrand met zee en windmolens aan de horizon': 'Empty sandy beach with sea and wind turbines on the horizon',
  'Stranden': 'Beaches',
- 'Op korte rijafstand. Let op de plaatselijke regels voor honden.': 'A short drive away. Please check the local rules for dogs.',
  'Dijk met fietspad langs het water en windmolens in de verte': 'Dyke with cycle path along the water and wind turbines in the distance',
  'Steiger en rotsen aan het water bij zonsopkomst': 'Jetty and rocks by the water at sunrise',
  'Oever met stenen en een rij boeien in het stille water': 'Shore with stones and a row of buoys in the still water',
@@ -727,8 +730,13 @@ EN = {
  'Extra kosten': 'Extra costs',
  'Schoonmaakkosten: € 45 per verblijf': 'Cleaning fee: €45 per stay',
  'Schoonmaakkosten: € 40 per verblijf': 'Cleaning fee: €40 per stay',
- 'Hond: € 15 per nacht': 'Dog: €15 per night',
- 'Elektrische fiets: op aanvraag': 'Electric bike: on request',
+ 'Hond: € 15 per hond per nacht': 'Dog: €15 per dog per night',
+ 'Elektrische fiets: eerste dag € 25, daarna € 15 per dag': 'Electric bike: first day €25, then €15 per day',
+ 'Toeristenbelasting': 'Tourist tax',
+ 'Op 2,5 kilometer, makkelijk te fietsen. Let op de plaatselijke regels voor honden.': '2.5 kilometres away, an easy bike ride. Please check the local rules for dogs.',
+ 'Boekingsmodule van Juultje Zeeland': 'Booking tool of Juultje Zeeland',
+ 'Zie je hierboven geen boekingsmodule?': 'No booking tool showing above?',
+ 'Open de boekingspagina': 'Open the booking page',
  'Inchecken vanaf 15.00 uur': 'Check in from 3 pm',
  'Uitchecken uiterlijk 10.00 uur': 'Check out by 10 am',
  'Sleutel via een sleutelkluisje': 'Key from a key safe',
@@ -784,7 +792,7 @@ def maak(bron, taal, tabel, regels, bestand):
             elif tag.startswith(('</style', '</script')): in_code = False
             def attr(m):
                 return f'{m.group(1)}="{vertaal(m.group(2), tabel, regels, missers)}"'
-            d = re.sub(r'\b(alt|aria-label|data-teller)="([^"]*)"', attr, d)
+            d = re.sub(r'\b(alt|aria-label|data-teller|data-titel)="([^"]*)"', attr, d)
             if d.startswith('<meta name="description"'):
                 d = re.sub(r'content="([^"]*)"', lambda m: f'content="{vertaal(m.group(1), tabel, regels, missers)}"', d)
             uit.append(d)
@@ -841,18 +849,41 @@ def t(tekst, taal):
 def pagina_url(bestand, taal):
     return SITE + ('' if taal == 'nl' else taal + '/') + ('' if bestand == 'index.html' else bestand)
 
+ADRES = {'@type': 'PostalAddress', 'streetAddress': 'Julianastraat 38', 'postalCode': '4491 GB',
+         'addressLocality': 'Wissenkerke', 'addressRegion': 'Zeeland', 'addressCountry': 'NL'}
+GEO = {'@type': 'GeoCoordinates', 'latitude': 51.58268, 'longitude': 3.74590}
+PRIJZEN = {'nl': '€ 72 tot € 130 per nacht', 'de': '72 € bis 130 € pro Nacht', 'en': '€72 to €130 per night'}
+BED = {'nl': 'Tweepersoonsbed', 'de': 'Doppelbett', 'en': 'Double bed'}
+BOOKING = {
+    'huisje': 'https://www.booking.com/hotel/nl/vakantiehuisje-juultje-in-wissenkerke.html',
+    'appartement': 'https://www.booking.com/hotel/nl/appartement-in-wissenkerke.html',
+}
+FOTOS = {
+    'huisje': ['woonkamer', 'keuken', 'zithoek', 'slaapkamer', 'overkapping', 'bank', 'badkamer', 'oprit'],
+    'appartement': ['slaapkamer', 'zithoek', 'eettafel', 'keuken', 'badkamer', 'terras', 'douche', 'hal'],
+}
+
 def json_ld(taal, beschrijving):
-    def verblijf(soort, naam, m2, extra):
+    def verblijf(soort, sleutel, smoobu_id, naam, m2, extra):
+        voorvoegsel = 'vakantiehuisje' if sleutel == 'huisje' else 'appartement'
         return {
             '@type': soort,
+            '@id': SITE + '#' + sleutel,
             'name': t(naam, taal),
+            'identifier': str(smoobu_id),
             'url': pagina_url('index.html', taal) + '#verblijven',
-            'occupancy': {'@type': 'QuantitativeValue', 'maxValue': 2},
+            'image': [SITE + f'assets/fotos/{voorvoegsel}-{f}-1600.jpg' for f in FOTOS[sleutel]],
+            'address': ADRES,
+            'geo': GEO,
+            'occupancy': {'@type': 'QuantitativeValue', 'value': 2},
             'numberOfBedrooms': 1,
+            'numberOfBathroomsTotal': 1,
+            'bed': {'@type': 'BedDetails', 'numberOfBeds': 1, 'typeOfBed': BED[taal]},
             'floorSize': {'@type': 'QuantitativeValue', 'value': m2, 'unitCode': 'MTK'},
             'petsAllowed': True,
             'amenityFeature': [{'@type': 'LocationFeatureSpecification', 'name': t(n, taal), 'value': True}
                                for n in ['Wifi', 'Airconditioning'] + extra],
+            'sameAs': [BOOKING[sleutel]],
         }
     bedrijf = {
         '@type': 'LodgingBusiness',
@@ -863,10 +894,9 @@ def json_ld(taal, beschrijving):
         'image': DEELBEELD,
         'telephone': '+31613664239',
         'email': 'juultjeverhuur@gmail.com',
-        'address': {'@type': 'PostalAddress', 'addressLocality': 'Wissenkerke',
-                    'addressRegion': 'Zeeland', 'addressCountry': 'NL'},
-        'areaServed': 'Noord-Beveland',
-        'priceRange': '€€',
+        'address': ADRES,
+        'geo': GEO,
+        'priceRange': PRIJZEN[taal],
         'currenciesAccepted': 'EUR',
         'paymentAccepted': 'iDEAL, Creditcard, Bancontact, Overschrijving',
         'checkinTime': '15:00',
@@ -874,10 +904,10 @@ def json_ld(taal, beschrijving):
         'petsAllowed': True,
         'knowsLanguage': ['nl', 'de', 'en'],
         'founder': [{'@type': 'Person', 'name': 'Marc'}, {'@type': 'Person', 'name': 'Angelia'}],
-        'sameAs': ['https://www.instagram.com/juultjezeeland'],
+        'sameAs': ['https://www.instagram.com/juultjezeeland'] + list(BOOKING.values()),
         'containsPlace': [
-            verblijf('House', 'Vakantiehuisje Juultje', 35, ['Eigen parkeerplaats op de oprit']),
-            verblijf('Apartment', 'Appartement Juultje', 26, []),
+            verblijf('House', 'huisje', 3563861, 'Vakantiehuisje Juultje', 35, ['Eigen parkeerplaats op de oprit']),
+            verblijf('Apartment', 'appartement', 3563866, 'Appartement Juultje', 26, []),
         ],
     }
     site = {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Juultje Zeeland', 'url': SITE,

@@ -55,12 +55,18 @@
    "email": "juultjeverhuur@gmail.com",
    "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Julianastraat 38",
+    "postalCode": "4491 GB",
     "addressLocality": "Wissenkerke",
     "addressRegion": "Zeeland",
     "addressCountry": "NL"
    },
-   "areaServed": "Noord-Beveland",
-   "priceRange": "€€",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.58268,
+    "longitude": 3.7459
+   },
+   "priceRange": "€ 72 tot € 130 per nacht",
    "currenciesAccepted": "EUR",
    "paymentAccepted": "iDEAL, Creditcard, Bancontact, Overschrijving",
    "checkinTime": "15:00",
@@ -82,18 +88,51 @@
     }
    ],
    "sameAs": [
-    "https://www.instagram.com/juultjezeeland"
+    "https://www.instagram.com/juultjezeeland",
+    "https://www.booking.com/hotel/nl/vakantiehuisje-juultje-in-wissenkerke.html",
+    "https://www.booking.com/hotel/nl/appartement-in-wissenkerke.html"
    ],
    "containsPlace": [
     {
      "@type": "House",
+     "@id": "https://juultjezeeland.nl/#huisje",
      "name": "Vakantiehuisje Juultje",
+     "identifier": "3563861",
      "url": "https://juultjezeeland.nl/#verblijven",
+     "image": [
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-woonkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-keuken-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-zithoek-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-slaapkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-overkapping-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-bank-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-badkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/vakantiehuisje-oprit-1600.jpg"
+     ],
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Julianastraat 38",
+      "postalCode": "4491 GB",
+      "addressLocality": "Wissenkerke",
+      "addressRegion": "Zeeland",
+      "addressCountry": "NL"
+     },
+     "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.58268,
+      "longitude": 3.7459
+     },
      "occupancy": {
       "@type": "QuantitativeValue",
-      "maxValue": 2
+      "value": 2
      },
      "numberOfBedrooms": 1,
+     "numberOfBathroomsTotal": 1,
+     "bed": {
+      "@type": "BedDetails",
+      "numberOfBeds": 1,
+      "typeOfBed": "Tweepersoonsbed"
+     },
      "floorSize": {
       "@type": "QuantitativeValue",
       "value": 35,
@@ -116,17 +155,51 @@
        "name": "Eigen parkeerplaats op de oprit",
        "value": true
       }
+     ],
+     "sameAs": [
+      "https://www.booking.com/hotel/nl/vakantiehuisje-juultje-in-wissenkerke.html"
      ]
     },
     {
      "@type": "Apartment",
+     "@id": "https://juultjezeeland.nl/#appartement",
      "name": "Appartement Juultje",
+     "identifier": "3563866",
      "url": "https://juultjezeeland.nl/#verblijven",
+     "image": [
+      "https://juultjezeeland.nl/assets/fotos/appartement-slaapkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-zithoek-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-eettafel-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-keuken-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-badkamer-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-terras-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-douche-1600.jpg",
+      "https://juultjezeeland.nl/assets/fotos/appartement-hal-1600.jpg"
+     ],
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Julianastraat 38",
+      "postalCode": "4491 GB",
+      "addressLocality": "Wissenkerke",
+      "addressRegion": "Zeeland",
+      "addressCountry": "NL"
+     },
+     "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.58268,
+      "longitude": 3.7459
+     },
      "occupancy": {
       "@type": "QuantitativeValue",
-      "maxValue": 2
+      "value": 2
      },
      "numberOfBedrooms": 1,
+     "numberOfBathroomsTotal": 1,
+     "bed": {
+      "@type": "BedDetails",
+      "numberOfBeds": 1,
+      "typeOfBed": "Tweepersoonsbed"
+     },
      "floorSize": {
       "@type": "QuantitativeValue",
       "value": 26,
@@ -144,6 +217,9 @@
        "name": "Airconditioning",
        "value": true
       }
+     ],
+     "sameAs": [
+      "https://www.booking.com/hotel/nl/appartement-in-wissenkerke.html"
      ]
     }
    ]
@@ -182,8 +258,8 @@
   <div class="wrap">
     <div class="hero-tekst">
       <span class="label">Wissenkerke, Noord-Beveland</span>
-      <h1>Welkom in Zeeland</h1>
-      <p>Twee sfeervolle verblijven voor twee personen in het dorp Wissenkerke. Het strand ligt op een paar minuten afstand: uitwaaien aan zee, wandelen langs het water en daarna heerlijk tot rust komen. Jullie zijn van harte welkom en je hond natuurlijk ook.</p>
+      <h1>Vakantiehuisje en appartement in Wissenkerke</h1>
+      <p>Twee sfeervolle verblijven voor twee personen in het dorp Wissenkerke. Het strand ligt op 2,5 kilometer: uitwaaien aan zee, wandelen langs het water en daarna heerlijk tot rust komen. Jullie zijn van harte welkom en je hond natuurlijk ook.</p>
       <div class="knoppen">
         <a href="#verblijven" class="knop">Bekijk de verblijven</a>
       </div>
@@ -200,11 +276,11 @@
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="9" r="2"/><circle cx="10" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="19" cy="9" r="2"/><path d="M12.5 11c-3 0-5.5 4-5.5 6.5 0 2 2 2.5 5.5 2.5s5.5-.5 5.5-2.5c0-2.5-2.5-6.5-5.5-6.5z"/></svg>
-      <div><strong>Honden welkom</strong><span>€ 15 per nacht</span></div>
+      <div><strong>Honden welkom</strong><span>€ 15 per hond per nacht</span></div>
     </div>
     <div class="voordeel">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7350" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8"/><path d="M9 6h3"/></svg>
-      <div><strong>Elektrische fiets huren</strong><span>Beschikbaarheid en tarief op aanvraag</span></div>
+      <div><strong>Elektrische fiets huren</strong><span>Eerste dag € 25, daarna € 15 per dag</span></div>
     </div>
   </div>
 </section>
@@ -242,8 +318,8 @@
             <summary><span class="tekst-dicht">Meer informatie</span><span class="tekst-open">Minder informatie</span></summary>
             <div class="verblijf-details">
               <div><h4>Indeling</h4><ul><li>Woonkamer met leren bank, eettafel en open keuken</li><li>Keuken met koffiezetapparaat</li><li>Slaapkamer met tweepersoonsbed en televisie</li><li>Badkamer met inloopdouche en regendouche</li><li>Toilet met wastafel</li><li>Tuintje met houten overkapping en loungestoelen</li><li>Eigen parkeerplaats op de oprit</li></ul></div>
-              <div><h4>Inbegrepen</h4><ul><li>Beddengoed, handdoeken en keukenlinnen</li><li>Wifi</li><li>Airconditioning</li></ul></div>
-              <div><h4>Extra kosten</h4><ul><li>Schoonmaakkosten: € 45 per verblijf</li><li>Hond: € 15 per nacht</li><li>Elektrische fiets: op aanvraag</li></ul></div>
+              <div><h4>Inbegrepen</h4><ul><li>Beddengoed, handdoeken en keukenlinnen</li><li>Wifi</li><li>Airconditioning</li><li>Toeristenbelasting</li></ul></div>
+              <div><h4>Extra kosten</h4><ul><li>Schoonmaakkosten: € 45 per verblijf</li><li>Hond: € 15 per hond per nacht</li><li>Elektrische fiets: eerste dag € 25, daarna € 15 per dag</li></ul></div>
               <div><h4>Aankomst en vertrek</h4><ul><li>Inchecken vanaf 15.00 uur</li><li>Uitchecken uiterlijk 10.00 uur</li><li>Sleutel via een sleutelkluisje</li><li>Eerder of later alleen in overleg</li></ul></div>
             </div>
             <p class="verblijf-links"><a href="huisregels.html">Huisregels</a><a href="annuleringsvoorwaarden.html">Annuleringsvoorwaarden</a></p>
@@ -272,8 +348,8 @@
             <summary><span class="tekst-dicht">Meer informatie</span><span class="tekst-open">Minder informatie</span></summary>
             <div class="verblijf-details">
               <div><h4>Indeling</h4><ul><li>Slaapkamer met tweepersoonsbed onder een schuin dak</li><li>Zithoek met bank en dakraam</li><li>Eettafel voor twee</li><li>Keuken met koelkast, oven en kookplaat</li><li>Badkamer met douche en handgreep</li><li>Eigen terras met tafel en twee stoelen</li></ul></div>
-              <div><h4>Inbegrepen</h4><ul><li>Beddengoed, handdoeken en keukenlinnen</li><li>Wifi</li><li>Airconditioning</li></ul></div>
-              <div><h4>Extra kosten</h4><ul><li>Schoonmaakkosten: € 40 per verblijf</li><li>Hond: € 15 per nacht</li><li>Elektrische fiets: op aanvraag</li></ul></div>
+              <div><h4>Inbegrepen</h4><ul><li>Beddengoed, handdoeken en keukenlinnen</li><li>Wifi</li><li>Airconditioning</li><li>Toeristenbelasting</li></ul></div>
+              <div><h4>Extra kosten</h4><ul><li>Schoonmaakkosten: € 40 per verblijf</li><li>Hond: € 15 per hond per nacht</li><li>Elektrische fiets: eerste dag € 25, daarna € 15 per dag</li></ul></div>
               <div><h4>Aankomst en vertrek</h4><ul><li>Inchecken vanaf 15.00 uur</li><li>Uitchecken uiterlijk 10.00 uur</li><li>Sleutel via een sleutelkluisje</li><li>Eerder of later alleen in overleg</li></ul></div>
             </div>
             <p class="verblijf-links"><a href="huisregels.html">Huisregels</a><a href="annuleringsvoorwaarden.html">Annuleringsvoorwaarden</a></p>
@@ -300,7 +376,7 @@
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="0" aria-label="Vergroot foto 1 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-polder-800.webp 800w, assets/fotos/omgeving-polder-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-polder-1600.jpg" alt="Witte hond in het gras van de polder bij zonsondergang" width="1600" height="747" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></button><strong>Wandelen</strong><span>Door de polders, langs dijken, natuurgebieden en het water. Ook heerlijk met de hond.</span></div>
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="1" aria-label="Vergroot foto 2 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-fietsen-800.webp 800w, assets/fotos/omgeving-fietsen-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-fietsen-1600.jpg" alt="Twee elektrische fietsen op het gras in de tuin" width="1600" height="1200" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Fietsen</strong><span>Langs polders, Zeeuwse dorpen en de Noordzeekust. Vraag naar onze elektrische fietsen.</span></div>
       <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="2" aria-label="Vergroot foto 3 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-steiger-800.webp 800w, assets/fotos/omgeving-steiger-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-steiger-1600.jpg" alt="Houten steiger in stil water bij zonsopkomst met een zeilboot in de verte" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button><strong>Oosterschelde en Veerse Meer</strong><span>Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij.</span></div>
-      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="3" aria-label="Vergroot foto 4 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-strand-800.webp 800w, assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-strand-1600.jpg" alt="Leeg zandstrand met zee en windmolens aan de horizon" width="1600" height="2133" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 52%"></picture></button><strong>Stranden</strong><span>Op korte rijafstand. Let op de plaatselijke regels voor honden.</span></div>
+      <div class="tegel"><button type="button" class="tegel-knop" data-galerij="omgeving" data-index="3" aria-label="Vergroot foto 4 van 7"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-strand-800.webp 800w, assets/fotos/omgeving-strand-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-strand-1600.jpg" alt="Leeg zandstrand met zee en windmolens aan de horizon" width="1600" height="2133" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async" style="object-position:50% 52%"></picture></button><strong>Stranden</strong><span>Op 2,5 kilometer, makkelijk te fietsen. Let op de plaatselijke regels voor honden.</span></div>
       <button type="button" hidden data-galerij="omgeving" data-index="4"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-dijk-800.webp 800w, assets/fotos/omgeving-dijk-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-dijk-1600.jpg" alt="Dijk met fietspad langs het water en windmolens in de verte" width="1600" height="2819" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
       <button type="button" hidden data-galerij="omgeving" data-index="5"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-steiger-zonsopkomst-800.webp 800w, assets/fotos/omgeving-steiger-zonsopkomst-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-steiger-zonsopkomst-1600.jpg" alt="Steiger en rotsen aan het water bij zonsopkomst" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
       <button type="button" hidden data-galerij="omgeving" data-index="6"><picture class="beeld"><source type="image/webp" srcset="assets/fotos/omgeving-oever-800.webp 800w, assets/fotos/omgeving-oever-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px"><img src="assets/fotos/omgeving-oever-1600.jpg" alt="Oever met stenen en een rij boeien in het stille water" width="1600" height="900" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1200px) 50vw, 270px" loading="lazy" decoding="async"></picture></button>
@@ -352,11 +428,12 @@
       </select>
     </div>
     <div class="boeking">
-      <div id="apartmentIframeAll">
+      <div id="apartmentIframeAll" data-titel="Boekingsmodule van Juultje Zeeland">
         <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
         <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/nl/booking-tool/iframe/1927951", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
       </div>
     </div>
+    <p class="betalen">Zie je hierboven geen boekingsmodule? <a href="https://booking.smoobu.com/juultjezeeland" target="_blank" rel="noopener">Open de boekingspagina</a>.</p>
     <p class="betalen">Betalen kan met iDEAL, creditcard, Bancontact of via een overschrijving op factuur.</p>
   </div>
 </section>
@@ -424,6 +501,7 @@
   let gekozenVerblijf = '';
   function toonVerblijf() {
     const iframe = boekingsmodule.querySelector('iframe');
+    if (iframe && !iframe.title) iframe.title = boekingsmodule.dataset.titel;
     const adres = smoobuPagina + (gekozenVerblijf ? '?apartmentId=' + gekozenVerblijf : '');
     if (iframe && iframe.src !== adres) iframe.src = adres;
   }
