@@ -26,7 +26,7 @@ Nieuwe of gewijzigde Nederlandse teksten voeg je eerst toe aan de woordenlijsten
 
 ## Boekingsmodule (Smoobu)
 - Boven de boekingsmodule kiest de bezoeker in een keuzelijst "Beide verblijven", "Vakantiehuisje" (Smoobu ID 3563861) of "Appartement" (Smoobu ID 3563866). De knoppen "Prijs en beschikbaarheid" bij de verblijven kiezen het juiste verblijf vooraf.
-- De opmaak binnen de boekingsmodule (zoals rood gearceerde data die niet meer kunnen) kan niet vanaf deze website. Plak daarvoor `tools/smoobu-kalender.css` in Smoobu bij Custom CSS (Instellingen boekingssysteem, tabblad Custom style).
+- De opmaak binnen de boekingsmodule (zoals rood gearceerde data die niet meer kunnen, personalia pas na het zoeken op data, en op desktop eerst foto en prijs met de personalia eronder) kan niet vanaf deze website. Plak daarvoor `tools/smoobu-kalender.css` in Smoobu bij Custom CSS (Instellingen boekingssysteem, tabblad Custom style).
 
 ## Domein
 De site draait op GitHub Pages met het eigen domein juultjezeeland.nl (bestand `CNAME`). Het domein staat bij Strato. DNS instellingen bij Strato:
