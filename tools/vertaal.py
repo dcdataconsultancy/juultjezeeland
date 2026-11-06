@@ -451,6 +451,7 @@ DE = {
  'Veere, Middelburg en Zierikzee liggen op twintig tot vijfentwintig minuten rijden. Goes is iets dichterbij.': 'Veere, Middelburg und Zierikzee erreichen Sie in zwanzig bis fünfundzwanzig Minuten mit dem Auto. Goes ist etwas näher.',
  'Boeken | Juultje Zeeland': 'Buchen | Juultje Zeeland',
  'Boek Vakantiehuisje of Appartement Juultje in Wissenkerke rechtstreeks bij Marc en Angelia. Altijd de actuele prijs en beschikbaarheid, direct een bevestiging.': 'Buchen Sie Ferienhaus oder Ferienwohnung Juultje in Wissenkerke direkt bei Marc und Angelia. Immer aktuelle Preise und Verfügbarkeit, sofortige Bestätigung.',
+ 'Wissenkerke, Noord-Beveland, Zeeland, Nederland': 'Wissenkerke, Noord-Beveland, Zeeland, Niederlande',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -897,6 +898,7 @@ EN = {
  'Veere, Middelburg en Zierikzee liggen op twintig tot vijfentwintig minuten rijden. Goes is iets dichterbij.': 'Veere, Middelburg and Zierikzee are a twenty to twenty five minute drive away. Goes is a little closer.',
  'Boeken | Juultje Zeeland': 'Book | Juultje Zeeland',
  'Boek Vakantiehuisje of Appartement Juultje in Wissenkerke rechtstreeks bij Marc en Angelia. Altijd de actuele prijs en beschikbaarheid, direct een bevestiging.': 'Book Holiday cottage or Apartment Juultje in Wissenkerke directly with Marc and Angelia. Always the latest prices and availability, instant confirmation.',
+ 'Wissenkerke, Noord-Beveland, Zeeland, Nederland': 'Wissenkerke, Noord-Beveland, Zeeland, the Netherlands',
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),
