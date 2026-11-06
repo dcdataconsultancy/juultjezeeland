@@ -365,8 +365,7 @@
 <!-- /seo -->
 <link rel="preload" href="../assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/webp" imagesrcset="assets/fotos/omgeving-strand-800.webp 800w, assets/fotos/omgeving-strand-1600.webp 1600w" imagesizes="(max-width: 1000px) calc(100vw - 48px), 560px" fetchpriority="high">
-<link rel="preconnect" href="https://login.smoobu.com">
+<link rel="preload" as="image" type="image/webp" imagesrcset="../assets/fotos/omgeving-strand-800.webp 800w, ../assets/fotos/omgeving-strand-1600.webp 1600w" imagesizes="(max-width: 1000px) calc(100vw - 48px), 560px" fetchpriority="high">
 <link rel="stylesheet" href="../assets/stijl.css">
 </head>
 <body>
@@ -385,7 +384,7 @@
         <li><a href="#praktisch">Practical</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="talen"><a href="../" lang="nl" hreflang="nl">NL</a><a href="../de/" lang="de" hreflang="de">DE</a><strong>EN</strong></li>
-        <li><a href="#boeken" class="knop">Book now</a></li>
+        <li><a href="boeken.html" class="knop">Book now</a></li>
       </ul>
     </nav>
   </div>
@@ -463,7 +462,7 @@
             </div>
             <p class="verblijf-links"><a href="huisregels.html">House rules</a><a href="annuleringsvoorwaarden.html">Cancellation policy</a></p>
           </details>
-          <a href="#boeken" class="knop" data-verblijf="3563861">Price and availability</a>
+          <a href="boeken.html?verblijf=vakantiehuisje" class="knop">Price and availability</a>
         </div>
       </article>
       <article class="verblijf">
@@ -493,7 +492,7 @@
             </div>
             <p class="verblijf-links"><a href="huisregels.html">House rules</a><a href="annuleringsvoorwaarden.html">Cancellation policy</a></p>
           </details>
-          <a href="#boeken" class="knop" data-verblijf="3563866">Price and availability</a>
+          <a href="boeken.html?verblijf=appartement" class="knop">Price and availability</a>
         </div>
       </article>
     </div>
@@ -573,30 +572,6 @@
   </div>
 </section>
 
-<section id="boeken" class="band">
-  <div class="wrap">
-    <div class="intro">
-      <span class="label">Booking</span>
-      <h2>Book directly with us</h2>
-      <p>Always the latest prices and availability. You receive a confirmation straight after booking, and before your arrival we send you all the practical information.</p>
-      <p class="intro-link"><a href="#verblijven">More information about the stays</a></p>
-    </div>
-    <div class="verblijfkeuze">
-      <label for="verblijf">Choose a stay</label>
-      <select id="verblijf" autocomplete="off">
-        <option value="">Both stays</option>
-        <option value="3563861">Holiday cottage</option>
-        <option value="3563866">Apartment</option>
-      </select>
-    </div>
-    <div class="boeking">
-      <div id="apartmentIframeAll" data-titel="Booking tool of Juultje Zeeland" data-url="https://login.smoobu.com/en/booking-tool/iframe/1927951"></div>
-    </div>
-    <p class="betalen">No booking tool showing above? <a href="https://booking.smoobu.com/juultjezeeland" target="_blank" rel="noopener">Open the booking page</a>.</p>
-    <p class="betalen">You can pay by iDEAL, credit card, Bancontact or bank transfer on invoice.</p>
-  </div>
-</section>
-
 <section id="contact" class="band contact">
   <div class="wrap">
     <div class="contact-info">
@@ -654,44 +629,6 @@
     knop.setAttribute('aria-expanded', 'false');
   }));
   document.getElementById('jaar').textContent = new Date().getFullYear();
-
-  // keuze van verblijf in de boekingsmodule van Smoobu
-  const smoobuPagina = 'https://booking.smoobu.com/juultjezeeland';
-  const keuze = document.getElementById('verblijf');
-  const boekingsmodule = document.getElementById('apartmentIframeAll');
-  let gekozenVerblijf = '';
-  function toonVerblijf() {
-    const iframe = boekingsmodule.querySelector('iframe');
-    if (iframe && !iframe.title) iframe.title = boekingsmodule.dataset.titel;
-    const adres = smoobuPagina + (gekozenVerblijf ? '?apartmentId=' + gekozenVerblijf : '');
-    if (iframe && iframe.src !== adres) iframe.src = adres;
-  }
-  function kiesVerblijf(id) {
-    gekozenVerblijf = id;
-    keuze.value = id;
-    toonVerblijf();
-  }
-  keuze.addEventListener('change', () => kiesVerblijf(keuze.value));
-  document.querySelectorAll('[data-verblijf]').forEach(a => a.addEventListener('click', () => kiesVerblijf(a.dataset.verblijf)));
-  new MutationObserver(toonVerblijf).observe(boekingsmodule, { childList: true, subtree: true });
-  // boekingsmodule pas laden als de bezoeker in de buurt komt
-  let smoobuGeladen = false;
-  function laadSmoobu() {
-    if (smoobuGeladen) return;
-    smoobuGeladen = true;
-    const s = document.createElement('script');
-    s.src = 'https://login.smoobu.com/js/Settings/BookingToolIframe.js';
-    s.onload = () => BookingToolIframe.initialize({ url: boekingsmodule.dataset.url, baseUrl: 'https://login.smoobu.com', target: '#apartmentIframeAll' });
-    document.head.appendChild(s);
-  }
-  if ('IntersectionObserver' in window) {
-    const kijker = new IntersectionObserver(e => { if (e.some(x => x.isIntersecting)) { kijker.disconnect(); laadSmoobu(); } }, { rootMargin: '800px 0px' });
-    kijker.observe(document.getElementById('boeken'));
-  } else {
-    laadSmoobu();
-  }
-  document.querySelectorAll('a[href="#boeken"]').forEach(a => a.addEventListener('click', laadSmoobu));
-  window.addEventListener('load', () => setTimeout(laadSmoobu, 5000));
 
   // fotogalerij
   const lb = document.querySelector('.lightbox');

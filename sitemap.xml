@@ -97,6 +97,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juultjezeeland.nl/omgeving.html"/>
   </url>
   <url>
+    <loc>https://juultjezeeland.nl/boeken.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://juultjezeeland.nl/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juultjezeeland.nl/de/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juultjezeeland.nl/en/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juultjezeeland.nl/boeken.html"/>
+  </url>
+  <url>
+    <loc>https://juultjezeeland.nl/de/boeken.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://juultjezeeland.nl/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juultjezeeland.nl/de/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juultjezeeland.nl/en/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juultjezeeland.nl/boeken.html"/>
+  </url>
+  <url>
+    <loc>https://juultjezeeland.nl/en/boeken.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://juultjezeeland.nl/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juultjezeeland.nl/de/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juultjezeeland.nl/en/boeken.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juultjezeeland.nl/boeken.html"/>
+  </url>
+  <url>
     <loc>https://juultjezeeland.nl/huisregels.html</loc>
     <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://juultjezeeland.nl/huisregels.html"/>
