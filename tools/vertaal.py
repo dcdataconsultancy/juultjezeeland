@@ -821,17 +821,131 @@ def maak(bron, taal, tabel, regels, bestand):
     h = re.sub(r'<(?:a|link|img|source|script)\b[^>]*>', tag, h)
     return h, missers
 
+
+# ---------------------------------------------------------------------------
+# SEO blok in de <head>: canonical, hreflang, Open Graph en (op de homepage) JSON-LD.
+# Wordt voor elke taal opnieuw gemaakt tussen <!-- seo --> en <!-- /seo -->,
+# ook in de Nederlandse pagina's. Pas feiten hieronder aan, niet in de HTML.
+# ---------------------------------------------------------------------------
+import json, html as _html
+
+SITE = 'https://juultjezeeland.nl/'
+DEELBEELD = SITE + 'assets/fotos/deelbeeld-1200.jpg'
+DEELBEELD_ALT = 'Woonkamer van het vakantiehuisje met leren bank, eettafel en open keuken'
+LOCALE = {'nl': 'nl_NL', 'de': 'de_DE', 'en': 'en_GB'}
+TABELLEN = {'nl': None, 'de': DE, 'en': EN}
+
+def t(tekst, taal):
+    return tekst if taal == 'nl' else TABELLEN[taal].get(tekst, tekst)
+
+def pagina_url(bestand, taal):
+    return SITE + ('' if taal == 'nl' else taal + '/') + ('' if bestand == 'index.html' else bestand)
+
+def json_ld(taal, beschrijving):
+    def verblijf(soort, naam, m2, extra):
+        return {
+            '@type': soort,
+            'name': t(naam, taal),
+            'url': pagina_url('index.html', taal) + '#verblijven',
+            'occupancy': {'@type': 'QuantitativeValue', 'maxValue': 2},
+            'numberOfBedrooms': 1,
+            'floorSize': {'@type': 'QuantitativeValue', 'value': m2, 'unitCode': 'MTK'},
+            'petsAllowed': True,
+            'amenityFeature': [{'@type': 'LocationFeatureSpecification', 'name': t(n, taal), 'value': True}
+                               for n in ['Wifi', 'Airconditioning'] + extra],
+        }
+    bedrijf = {
+        '@type': 'LodgingBusiness',
+        '@id': SITE + '#bedrijf',
+        'name': 'Juultje Zeeland',
+        'description': beschrijving,
+        'url': pagina_url('index.html', taal),
+        'image': DEELBEELD,
+        'telephone': '+31613664239',
+        'email': 'juultjeverhuur@gmail.com',
+        'address': {'@type': 'PostalAddress', 'addressLocality': 'Wissenkerke',
+                    'addressRegion': 'Zeeland', 'addressCountry': 'NL'},
+        'areaServed': 'Noord-Beveland',
+        'priceRange': '€€',
+        'currenciesAccepted': 'EUR',
+        'paymentAccepted': 'iDEAL, Creditcard, Bancontact, Overschrijving',
+        'checkinTime': '15:00',
+        'checkoutTime': '10:00',
+        'petsAllowed': True,
+        'knowsLanguage': ['nl', 'de', 'en'],
+        'founder': [{'@type': 'Person', 'name': 'Marc'}, {'@type': 'Person', 'name': 'Angelia'}],
+        'sameAs': ['https://www.instagram.com/juultjezeeland'],
+        'containsPlace': [
+            verblijf('House', 'Vakantiehuisje Juultje', 35, ['Eigen parkeerplaats op de oprit']),
+            verblijf('Apartment', 'Appartement Juultje', 26, []),
+        ],
+    }
+    site = {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Juultje Zeeland', 'url': SITE,
+            'inLanguage': ['nl', 'de', 'en'], 'publisher': {'@id': SITE + '#bedrijf'}}
+    data = {'@context': 'https://schema.org', '@graph': [site, bedrijf]}
+    return json.dumps(data, ensure_ascii=False, indent=1).replace('</', '<\\/')
+
+def seo(h, taal, bestand):
+    titel = _html.unescape(re.search(r'<title>(.*?)</title>', h).group(1))
+    beschrijving = _html.unescape(re.search(r'<meta name="description" content="([^"]*)"', h).group(1))
+    e = lambda x: _html.escape(x, quote=True)
+    regels = [f'<link rel="canonical" href="{pagina_url(bestand, taal)}">']
+    for tl in ('nl', 'de', 'en'):
+        regels.append(f'<link rel="alternate" hreflang="{tl}" href="{pagina_url(bestand, tl)}">')
+    regels.append(f'<link rel="alternate" hreflang="x-default" href="{pagina_url(bestand, "nl")}">')
+    regels += [
+        '<meta property="og:type" content="website">',
+        '<meta property="og:site_name" content="Juultje Zeeland">',
+        f'<meta property="og:title" content="{e(titel)}">',
+        f'<meta property="og:description" content="{e(beschrijving)}">',
+        f'<meta property="og:url" content="{pagina_url(bestand, taal)}">',
+        f'<meta property="og:locale" content="{LOCALE[taal]}">',
+    ] + [f'<meta property="og:locale:alternate" content="{LOCALE[a]}">' for a in LOCALE if a != taal] + [
+        f'<meta property="og:image" content="{DEELBEELD}">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        f'<meta property="og:image:alt" content="{e(t(DEELBEELD_ALT, taal))}">',
+        '<meta name="twitter:card" content="summary_large_image">',
+    ]
+    if bestand == 'index.html':
+        regels.append('<script type="application/ld+json">\n' + json_ld(taal, beschrijving) + '\n</script>')
+    blok = '<!-- seo -->\n' + '\n'.join(regels) + '\n<!-- /seo -->'
+    if '<!-- seo -->' in h:
+        h, n = re.subn(r'<!-- seo -->.*?<!-- /seo -->', lambda m: blok, h, flags=re.S)
+    else:
+        h, n = re.subn(r'(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n)+', lambda m: blok + '\n', h, count=1)
+    assert n == 1, (bestand, taal, 'plek voor seo blok niet gevonden')
+    return h
+
 PAGINAS = ['index.html', 'huisregels.html', 'algemene-voorwaarden.html', 'annuleringsvoorwaarden.html', 'privacyverklaring.html']
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 fout = False
 for bestand in PAGINAS:
-    bron = open(os.path.join(root, bestand)).read()
+    pad = os.path.join(root, bestand)
+    origineel = open(pad).read()
+    bron = seo(origineel, 'nl', bestand)
+    if bron != origineel:
+        open(pad, 'w').write(bron)
+        print(bestand, 'seo blok bijgewerkt')
     for taal, tabel, regels in (('de', DE, DE_RE), ('en', EN, EN_RE)):
         h, missers = maak(bron, taal, tabel, regels, bestand)
+        h = seo(h, taal, bestand)
         if missers:
             fout = True
             print(bestand, taal, 'ONVERTAALD:', missers)
         os.makedirs(os.path.join(root, taal), exist_ok=True)
         open(os.path.join(root, taal, bestand), 'w').write(h)
         print(taal + '/' + bestand, 'ok', len(h))
+# sitemap.xml met alle pagina's in alle talen
+regels = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+for bestand in PAGINAS:
+    for taal in ('nl', 'de', 'en'):
+        regels += ['  <url>', f'    <loc>{pagina_url(bestand, taal)}</loc>']
+        regels += [f'    <xhtml:link rel="alternate" hreflang="{a}" href="{pagina_url(bestand, a)}"/>' for a in ('nl', 'de', 'en')]
+        regels += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{pagina_url(bestand, 'nl')}"/>', '  </url>']
+regels.append('</urlset>')
+open(os.path.join(root, 'sitemap.xml'), 'w').write('\n'.join(regels) + '\n')
+print('sitemap.xml ok')
+
 sys.exit(1 if fout else 0)
