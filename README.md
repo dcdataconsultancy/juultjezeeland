@@ -24,6 +24,12 @@ python3 tools/vertaal.py
 
 Nieuwe of gewijzigde Nederlandse teksten voeg je eerst toe aan de woordenlijsten `DE` en `EN` in `tools/vertaal.py`. Het script stopt met "ONVERTAALD" als er nog een tekst zonder vertaling is. Een nieuwe pagina voeg je toe aan `PAGINAS` onderaan het script.
 
+## SEO en vindbaarheid
+- `tools/vertaal.py` maakt in elke pagina (NL, DE, EN) het blok tussen `<!-- seo -->` en `<!-- /seo -->`: canonical, hreflang, Open Graph en op de homepage structured data (JSON-LD, `LodgingBusiness` met beide verblijven). Pas dit blok niet met de hand aan; feiten zoals telefoon, inchecktijd of oppervlakte staan in de functie `json_ld` in het script.
+- Het script maakt ook `sitemap.xml`. `robots.txt` laat alle zoekmachines en AI zoekdiensten toe.
+- `llms.txt` is een korte samenvatting voor AI diensten. Houd prijzen en voorwaarden daarin gelijk aan de website.
+- Het deelbeeld voor sociale media en zoekresultaten is `assets/fotos/deelbeeld-1200.jpg` (1200 x 630).
+
 ## Boekingsmodule (Smoobu)
 - Boven de boekingsmodule kiest de bezoeker in een keuzelijst "Beide verblijven", "Vakantiehuisje" (Smoobu ID 3563861) of "Appartement" (Smoobu ID 3563866). De knoppen "Prijs en beschikbaarheid" bij de verblijven kiezen het juiste verblijf vooraf.
 - De opmaak binnen de boekingsmodule (zoals rood gearceerde data die niet meer kunnen, personalia pas na het zoeken op data, en op desktop eerst foto en prijs met de personalia eronder) kan niet vanaf deze website. Plak daarvoor `tools/smoobu-kalender.css` in Smoobu bij Custom CSS (Instellingen boekingssysteem, tabblad Custom style).
