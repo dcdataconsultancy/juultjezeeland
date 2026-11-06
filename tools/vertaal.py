@@ -449,6 +449,8 @@ DE = {
  'Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij. Ideaal voor wandelen langs het water, zeilen, suppen en vogels kijken.': 'Der Nationalpark Oosterschelde und das Veerse Meer liegen ganz in der Nähe. Ideal für Spaziergänge am Wasser, Segeln, Stand Up Paddling und Vogelbeobachtung.',
  'Zeeuwse steden': 'Städte in Zeeland',
  'Veere, Middelburg en Zierikzee liggen op twintig tot vijfentwintig minuten rijden. Goes is iets dichterbij.': 'Veere, Middelburg und Zierikzee erreichen Sie in zwanzig bis fünfundzwanzig Minuten mit dem Auto. Goes ist etwas näher.',
+ 'Boeken | Juultje Zeeland': 'Buchen | Juultje Zeeland',
+ 'Boek Vakantiehuisje of Appartement Juultje in Wissenkerke rechtstreeks bij Marc en Angelia. Altijd de actuele prijs en beschikbaarheid, direct een bevestiging.': 'Buchen Sie Ferienhaus oder Ferienwohnung Juultje in Wissenkerke direkt bei Marc und Angelia. Immer aktuelle Preise und Verfügbarkeit, sofortige Bestätigung.',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -893,6 +895,8 @@ EN = {
  'Nationaal Park Oosterschelde en het Veerse Meer liggen dichtbij. Ideaal voor wandelen langs het water, zeilen, suppen en vogels kijken.': 'Oosterschelde National Park and the Veerse Meer are close by. Ideal for walks by the water, sailing, paddleboarding and birdwatching.',
  'Zeeuwse steden': 'Towns in Zeeland',
  'Veere, Middelburg en Zierikzee liggen op twintig tot vijfentwintig minuten rijden. Goes is iets dichterbij.': 'Veere, Middelburg and Zierikzee are a twenty to twenty five minute drive away. Goes is a little closer.',
+ 'Boeken | Juultje Zeeland': 'Book | Juultje Zeeland',
+ 'Boek Vakantiehuisje of Appartement Juultje in Wissenkerke rechtstreeks bij Marc en Angelia. Altijd de actuele prijs en beschikbaarheid, direct een bevestiging.': 'Book Holiday cottage or Apartment Juultje in Wissenkerke directly with Marc and Angelia. Always the latest prices and availability, instant confirmation.',
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),
@@ -968,8 +972,8 @@ def maak(bron, taal, tabel, regels, bestand):
         t = m.group(0)
         nl_link = 'hreflang="nl"' in t and not t.startswith('<link')
         t = re.sub(r'\b(href|src)="([^"]*)"', lambda a: f'{a.group(1)}="{url(a.group(2), nl_link)}"', t)
-        t = re.sub(r'\bsrcset="([^"]*)"', lambda a: 'srcset="' + ', '.join(
-            ' '.join([url(d.strip().split(' ')[0], False)] + d.strip().split(' ')[1:]) for d in a.group(1).split(',')) + '"', t)
+        t = re.sub(r'\b(imagesrcset|srcset)="([^"]*)"', lambda a: a.group(1) + '="' + ', '.join(
+            ' '.join([url(d.strip().split(' ')[0], False)] + d.strip().split(' ')[1:]) for d in a.group(2).split(',')) + '"', t)
         return t
     h = re.sub(r'<(?:a|link|img|source|script)\b[^>]*>', tag, h)
     return h, missers
@@ -1125,7 +1129,7 @@ def seo(h, taal, bestand):
     assert n == 1, (bestand, taal, 'plek voor seo blok niet gevonden')
     return h
 
-PAGINAS = ['index.html', 'vakantiehuisje-wissenkerke.html', 'appartement-wissenkerke.html', 'omgeving.html', 'huisregels.html', 'algemene-voorwaarden.html', 'annuleringsvoorwaarden.html', 'privacyverklaring.html']
+PAGINAS = ['index.html', 'vakantiehuisje-wissenkerke.html', 'appartement-wissenkerke.html', 'omgeving.html', 'boeken.html', 'huisregels.html', 'algemene-voorwaarden.html', 'annuleringsvoorwaarden.html', 'privacyverklaring.html']
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 fout = False
 for bestand in PAGINAS:
