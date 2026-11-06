@@ -218,3 +218,5 @@ footer a:hover{color:#fff}
 .verblijf-kop h3 a{color:inherit;text-decoration:none}
 .verblijf-kop h3 a:hover{text-decoration:underline}
 .boekpagina .verblijfkeuze{position:sticky;top:69px;z-index:5;background:var(--gebroken);padding:12px 0;margin-bottom:8px}
+.label .plaats{color:inherit;text-decoration:none}
+.label .plaats:hover{text-decoration:underline}
