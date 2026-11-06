@@ -140,7 +140,7 @@
         <li><a href="./#praktisch">Praktisches</a></li>
         <li><a href="./#contact">Kontakt</a></li>
         <li class="talen"><a href="../appartement-wissenkerke.html" lang="nl" hreflang="nl">NL</a><strong>DE</strong><a href="../en/appartement-wissenkerke.html" lang="en" hreflang="en">EN</a></li>
-        <li><a href="./#boeken" class="knop">Direkt buchen</a></li>
+        <li><a href="boeken.html" class="knop">Direkt buchen</a></li>
       </ul>
     </nav>
   </div>
@@ -183,7 +183,7 @@
             </div>
             <p class="verblijf-links"><a href="huisregels.html">Hausregeln</a><a href="annuleringsvoorwaarden.html">Stornierungsbedingungen</a></p>
           </details>
-          <a href="#boeken" class="knop">Preis und Verfügbarkeit</a>
+          <a href="boeken.html?verblijf=appartement" class="knop">Preis und Verfügbarkeit</a>
         </div>
       </article>
     </div>
@@ -204,20 +204,6 @@
   </div>
 </section>
 
-<section id="boeken" class="band">
-  <div class="wrap">
-    <div class="intro">
-      <span class="label">Buchen</span>
-      <h2>Buchen Sie direkt bei uns</h2>
-      <p>Immer aktuelle Preise und Verfügbarkeit. Nach Ihrer Reservierung erhalten Sie sofort eine Bestätigung, und vor der Anreise senden wir Ihnen alle praktischen Informationen.</p>
-    </div>
-    <div class="boeking">
-      <div id="apartmentIframeAll" data-titel="Buchungsmodul von Juultje Zeeland" data-url="https://login.smoobu.com/de/booking-tool/iframe/1927951/3563866"></div>
-    </div>
-    <p class="betalen">Sie sehen oben kein Buchungsmodul? <a href="https://booking.smoobu.com/juultjezeeland?apartmentId=3563866" target="_blank" rel="noopener">Buchungsseite öffnen</a>.</p>
-    <p class="betalen">Bezahlen können Sie mit iDEAL, Kreditkarte, Bancontact oder per Überweisung auf Rechnung.</p>
-  </div>
-</section>
 
 </main>
 
@@ -258,30 +244,6 @@
     knop.setAttribute('aria-expanded', 'false');
   }));
   document.getElementById('jaar').textContent = new Date().getFullYear();
-
-  const boekingsmodule = document.getElementById('apartmentIframeAll');
-  new MutationObserver(() => {
-    const iframe = boekingsmodule.querySelector('iframe');
-    if (iframe && !iframe.title) iframe.title = boekingsmodule.dataset.titel;
-  }).observe(boekingsmodule, { childList: true, subtree: true });
-  // boekingsmodule pas laden als de bezoeker in de buurt komt
-  let smoobuGeladen = false;
-  function laadSmoobu() {
-    if (smoobuGeladen) return;
-    smoobuGeladen = true;
-    const s = document.createElement('script');
-    s.src = 'https://login.smoobu.com/js/Settings/BookingToolIframe.js';
-    s.onload = () => BookingToolIframe.initialize({ url: boekingsmodule.dataset.url, baseUrl: 'https://login.smoobu.com', target: '#apartmentIframeAll' });
-    document.head.appendChild(s);
-  }
-  if ('IntersectionObserver' in window) {
-    const kijker = new IntersectionObserver(e => { if (e.some(x => x.isIntersecting)) { kijker.disconnect(); laadSmoobu(); } }, { rootMargin: '800px 0px' });
-    kijker.observe(document.getElementById('boeken'));
-  } else {
-    laadSmoobu();
-  }
-  document.querySelectorAll('a[href="#boeken"]').forEach(a => a.addEventListener('click', laadSmoobu));
-  window.addEventListener('load', () => setTimeout(laadSmoobu, 5000));
 
   // fotogalerij
   const lb = document.querySelector('.lightbox');
