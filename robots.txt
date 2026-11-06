@@ -1,0 +1,5 @@
+# Juultje Zeeland: alle zoekmachines en AI zoekdiensten zijn welkom
+User-agent: *
+Allow: /
+
+Sitemap: https://juultjezeeland.nl/sitemap.xml
