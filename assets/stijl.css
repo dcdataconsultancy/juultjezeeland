@@ -87,7 +87,7 @@ nav a{text-decoration:none;white-space:nowrap}
 .kenmerken{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;list-style:none;margin:0;padding:0}
 .kenmerken li{background:var(--zand);padding:6px 12px;border-radius:999px}
 .verblijf p{color:var(--tekst2)}
-.verblijf .knop{margin-top:auto;align-self:flex-start}
+.verblijf .knop{align-self:flex-start}
 .verblijf-meer{border-top:1px solid var(--lijn);padding-top:14px}
 .verblijf-meer summary{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:700;cursor:pointer;list-style:none}
 .verblijf-meer summary::-webkit-details-marker{display:none}
@@ -193,8 +193,8 @@ footer a:hover{color:#fff}
   .lb-vorige,.lb-volgende{top:auto;bottom:16px;transform:none}
   .lb-onderschrift{padding:16px 76px 20px;min-height:80px;display:flex;align-items:center;justify-content:center}
 }
-.verblijf-prijs{display:flex;flex-wrap:wrap;gap:10px 28px;margin:0;padding:14px 0 0;border-top:1px solid var(--lijn)}
-.verblijf-prijs div{display:flex;flex-direction:column;gap:2px}
+.verblijf-prijs{display:flex;flex-wrap:wrap;gap:10px 28px;margin:auto 0 0;padding:14px 0 0;border-top:1px solid var(--lijn)}
+.verblijf-prijs div{display:flex;flex-direction:column;gap:2px;min-width:190px}
 .verblijf-prijs dt{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--olijf)}
 .verblijf-prijs dd{margin:0;color:var(--tekst2)}
 .verblijf-prijs strong{font-size:22px;color:var(--taupe)}
