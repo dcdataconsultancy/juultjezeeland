@@ -508,6 +508,10 @@ DE = {
  'Voor het boeken van een accommodatie voor een bepaalde periode geldt geen wettelijk herroepingsrecht van 14 dagen.': 'Für die Buchung einer Unterkunft für einen bestimmten Zeitraum gilt kein gesetzliches Widerrufsrecht von 14 Tagen.',
  '6. Hoe annuleer ik mijn reservering?': '6. Wie storniere ich meine Buchung?',
  '7. Boekingen via externe platforms': '7. Buchungen über externe Plattformen',
+ 'Kaart van Wissenkerke op Google Maps': 'Karte von Wissenkerke auf Google Maps',
+ 'Kaart': 'Karte',
+ 'Wissenkerke op de kaart': 'Wissenkerke auf der Karte',
+ 'Onze website gebruikt zelf geen cookies; het boekingssysteem van Smoobu kan cookies plaatsen die nodig zijn om te boeken. Op de homepage en de omgevingspagina tonen wij een kaart van Google Maps; Google kan daarbij cookies plaatsen en gegevens verwerken volgens het privacybeleid van Google.': 'Unsere Website verwendet selbst keine Cookies; das Buchungssystem von Smoobu kann Cookies setzen, die für die Buchung notwendig sind. Auf der Startseite und der Seite zur Umgebung zeigen wir eine Karte von Google Maps; Google kann dabei Cookies setzen und Daten gemäß der Datenschutzerklärung von Google verarbeiten.',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -1011,6 +1015,10 @@ EN = {
  'Voor het boeken van een accommodatie voor een bepaalde periode geldt geen wettelijk herroepingsrecht van 14 dagen.': 'There is no statutory 14 day right of withdrawal for booking accommodation for a specific period.',
  '6. Hoe annuleer ik mijn reservering?': '6. How do I cancel my booking?',
  '7. Boekingen via externe platforms': '7. Bookings via external platforms',
+ 'Kaart van Wissenkerke op Google Maps': 'Map of Wissenkerke on Google Maps',
+ 'Kaart': 'Map',
+ 'Wissenkerke op de kaart': 'Wissenkerke on the map',
+ 'Onze website gebruikt zelf geen cookies; het boekingssysteem van Smoobu kan cookies plaatsen die nodig zijn om te boeken. Op de homepage en de omgevingspagina tonen wij een kaart van Google Maps; Google kan daarbij cookies plaatsen en gegevens verwerken volgens het privacybeleid van Google.': "Our website does not use cookies itself; the Smoobu booking system may place cookies that are needed to make a booking. On the homepage and the area page we show a Google Maps map; Google may set cookies and process data in accordance with Google's privacy policy.",
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),
@@ -1055,7 +1063,7 @@ def maak(bron, taal, tabel, regels, bestand):
             elif tag.startswith(('</style', '</script')): in_code = False
             def attr(m):
                 return f'{m.group(1)}="{vertaal(m.group(2), tabel, regels, missers)}"'
-            d = re.sub(r'\b(alt|aria-label|data-teller|data-titel)="([^"]*)"', attr, d)
+            d = re.sub(r'\b(alt|aria-label|data-teller|data-titel|title)="([^"]*)"', attr, d)
             if d.startswith('<meta name="description"'):
                 d = re.sub(r'content="([^"]*)"', lambda m: f'content="{vertaal(m.group(1), tabel, regels, missers)}"', d)
             uit.append(d)
@@ -1064,6 +1072,7 @@ def maak(bron, taal, tabel, regels, bestand):
     h = ''.join(uit)
     h = h.replace('<html lang="nl">', f'<html lang="{taal}">')
     h = h.replace('login.smoobu.com/nl/booking-tool', f'login.smoobu.com/{taal}/booking-tool')
+    h = h.replace('output=embed&amp;hl=nl', f'output=embed&amp;hl={taal}')
     # taalkeuze in het menu: NL wordt een link, de eigen taal wordt vet
     nl_pagina = './' if bestand == 'index.html' else bestand
     def talen(m):
