@@ -452,6 +452,7 @@ DE = {
  'Boeken | Juultje Zeeland': 'Buchen | Juultje Zeeland',
  'Boek Vakantiehuisje of Appartement Juultje in Wissenkerke rechtstreeks bij Marc en Angelia. Altijd de actuele prijs en beschikbaarheid, direct een bevestiging.': 'Buchen Sie Ferienhaus oder Ferienwohnung Juultje in Wissenkerke direkt bei Marc und Angelia. Immer aktuelle Preise und Verfügbarkeit, sofortige Bestätigung.',
  'Wissenkerke, Noord-Beveland, Zeeland, Nederland': 'Wissenkerke, Noord-Beveland, Zeeland, Niederlande',
+ 'Woonruimte van het appartement met eettafel, bank, tweepersoonsbed en open keuken': 'Wohnbereich der Ferienwohnung mit Esstisch, Sofa, Doppelbett und offener Küche',
 }
 DE_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"Alle \1 Fotos vom Ferienhaus ansehen"),
@@ -899,6 +900,7 @@ EN = {
  'Boeken | Juultje Zeeland': 'Book | Juultje Zeeland',
  'Boek Vakantiehuisje of Appartement Juultje in Wissenkerke rechtstreeks bij Marc en Angelia. Altijd de actuele prijs en beschikbaarheid, direct een bevestiging.': 'Book Holiday cottage or Apartment Juultje in Wissenkerke directly with Marc and Angelia. Always the latest prices and availability, instant confirmation.',
  'Wissenkerke, Noord-Beveland, Zeeland, Nederland': 'Wissenkerke, Noord-Beveland, Zeeland, the Netherlands',
+ 'Woonruimte van het appartement met eettafel, bank, tweepersoonsbed en open keuken': 'Living space of the apartment with dining table, sofa, double bed and open kitchen',
 }
 EN_RE = [
  (r"^Bekijk alle (\d+) foto's van het vakantiehuisje$", r"View all \1 photos of the holiday cottage"),
@@ -910,7 +912,7 @@ EN_RE = [
 ]
 
 # strings die in alle talen gelijk blijven
-GELIJK = {'juultjeverhuur@gmail.com', 'Juultje Zeeland', 'NL', 'DE', 'EN', 'Wissenkerke, Noord-Beveland', '+7', '+3', '9,1', '4,92', '4,84', 'Airbnb',
+GELIJK = {'juultjeverhuur@gmail.com', 'Juultje Zeeland', 'NL', 'DE', 'EN', 'Wissenkerke, Noord-Beveland', '+7', '+3', '+4', '9,1', '4,92', '4,84', 'Airbnb',
           'Instagram:', '@juultjezeeland', 'Nederlands', 'Deutsch', 'English', '©', '2026', '">', '.', 'Wissenkerke, Zeeland',
           'www.autoriteitpersoonsgegevens.nl',
           'Kamperland', 'Kortgene', 'Colijnsplaat', 'Neeltje Jans', 'Goes', 'Veere', 'Zierikzee', 'Middelburg', 'Domburg', 'Vlissingen'}
@@ -1013,7 +1015,7 @@ ADVERTENTIES = {
 }
 FOTOS = {
     'huisje': ['woonkamer', 'keuken', 'zithoek', 'slaapkamer', 'overkapping', 'bank', 'badkamer', 'oprit'],
-    'appartement': ['slaapkamer', 'zithoek', 'eettafel', 'keuken', 'badkamer', 'terras', 'douche', 'hal'],
+    'appartement': ['woonruimte', 'slaapkamer', 'zithoek', 'eettafel', 'keuken', 'badkamer', 'terras', 'douche'],
 }
 
 VERBLIJVEN = {
