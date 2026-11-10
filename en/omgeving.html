@@ -174,7 +174,6 @@
   <div class="lb-beeld">
     <picture><source type="image/webp" sizes="100vw"><img alt=""></picture>
   </div>
-  <p class="lb-onderschrift"></p>
   <button type="button" class="lb-knop lb-vorige" aria-label="Previous photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
   <button type="button" class="lb-knop lb-volgende" aria-label="Next photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
 </dialog>
@@ -197,7 +196,6 @@
   const lbBron = lb.querySelector('source');
   const lbImg = lb.querySelector('img');
   const lbTeller = lb.querySelector('.lb-teller');
-  const lbTekst = lb.querySelector('.lb-onderschrift');
   let reeks = [], pos = 0;
   function toon(i) {
     pos = (i + reeks.length) % reeks.length;
@@ -206,7 +204,6 @@
     lbBron.srcset = knop.querySelector('source').srcset;
     lbImg.src = img.getAttribute('src');
     lbImg.alt = img.alt;
-    lbTekst.textContent = img.alt;
     lbTeller.textContent = lb.dataset.teller.replace('{n}', pos + 1).replace('{t}', reeks.length);
   }
   document.querySelectorAll('[data-galerij]').forEach(knop => knop.addEventListener('click', () => {
