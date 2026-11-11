@@ -1,0 +1,44 @@
+name: Publiceer website
+
+# Zet de map site/ online via GitHub Pages bij elke push naar main.
+# Vereist: Settings > Pages > Build and deployment > Source = "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  controleer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Controleer links en teksten
+        run: python3 tools/controleer.py
+
+  publiceer:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: controleer
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
