@@ -7,7 +7,7 @@ Gebruik, vanuit de hoofdmap van de repository:
     python3 tools/vertaal.py
 
 Werkwijze bij een wijziging:
-1. Pas alleen de Nederlandse index.html aan.
+1. Pas alleen de Nederlandse pagina's in site/ aan (niet die in site/de/ en site/en/).
 2. Voeg nieuwe of gewijzigde Nederlandse teksten toe aan de woordenlijsten DE en EN hieronder
    (de Nederlandse tekst exact als sleutel, de vertaling als waarde).
 3. Draai het script. Het stopt met "ONVERTAALD" en een lijst als er nog een Nederlandse tekst
@@ -3105,7 +3105,7 @@ def seo(h, taal, bestand):
     return h
 
 PAGINAS = ['index.html', 'vakantiehuisje-wissenkerke.html', 'appartement-wissenkerke.html', 'omgeving.html', 'hondenstranden-noord-beveland.html', 'vakantie-met-hond-noord-beveland.html', 'wissenkerke.html', 'fietsroutes-noord-beveland.html', 'zeehonden-oosterschelde.html', 'weekend-noord-beveland-voor-twee.html', 'vakantiehuisje-zeeland.html', 'vakantieappartement-zeeland.html', 'wat-te-doen-zeeland.html', 'zeeland-bij-regen.html', 'stranden-zeeland.html', 'zeeuwse-stadjes.html', 'deltawerken-bezoeken.html', 'zeeuwse-specialiteiten.html', 'veerse-meer.html', 'zeeland-herfst-winter.html', 'boeken.html', 'huisregels.html', 'algemene-voorwaarden.html', 'annuleringsvoorwaarden.html', 'privacyverklaring.html']
-root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'site')
 fout = False
 for bestand in PAGINAS:
     pad = os.path.join(root, bestand)
@@ -3128,7 +3128,7 @@ import subprocess, datetime
 def gewijzigd(bestand):
     # datum van de laatste commit van de Nederlandse bron, of vandaag bij niet gecommitte wijzigingen
     vuil = subprocess.run(['git', 'status', '--porcelain', bestand], cwd=root, capture_output=True, text=True).stdout.strip()
-    datum = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', bestand], cwd=root, capture_output=True, text=True).stdout.strip()
+    datum = subprocess.run(['git', 'log', '-1', '--follow', '--format=%cs', '--', bestand], cwd=root, capture_output=True, text=True).stdout.strip()
     return datetime.date.today().isoformat() if vuil or not datum else datum
 regels = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']

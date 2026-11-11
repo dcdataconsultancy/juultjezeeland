@@ -1,3 +1,6 @@
-fotos-origineel/
 .DS_Store
-juultjezeeland.nl-audit/
+.claude/
+
+# lokale werkbestanden, niet in de repository
+fotos-origineel/
+docs/seo/
